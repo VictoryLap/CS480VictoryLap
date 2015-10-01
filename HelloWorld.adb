@@ -15,4 +15,14 @@ with Ada.Text_IO; use Ada.Text_IO;
        Put_Line ("Hello WORLD!");
     end Hello; 
     --END PROCEDURE
+#else
+
+---------------------------------------
+-----      Procedure Goodbye      -----
+---------------------------------------
+    procedure GoodBye is
+    begin
+        Put_Line("Goodbye Cruel World...");
+    end Hello;
+    --END PROCEDURE
 #end if;
