@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <base href="/">
 
-    <title>Starter Node and Angular</title>
+    <title>Collabin</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
@@ -22,20 +22,16 @@
     <script src="js/app.js"></script>
     <script src="js/custom_collabin.js"></script>
 </head>
-<body ng-app="sampleApp" ng-controller="NerdController">
 
+<!--START BODY-->
+<body ng-app="sampleApp" ng-controller="NerdController">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img class="logo-collabin" alt="Brand" src="../images/collabin-1.png">
-                <!--<a href="#" class="pull-left"><img src="../images/collabin-1.png" width="30px"></a>-->
             </a>
         </div>
         <div class="nav_content">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/">Stencil: Node and Angular</a>
-            </div>
-
             <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
             <ul class="nav navbar-nav">
                 <li><a href="/nerds">Nerds</a></li>
@@ -46,72 +42,17 @@
         </div>
     </nav>
     <br>
-<!--</section>-->
 
 <!-- ANGULAR DYNAMIC CONTENT -->
 <div ng-view></div>
 
-<!--SIGN UP FORM-->
-<form class="form-horizontal">
-    <fieldset>
 
-        <!-- Form Name -->
-        <legend style="padding-left: 20px;">Sign Up</legend>
-
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-2 control-label" for="name">First Name</label>
-            <div class="col-md-2">
-                <input id="name" name="name" type="text" placeholder="" class="form-control input-md">
-
-            </div>
-        </div>
-
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-2 control-label" for="lname">Last Name</label>
-            <div class="col-md-2">
-                <input id="lname" name="lname" type="text" placeholder="" class="form-control input-md">
-
-            </div>
-        </div>
-
-        <!-- Password input-->
-        <div class="form-group">
-            <label class="col-md-2 control-label" for="password">Password</label>
-            <div class="col-md-2">
-                <input id="password" name="password" type="password" placeholder="" class="form-control input-md">
-
-            </div>
-        </div>
-
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-2 control-label" for="email">Email</label>
-            <div class="col-md-2">
-                <input id="email" name="email" type="text" placeholder="john_doe@collabin.com" class="form-control input-md" required="">
-
-            </div>
-        </div>
-
-        <!-- Button -->
-        <div class="form-group">
-            <label class="col-md-2 control-label" for="button_signup"></label>
-            <div class="col-md-4">
-                <button id="button_signup" name="button_signup" class="btn btn-warning">Sign Up</button>
-            </div>
-        </div>
-
-    </fieldset>
-</form>
-<!--</div>-->
-
-<!--FOOTER-->
-<footer>
-    <div class="container">
-        <p class="text-muted" style="color: white;">&copy; Victory Lap. All rights reserved.</p>
-    </div>
-</footer>
+<!--&lt;!&ndash;FOOTER&ndash;&gt;-->
+<!--<footer>-->
+    <!--<div class="container">-->
+        <!--<p class="text-muted" style="color: white;">&copy; Victory Lap. All rights reserved.</p>-->
+    <!--</div>-->
+<!--</footer>-->
 
 
 </body>

@@ -1,25 +1,80 @@
 html,body {
-    height:100%;
+    /*height:100%;*/
     width: 100%;
 }
 
-.jumbotron {
+/********** NAVIGATION BAR **************/
+.navbar-default {
+    background-color: #FC5C2C;
+    bottom-border: 0px;
+}
+
+/* title */
+.navbar-default .navbar-brand {
+    color: white;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: white;
+    font-size: 18px;
+}
+
+.navbar-inner, .navbar .btn-navbar {
+    border: 0px;
+}
+
+.logo-collabin {
+    margin-top: -12px;
+    width: 45px;
+}
+
+
+/***************** MAIN HOME IMAGE ************************/
+.home_image {
+    padding-top: 5%;
     margin-bottom: 0px;
     background-image: url(../images/wynne_stuff.jpg);
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-    text-shadow: black 0.3em 0.3em 0.3em;
+    text-shadow: black 0.1em 0.1em 0.1em;
 
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*position: absolute;*/
-    /*top: 0px;*/
-    /*left: 0px;*/
-    /*background-position: 50% 0%!important;*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
+/******************* SIGN UP LEGEND **************************/
+/*.sign-up-form {*/
+    /*background: url(../images/opaque_orange.png);*/
+    /*/!*background-color: #FC5C2C;*!/*/
+    /*padding-top: 1%;*/
+    /*padding-bottom: 1%;*/
+    /*margin-right: 0px !important;*/
+    /*margin-left: 0px !important;*/
+    /*color: white;*/
+    /*/!*text-shadow: black 0em 0em 0.1em;*!/*/
+    /*background-size: 40% ;*/
+/*}*/
+
+/*.sign-up-legend {*/
+    /*color: white;*/
+    /*padding-left: 20px;*/
+    /*border-bottom: inherit !important;*/
+    /*font-size: 25px;*/
+    /*padding-right: 3%;*/
+    /*text-shadow: black 0em 0em 0.1em;*/
+/*}*/
+
+
+/************************** FOOTER **********************/
 footer {
     position: absolute;
     bottom: 0;
@@ -29,14 +84,82 @@ footer {
     background-color: #FC5C2C;
     text-align: center;
     padding-top: 2%; /* this needs to be bigger than footer height*/
-    padding-bottom: 3%; /* this needs to be bigger than footer height*/
+    padding-bottom: 2%; /* this needs to be bigger than footer height*/
 }
 
-.form-horizontal {
-    padding-top: 2%;
-}
 
-.logo-collabin {
-    margin-top: -12px;
-    width: 45px;
+.form-signin
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+    /*font-weight: normal;*/
+}
+.form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+    z-index: 2;
+}
+.form-signin input[type="text"]
+{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-wall
+{
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+/*.login-title*/
+/*{*/
+    /*color: #555;*/
+    /*font-size: 18px;*/
+    /*font-weight: 400;*/
+    /*display: block;*/
+/*}*/
+.profile-img
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.need-help
+{
+    margin-top: 10px;
+}
+.new-account
+{
+    display: block;
+    margin-top: 10px;
 }
