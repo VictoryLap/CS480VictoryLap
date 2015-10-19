@@ -1,7 +1,18 @@
 <!-- public/views/nerd.html -->
 
-<div class="jumbotron text-center">
-    <h1>Nerds and Proud</h1>
-
-    <p>{{ tagline }}</p>
+<div class="panel panel-default">
+	<div class="panel-heading">Basic Inventory table</div>
+	<table class="table table-striped">
+		<thead><tr>
+			<th>Item</th>
+			<th>Amount</th>
+		</tr></thead>
+		<tbody>
+			<tr ng-repeat="item in inventory | orderBy:orderProp">
+				<td>{{ item.name }}</td>
+				<td>{{ item.amount }}</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
+<button type="button" class="btn btn-default" ng-click="sortOrder()">{{ orderType }}</button>
