@@ -1,12 +1,15 @@
-    {
-      "name": "starter-node-angular",
-      "main": "server.js",
-      "dependencies": {
-        "express" : "~4.5.1",
-        "mongoose" : "~3.8.0",
-        "body-parser" : "~1.4.2",
-        "method-override" : "~2.0.2",
-	"jasmine-core" : "~2.3.2",
-	"karma" : "~0.13.14"
-      }
-    }
+{
+  "name": "starter-node-angular",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.5.1",
+    "mongoose": "~3.8.0",
+    "body-parser": "~1.4.2",
+    "method-override": "~2.0.2"
+  },
+  "devDependencies": {
+    "jasmine-core": "~2.3.2",
+    "karma": "~0.13.14",
+    "karma-jasmine": "^0.3.6"
+  }
+}
