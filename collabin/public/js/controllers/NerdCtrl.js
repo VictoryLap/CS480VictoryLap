@@ -1,5 +1,6 @@
 // public/js/controllers/NerdCtrl.js
-angular.module('NerdCtrl', []).controller('NerdController', function($scope) {
+var NerdCtrl = angular.module('NerdCtrl', []);
+NerdCtrl.controller('NerdController', function($scope) {
 
     $scope.inventory = [
     	{'name': 'Full rack of boobies',
