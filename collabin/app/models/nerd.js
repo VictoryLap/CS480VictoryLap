@@ -24,7 +24,7 @@ var itemSchema = mongoose.Schema({
 	ID: Schema.Types.ObjectId,
 	name: String,
 	description: String,
-	img: { data: Buffer, contentType: String }
+	img: { data: Buffer, contentType: String },
 	quantity: Number,
 	owner: Schema.Types.ObjectId
 });
