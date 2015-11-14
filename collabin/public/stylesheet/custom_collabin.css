@@ -34,6 +34,29 @@ html, body {
     background-color: white;
 }
 
+.dropdown-toggle:active, .open .dropdown-toggle{
+    background:#9D3A21 !important; color:white !important;
+    /*background-color: #9D3A21;*/
+    /*color: white;*/
+}
+
+.dropdown-menu {
+    background:#9D3A21 !important; color:white !important;
+}
+
+.dropdown-menu li a{
+   color:white !important;
+    font-size: 15px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #FC5C2C;
+}
+
+.divider {
+    background-color: white;
+}
+
 /**************** JUMBOTRON ******************/
 .jumbotron h1{
     color: #FC5C2C;
