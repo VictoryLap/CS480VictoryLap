@@ -24,6 +24,12 @@ html, body {
     font-size: 18px;
 }
 
+/*hover link*/
+.navbar-default .navbar-nav > li > a:hover{
+    color: #843220 !important;
+    font-size: 18px;
+}
+
 .navbar {
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -50,11 +56,13 @@ html, body {
 }
 
 .dropdown-menu li a:hover {
-    background-color: #FC5C2C;
+    background-color: #AF6251;
 }
 
 .divider {
-    background-color: white;
+    /*background-color: white;*/
+    background-color: #843220 !important;
+
 }
 
 /**************** JUMBOTRON ******************/

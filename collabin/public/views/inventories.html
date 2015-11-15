@@ -1,0 +1,101 @@
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <div class="center-image">
+            <img src="../images/emily1.png">
+
+            <h2> User Name</h2>
+
+            <div class="add-inventory-button">
+                <button class="btn-warning btn btn-sm center-block" type="submit">
+                    <span class="glyphicon glyphicon-plus"></span> Inventory
+                </button>
+            </div>
+        </div>
+        <ul class="sidebar-nav center-block">
+            <!--<li class="profile-image">-->
+            <!--<img class="img-responsive" src="../images/emily1.png">-->
+            <!--</li>-->
+            <li>
+                <a href="#">Inventory 1</a>
+            </li>
+            <li>
+                <a href="#">Inventory 2</a>
+            </li>
+            <li>
+                <a href="#">Inventory 3</a>
+            </li>
+            <li>
+                <a href="#">Inventory 4</a>
+            </li>
+            <li>
+                <a href="#">Inventory 5</a>
+            </li>
+            <li>
+                <a href="#">Inventory 6</a>
+            </li>
+            <li>
+                <a href="#">Inventory 7</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Inventory {number}</div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Amount</th>
+                    <th>Image</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in inventories | orderBy:orderProp">
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.amount }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <button type="button" class="btn btn-default" ng-click="sortOrder()">{{ orderType }}</button>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Items</h1>
+
+                    <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller
+                        screens, and will appear non-collapsed on larger screens. When toggled using the button below,
+                        the menu will appear/disappear. On small screens, the page content will be pushed off
+                        canvas.</p>
+
+                    <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>

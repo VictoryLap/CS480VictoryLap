@@ -13,6 +13,12 @@
         .when('/nerds', {
             templateUrl: 'views/nerd.html',
             controller: 'NerdController'
+        })
+
+        // inventories page that will use the InventoriesController
+        .when('/inventories', {
+            templateUrl: 'views/inventories.html',
+            controller: 'InventoriesController'
         });
 
     $locationProvider.html5Mode(true);
