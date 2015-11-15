@@ -1,7 +1,7 @@
  // app/routes.js
 
-// grab the nerd model we just created
-var Nerd = require('./models/nerd');
+// grab the database models
+var dbModels = require('./models/dbModels');
 
     module.exports = function(app) {
 
@@ -9,22 +9,35 @@ var Nerd = require('./models/nerd');
         // handle things like api calls
         // authentication routes
 
-        // sample api route
-        app.get('/api/nerds', function(req, res) {
-            // use mongoose to get all nerds in the database
-            Nerd.find(function(err, nerds) {
+        // inventory api ===========================================================
+
+        app.get('/api/inventory/{inventoryID}', function(req, res) {
+            // use mongoose to get all inventories in the database
+            dbModels.inventory.find(function(err, inventories) {
 
                 // if there is an error retrieving, send the error. 
                                 // nothing after res.send(err) will execute
                 if (err)
                     res.send(err);
 
-                res.json(nerds); // return all nerds in JSON format
+                res.json(inventories); // return all inventories in JSON format
             });
         });
 
-        // route to handle creating goes here (app.post)
-        // route to handle delete goes here (app.delete)
+        //app.post
+        //app.delete
+
+        // user api ================================================================
+
+        //app.get
+        //app.post
+        //app.delete
+
+        // item api ================================================================
+
+        //app.get
+        //app.post
+        //app.delete
 
         // frontend routes =========================================================
         // route to handle all angular requests
