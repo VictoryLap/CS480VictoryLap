@@ -19,6 +19,11 @@
         .when('/inventories', {
             templateUrl: 'views/inventories.html',
             controller: 'InventoriesController'
+        })
+
+        .when('/profile', {
+            templateUrl: 'views/editProfile.html',
+            controller: 'editProfileController'
         });
 
     $locationProvider.html5Mode(true);

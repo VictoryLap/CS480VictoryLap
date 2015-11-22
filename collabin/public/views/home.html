@@ -1,34 +1,19 @@
 <!-- public/views/home.html -->
-<script>
-    $(document).ready(function () {
-        $("input#submit").click(function(){
-            $.ajax({
-                type: "POST",
-                url: "process.php", // To change from php
-                data: $('form.contact').serialize(),
-                success: function(msg){
-                    $("#thanks").html(msg)
-                    $("#form-content").modal('hide');
-                },
-                error: function(){
-                    alert("failure");
-                }
-            });
-        });
-    });
-</script>
-
-<div class="jumbotron text-center container-fluid" >
+<div class="jumbotron text-center container-fluid" style="position: relative;
+    background: url(../images/wynne_stuff.jpg) center center;
+    width: 100%; background-size: cover; height:100vh;">
     <!--<h1 style="font-size: 600%;"><b>Collabin </b></h1>-->
     <!--<p><b>{{ tagline }}</b></p>-->
     <br>
     <br>
     <br>
+
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
             <div class="account-wall">
-                <h1 style="font-size: 600%;"><b>Collabin </b></h1>
-                <p><b>{{ tagline }}</b></p>
+                <h1 style="font-size: 600%; color: #FC5C2C"><b>Collabin </b></h1>
+
+                <p style="color: #EEAC12"><b>{{ tagline }}</b></p>
                 <!--<img class="profile-img" src="../images/collabin%20title-1.png" alt="">-->
 
                 <!--asdkfalksdjflakdsflka-->
@@ -49,30 +34,15 @@
                 <div id="form-content" class="modal hide fade in" style="display: none;">
                     <div class="modal-header">
                         <a class="close" data-dismiss="modal">×</a>
+
                         <h3>Create an Account</h3>
                     </div>
-                    <div class="modal-body">
-                        <form class="contact" name="contact">
-                            <label class="label" for="name">Your Name</label><br>
-                            <input type="text" name="name" class="input-xlarge"><br>
-                            <label class="label" for="email">Your E-mail</label><br>
-                            <input type="email" name="email" class="input-xlarge"><br>
-                            <label class="label" for="password">Create a Password</label><br>
-                            <input type="password" name="password" class="input-xlarge">
-                            <!--<textarea name="message" class="input-xlarge"></textarea>-->
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <input class="btn btn-success" type="submit" value="Send!" id="submit">
-                        <a href="#" class="btn" data-dismiss="modal">Nah.</a>
-                    </div>
                 </div>
-                <div id="thanks"><p><a data-toggle="modal" href="#form-content" class="text-center new-account">Create an Account</a></p></div>
             </div>
             <!--ksadfhaksjfdhkjdasdhfkadjf-->
-            </div>
         </div>
     </div>
+</div>
 </div>
 
 

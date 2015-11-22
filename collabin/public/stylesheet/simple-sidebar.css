@@ -73,7 +73,7 @@
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar-nav li a:active,
@@ -96,7 +96,7 @@
     background: none;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     #wrapper {
         padding-left: 250px;
     }
@@ -123,15 +123,12 @@
         margin-right: 0;
     }
 
-    /*ADD INVENTORY BUTTOM*/
-    /*.add-inventory-button button{*/
-        /*line-height: 0px;*/
-        /*font-size: 15px;*/
-    /*}*/
-
     .add-inventory-button {
         padding-bottom: 30px;
     }
+}
+
+    /******** MY OWN ADDITIONS TO THIS CSS *********/
 
     /*************** IMAGE ******************/
     #sidebar-wrapper img {
@@ -141,12 +138,21 @@
         display: block;
     }
 
-    .center-image img{
+    .center-image img {
         margin: 0 auto;
     }
 
     #sidebar-wrapper h2 {
         color: white;
         text-align: center;
+
     }
-}
+
+    #page-content-wrapper img {
+        height: 100px;
+        width: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+

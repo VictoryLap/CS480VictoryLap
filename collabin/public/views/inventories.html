@@ -3,7 +3,7 @@
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
         <div class="center-image">
-            <img src="../images/emily1.png">
+            <img class="img-responsive" src="../images/emily1.png">
 
             <h2> User Name</h2>
 
@@ -45,37 +45,66 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-        <div class="panel panel-default">
-            <div class="panel-heading">Inventory {number}</div>
+        <!--header before items table-->
+        <div class="panel panel-default text-center">
+            <div class="panel-heading">
+                <h2> Iventory Name</h2>
+
+                <div class="add-inventory-button">
+                    <button class="btn-warning btn btn-med center-block" type="submit">
+                        <span class="glyphicon glyphicon-plus"></span> Item
+                    </button>
+                </div>
+            </div>
+
+            <!--<div class="panel-heading">Inventory {number}</div>-->
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Item</th>
-                    <th>Amount</th>
-                    <th>Image</th>
+                    <th class="text-center">Item</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-center">Image</th>
+                    <th class="text-center">Owner</th>
+                    <th class="text-center"></th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="item in inventories | orderBy:orderProp">
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.amount }}</td>
+                <!--<tr ng-repeat="item in inventories | orderBy:orderProp">-->
+                <!--<td>{{ item.name }}</td>-->
+                <!--<td>{{ item.amount }}</td>-->
+                <!--</tr>-->
+                <tr>
+                    <td> 70m Rope</td>
+                    <td> 2</td>
+                    <td><img class="img-responsive" src="../images/70mrope.jpeg"></td>
+                    <td> mathagoris</td>
+                    <td>
+                        <div class="btn-group-vertical">
+                            <button class="btn-warning btn btn-xs center-block" type="submit"> Edit </button>
+                            <button class="btn-danger btn btn-xs center-block" type="submit"> Remove </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Nuts</td>
+                    <td> 7</td>
+                    <td><img class="img-responsive" src="../images/nuts.jpeg"></td>
+                    <td> crisrealTheSecurityGod</td>
+                    <td>
+                        <div class="btn-group-vertical">
+                            <button class="btn-warning btn btn-xs center-block" type="submit"> Edit </button>
+                            <button class="btn-danger btn btn-xs center-block" type="submit"> Remove </button>
+                        </div>
+                    </td>
                 </tr>
                 </tbody>
             </table>
         </div>
-        <button type="button" class="btn btn-default" ng-click="sortOrder()">{{ orderType }}</button>
+        <!--<button type="button" class="btn btn-default" ng-click="sortOrder()">{{ orderType }}</button>-->
 
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Items</h1>
-
-                    <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller
-                        screens, and will appear non-collapsed on larger screens. When toggled using the button below,
-                        the menu will appear/disappear. On small screens, the page content will be pushed off
-                        canvas.</p>
-
-                    <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
                     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
                 </div>
             </div>
