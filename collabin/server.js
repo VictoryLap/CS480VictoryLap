@@ -12,10 +12,10 @@ var methodOverride = require('method-override');
 // config files
 var db = require('./config/db');
 
-// set our port
-var ipaddr = process.env.OPENSHIFT_INTERNAL_IP;
-//var port = process.env.PORT || 8080; 
-var port = process.env.PORT || process.env.OPENSHIFT_INTERNAL_PORT || 8080; 
+// set our ports
+//var ipaddr = process.env.OPENSHIFT_INTERNAL_IP;
+var port = process.env.PORT || 8080; 
+//var port = process.env.PORT || process.env.OPENSHIFT_INTERNAL_PORT || 8080; 
 
 // connect to our mongoDB database
 mongoose.connect(db.url); 
@@ -47,11 +47,11 @@ require('./app/routes')(app); // configure our routes
 // start app ===============================================
 // startup our app at http://localhost:8080
 //app.listen(port);
-app.start(port, ipaddr); //new
+//app.start(port, ipaddr); //new
 
 // shoutout to the user                     
 console.log('Magic happens on port ' + port);
-app.log.info("Started at http://" + ipaddr + ":" + port + "/");
+//app.log.info("Started at http://" + ipaddr + ":" + port + "/");
 
 // expose app           
 exports = module.exports = app;
