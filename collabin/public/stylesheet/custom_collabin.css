@@ -24,6 +24,12 @@ html, body {
     font-size: 18px;
 }
 
+/*hover link*/
+.navbar-default .navbar-nav > li > a:hover{
+    color: #843220 !important;
+    font-size: 18px;
+}
+
 .navbar {
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -50,32 +56,34 @@ html, body {
 }
 
 .dropdown-menu li a:hover {
-    background-color: #FC5C2C;
+    background-color: #AF6251;
 }
 
 .divider {
-    background-color: white;
+    /*background-color: white;*/
+    background-color: #843220 !important;
+
 }
 
 /**************** JUMBOTRON ******************/
-.jumbotron h1{
-    color: #FC5C2C;
-    /*margin-top: -20px;*/
-}
+/*.jumbotron h1{*/
+    /*color: #FC5C2C;*/
+    /*/!*margin-top: -20px;*!/*/
+/*}*/
 
-.jumbotron p{
-    color:  #EEAC12;
-}
+/*.jumbotron p{*/
+    /*color:  #EEAC12;*/
+/*}*/
 
-.jumbotron {
-    position: relative;
-    background: #000 url("../images/wynne_stuff.jpg") center center;
-    width: 100%;
-    background-size: cover;
-    height:100vh;
-}
+/*.jumbotron {*/
+    /*position: relative;*/
+    /*background: #000 url("../images/wynne_stuff.jpg") center center;*/
+    /*width: 100%;*/
+    /*background-size: cover;*/
+    /*height:100vh;*/
+/*}*/
 
-.special,.special .jumbotron {height:100%;}
+/*.special,.special .jumbotron {height:100%;}*/
 
 
 /**************** SIGN IN ********************/
@@ -146,3 +154,8 @@ html, body {
     display: block;
     margin-top: 10px;
 }
+
+/******************** TABLE ********************/
+/*.panel-default tr{*/
+    /*text-align: center;*/
+/*}*/
