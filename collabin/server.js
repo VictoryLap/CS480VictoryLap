@@ -12,7 +12,11 @@ var methodOverride = require('method-override');
 // config files
 var db = require('./config/db');
 
+<<<<<<< HEAD
 // set our port
+=======
+// set our ports
+>>>>>>> 422ad0822cdffc56ae39959bb7b703d461ceef13
 //var ipaddr = process.env.OPENSHIFT_INTERNAL_IP;
 var port = process.env.PORT || 8080; 
 //var port = process.env.PORT || process.env.OPENSHIFT_INTERNAL_PORT || 8080; 
@@ -46,7 +50,9 @@ require('./app/routes')(app); // configure our routes
 
 // start app ===============================================
 // startup our app at http://localhost:8080
-//app.listen(port);
+
+app.listen(port);
+
 //app.start(port, ipaddr); //new
 
 // shoutout to the user                     
