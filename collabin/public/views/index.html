@@ -10,6 +10,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../stylesheet/custom_collabin.css">
+    <link rel="stylesheet" href="../stylesheet/simple-sidebar.css">
+
 
     <!-- JS -->
     <script src="../libs/jQuery/dist/jquery.min.js"></script>
@@ -42,7 +44,8 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">
-                <img alt="Brand" src="../images/collabin-1.png">
+                <!--<img alt="Brand" src="../images/collabin-1.png">-->
+                <img alt="Brand" src="../images/collabin3Bullets-small.png">
             </a>
         </div>
 
@@ -50,14 +53,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="/">Login</a></li>
+                <li><a href="/inventories">Inventories</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/nerds">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" type="button" role="button" aria-haspopup="true"
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" type="button" role="button"
+                       aria-haspopup="true"
                        aria-expanded="true">Profile <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Edit Profile</a></li>
+                        <li><a href="/profile">Edit Profile</a></li>
                         <li><a href="#">Inventories</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Sign Out</a></li>
@@ -70,24 +75,6 @@
     <!-- /.container-fluid -->
 </nav>
 </body>
-<!--THIS IS THE OLD STUFF-->
-<!--<nav class="navbar navbar-default navbar-fixed-top">-->
-<!--<div class="navbar-header">-->
-<!--<a class="navbar-brand" href="/">-->
-<!--<img class="logo-collabin" alt="Brand" src="../images/collabin-1.png">-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="nav_content">-->
-<!--&lt;!&ndash; LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE &ndash;&gt;-->
-<!--<ul class="nav navbar-nav">-->
-<!--<li><a href="/nerds">Nerds</a></li>-->
-<!--</ul>-->
-<!--<ul style="padding-right: 20px;" class="nav navbar-nav navbar-right">-->
-<!--<li><a href="#">Login</a></li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--</nav>-->
-<!--<br>-->
 
 <!-- ANGULAR DYNAMIC CONTENT -->
 <div ng-view></div>
