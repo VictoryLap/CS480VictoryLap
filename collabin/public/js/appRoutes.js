@@ -9,10 +9,15 @@
             controller: 'MainController'
         })
 
-        // nerds page that will use the NerdController
-        .when('/nerds', {
-            templateUrl: 'views/nerd.html',
-            controller: 'NerdController'
+        // inventories page that will use the InventoryController
+        .when('/inventories', {
+            templateUrl: 'views/inventory.html',
+            controller: 'InventoryController'
+        })
+
+        .when('/profile', {
+            templateUrl: 'views/editProfile.html',
+            controller: 'editProfileController'
         });
 
     $locationProvider.html5Mode(true);
