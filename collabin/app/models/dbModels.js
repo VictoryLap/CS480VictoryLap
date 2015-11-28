@@ -25,7 +25,6 @@ var userSchema = Schema({
 
 var itemSchema = Schema({
 	name: String,
-	description: String,
 	img: { data: Buffer, contentType: String },
 	quantity: Number,
 	owner: Schema.Types.ObjectId

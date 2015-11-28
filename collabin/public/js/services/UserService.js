@@ -12,9 +12,10 @@ angular.module('UserService', []).factory('User', ['$http', function($http) {
             return $http.post('/api/users', userData);
         },
 
+        // call to update a user
         update : function(id, userData) {
-            return $http.put('/api/users' + id, userData);
-        },
+            return $http.put('/api/users/' + id, userData);
+	},
 
         // call to delete a user
         delete : function(id) {

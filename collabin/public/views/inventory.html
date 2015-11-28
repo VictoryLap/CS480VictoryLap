@@ -6,9 +6,11 @@
             <img class="img-responsive img-rounded" src="../images/emily1.png">
 
             <h2> User Name</h2>
+
             <div class="add-inventory-button">
 
-                <button class="btn-warning btn btn-sm center-block" type="submit" data-toggle="modal" data-target="#inventoryModal">
+                <button class="btn-warning btn btn-sm center-block" type="submit" data-toggle="modal"
+                        data-target="#inventoryModal">
                     <span class="glyphicon glyphicon-plus"></span> Inventory
                 </button>
             </div>
@@ -17,26 +19,8 @@
             <!--<li class="profile-image">-->
             <!--<img class="img-responsive" src="../images/emily1.png">-->
             <!--</li>-->
-            <li>
-                <a href="#">Inventory 1</a>
-            </li>
-            <li>
-                <a href="#">Inventory 2</a>
-            </li>
-            <li>
-                <a href="#">Inventory 3</a>
-            </li>
-            <li>
-                <a href="#">Inventory 4</a>
-            </li>
-            <li>
-                <a href="#">Inventory 5</a>
-            </li>
-            <li>
-                <a href="#">Inventory 6</a>
-            </li>
-            <li>
-                <a href="#">Inventory 7</a>
+            <li ng-repeat="inventory in inventories">
+                <a href="#">{{ inventory.name }}</a>
             </li>
         </ul>
     </div>
@@ -48,15 +32,17 @@
         <!-- Table header -->
         <div class="panel panel-default text-center">
             <div class="panel-heading">
-                <h2> Iventory Name</h2>
+                <h2>Iventory Name</h2>
 
                 <div class="btn-toolbar" style="display: inline-block">
                     <a href="#menu-toggle" class="btn btn-warning" id="menu-toggle"><span
                             class="glyphicon glyphicon-menu-left"></span> Menu</a>
 
-                    <p href="" class="btn btn-warning" data-toggle="modal" data-target="#itemModal"><span class="glyphicon glyphicon-plus" ></span> Item</p>
+                    <p href="" class="btn btn-warning" data-toggle="modal" data-target="#itemModal"><span
+                            class="glyphicon glyphicon-plus"></span> Item</p>
 
-                    <p href="" class="btn btn-warning" data-toggle="modal" data-target="#collaboratorsModal"> Collaborators</p>
+                    <p href="" class="btn btn-warning" data-toggle="modal" data-target="#collaboratorsModal">
+                        Collaborators</p>
 
                 </div>
             </div>
@@ -73,26 +59,16 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td style="vertical-align: middle"> mathagoris</td>
-                    <td style="vertical-align: middle"> 70m Rope</td>
-                    <td style="vertical-align: middle"> 2</td>
-                    <td style="vertical-align: middle"><img class="img-responsive" src="../images/70mrope.jpeg"></td>
+                <tr ng-repeat="item in items | orderBy:orderProp">
+                    <td style="vertical-align: middle">{{ item.owner }}</td>
+                    <td style="vertical-align: middle">{{ item.name }}</td>
+                    <td style="vertical-align: middle">{{ item.quantity }}</td>
+                    <td style="vertical-align: middle"><img class="img-responsive" src={{item.image}}></td>
                     <td style="vertical-align: middle">
                         <div class="btn-group-vertical">
-                            <button class="btn-warning btn btn-xs center-block" type="submit" data-toggle="modal" data-target="#editItemModal""> Edit</button>
-                            <button class="btn-danger btn btn-xs center-block" type="submit"> Remove</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="vertical-align: middle"> crisrealTheSecurityGod</td>
-                    <td style="vertical-align: middle"> Nuts</td>
-                    <td style="vertical-align: middle"> 7</td>
-                    <td style="vertical-align: middle"><img class="img-responsive" src="../images/nuts.jpeg"></td>
-                    <td style="vertical-align: middle">
-                        <div class="btn-group-vertical">
-                            <button class="btn-warning btn btn-xs center-block" type="submit" data-toggle="modal" data-target="#editItemModal"> Edit</button>
+                            <button class="btn-warning btn btn-xs center-block" type="submit" data-toggle="modal"
+                                    data-target="#editItemModal"> Edit
+                            </button>
                             <button class="btn-danger btn btn-xs center-block" type="submit"> Remove</button>
                         </div>
                     </td>
@@ -157,10 +133,28 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-3 control-label">Image URL: </label>
-
-                            <div class="col-lg-8">
-                                <input class="form-control" value="" type="text">
+                            <!--upload image-->
+                            <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                                <!-- image-preview-filename input [CUT FROM HERE]-->
+                                <div class="input-group image-preview">
+                                    <input type="text" class="form-control image-preview-filename" disabled="disabled">
+                                    <!-- don't give a name === doesn't send on POST/GET -->
+                                        <span class="input-group-btn">
+                                            <!-- image-preview-clear button -->
+                                            <button type="button" class="btn btn-default image-preview-clear"
+                                                    style="display:none;">
+                                                <span class="glyphicon glyphicon-remove"></span> Clear
+                                            </button>
+                                            <!-- image-preview-input -->
+                                            <div class="btn btn-default image-preview-input">
+                                                <span class="glyphicon glyphicon-folder-open"></span>
+                                                <span class="image-preview-input-title">Browse</span>
+                                                <input type="file" accept="image/png, image/jpeg, image/gif"
+                                                       name="input-file-preview"/> <!-- rename it -->
+                                            </div>
+                                        </span>
+                                </div>
+                                <!-- /input-group image-preview [TO HERE]-->
                             </div>
                         </div>
                     </form>
@@ -184,9 +178,17 @@
                     <h3 class="modal-title">Add Collaborator</h3>
                 </div>
                 <div class="modal-body">
-                    <div class="jumbotron container-fluid" style="background-color: #9D3A21!important; border-radius: 10px;">
+                    <div class="jumbotron container-fluid"
+                         style="background-color: #9D3A21!important; border-radius: 10px;">
                         <h3 class="center" style="text-align: center; color: white"> Current Collaborators: </h3>
-                        <p class="center" style="text-align: center; color: white;"> mathagoris, cristheSecurityGod, emilycup</p>
+
+                        <ul style="text-align: center">
+                            <li class="center"
+                                style="color: white; display: inline-block; font-size: large;"
+                                ng-repeat="collaborator in collaborators">
+                                {{collaborator.name + "&nbsp&nbsp&nbsp"}}
+                            </li>
+                        </ul>
                     </div>
                     <form class="form-horizontal" role="form">
                         <div class="form-group">
@@ -233,10 +235,28 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-3 control-label">Image URL: </label>
-
-                            <div class="col-lg-8">
-                                <input class="form-control" value="" type="text">
+                            <!--upload image-->
+                            <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                                <!-- image-preview-filename input [CUT FROM HERE]-->
+                                <div class="input-group image-preview">
+                                    <input type="text" class="form-control image-preview-filename" disabled="disabled">
+                                    <!-- don't give a name === doesn't send on POST/GET -->
+                                        <span class="input-group-btn">
+                                            <!-- image-preview-clear button -->
+                                            <button type="button" class="btn btn-default image-preview-clear"
+                                                    style="display:none;">
+                                                <span class="glyphicon glyphicon-remove"></span> Clear
+                                            </button>
+                                            <!-- image-preview-input -->
+                                            <div class="btn btn-default image-preview-input">
+                                                <span class="glyphicon glyphicon-folder-open"></span>
+                                                <span class="image-preview-input-title">Browse</span>
+                                                <input type="file" accept="image/png, image/jpeg, image/gif"
+                                                       name="input-file-preview"/> <!-- rename it -->
+                                            </div>
+                                        </span>
+                                </div>
+                                <!-- /input-group image-preview [TO HERE]-->
                             </div>
                         </div>
                     </form>
@@ -254,16 +274,13 @@
 </div>
 <!-- /#wrapper -->
 
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
-<!-- Menu Toggle Script -->
+<!-- will toggle the responsive side menu -->
 <script>
     $("#menu-toggle").click(function (e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
 </script>
+
+<!--javascript for previewing image-->
+<script src="../js/preview_image.js"></script>

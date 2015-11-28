@@ -1,0 +1,2514 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@3.3.6
+3 info using node@v5.0.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData passport
+20 silly mapToRegistry name passport
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry http://registry.npmjs.org/
+23 silly mapToRegistry uri http://registry.npmjs.org/passport
+24 verbose request uri http://registry.npmjs.org/passport
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 10:34:22 PM
+27 verbose request id 2cd444e053083892
+28 http request GET http://registry.npmjs.org/passport
+29 http 200 http://registry.npmjs.org/passport
+30 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 verbose headers   etag: '"6ZI8LZ26I41YAXW39185FAJYL"',
+30 verbose headers   'content-type': 'application/json',
+30 verbose headers   'cache-control': 'max-age=60',
+30 verbose headers   'content-length': '41484',
+30 verbose headers   'accept-ranges': 'bytes',
+30 verbose headers   date: 'Sat, 28 Nov 2015 06:34:18 GMT',
+30 verbose headers   via: '1.1 varnish',
+30 verbose headers   age: '0',
+30 verbose headers   connection: 'keep-alive',
+30 verbose headers   'x-served-by': 'cache-sjc3131-SJC',
+30 verbose headers   'x-cache': 'HIT',
+30 verbose headers   'x-cache-hits': '1',
+30 verbose headers   'x-timer': 'S1448692458.046722,VS0,VE35',
+30 verbose headers   vary: 'Accept' }
+31 silly get cb [ 200,
+31 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+31 silly get     etag: '"6ZI8LZ26I41YAXW39185FAJYL"',
+31 silly get     'content-type': 'application/json',
+31 silly get     'cache-control': 'max-age=60',
+31 silly get     'content-length': '41484',
+31 silly get     'accept-ranges': 'bytes',
+31 silly get     date: 'Sat, 28 Nov 2015 06:34:18 GMT',
+31 silly get     via: '1.1 varnish',
+31 silly get     age: '0',
+31 silly get     connection: 'keep-alive',
+31 silly get     'x-served-by': 'cache-sjc3131-SJC',
+31 silly get     'x-cache': 'HIT',
+31 silly get     'x-cache-hits': '1',
+31 silly get     'x-timer': 'S1448692458.046722,VS0,VE35',
+31 silly get     vary: 'Accept' } ]
+32 verbose get saving passport to /home/seed/.npm/registry.npmjs.org/passport/.cache.json
+33 silly resolveWithNewModule passport@0.3.2 checking installable status
+34 silly cache add args [ 'passport@~0.3.2', null ]
+35 verbose cache add spec passport@~0.3.2
+36 silly cache add parsed spec Result {
+36 silly cache add   raw: 'passport@~0.3.2',
+36 silly cache add   scope: null,
+36 silly cache add   name: 'passport',
+36 silly cache add   rawSpec: '~0.3.2',
+36 silly cache add   spec: '>=0.3.2 <0.4.0',
+36 silly cache add   type: 'range' }
+37 silly addNamed passport@>=0.3.2 <0.4.0
+38 verbose addNamed ">=0.3.2 <0.4.0" is a valid semver range for passport
+39 silly addNameRange { name: 'passport', range: '>=0.3.2 <0.4.0', hasData: false }
+40 silly mapToRegistry name passport
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry http://registry.npmjs.org/
+43 silly mapToRegistry uri http://registry.npmjs.org/passport
+44 verbose addNameRange registry:http://registry.npmjs.org/passport not in flight; fetching
+45 verbose get http://registry.npmjs.org/passport not expired, no request
+46 silly addNameRange number 2 { name: 'passport', range: '>=0.3.2 <0.4.0', hasData: true }
+47 silly addNameRange versions [ 'passport',
+47 silly addNameRange   [ '0.1.0',
+47 silly addNameRange     '0.1.1',
+47 silly addNameRange     '0.1.2',
+47 silly addNameRange     '0.1.3',
+47 silly addNameRange     '0.1.4',
+47 silly addNameRange     '0.1.5',
+47 silly addNameRange     '0.1.6',
+47 silly addNameRange     '0.1.7',
+47 silly addNameRange     '0.1.8',
+47 silly addNameRange     '0.1.9',
+47 silly addNameRange     '0.1.10',
+47 silly addNameRange     '0.1.11',
+47 silly addNameRange     '0.1.12',
+47 silly addNameRange     '0.1.13',
+47 silly addNameRange     '0.1.14',
+47 silly addNameRange     '0.1.15',
+47 silly addNameRange     '0.1.16',
+47 silly addNameRange     '0.1.17',
+47 silly addNameRange     '0.1.18',
+47 silly addNameRange     '0.2.0',
+47 silly addNameRange     '0.2.1',
+47 silly addNameRange     '0.2.2',
+47 silly addNameRange     '0.3.0',
+47 silly addNameRange     '0.3.1',
+47 silly addNameRange     '0.3.2' ] ]
+48 silly addNamed passport@0.3.2
+49 verbose addNamed "0.3.2" is a plain semver version for passport
+50 silly mapToRegistry name passport
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry http://registry.npmjs.org/
+53 silly mapToRegistry uri http://registry.npmjs.org/passport
+54 verbose addRemoteTarball http://registry.npmjs.org/passport/-/passport-0.3.2.tgz not in flight; adding
+55 verbose addRemoteTarball [ 'http://registry.npmjs.org/passport/-/passport-0.3.2.tgz',
+55 verbose addRemoteTarball   '9dd009f915e8fe095b0124a01b8f82da07510102' ]
+56 info retry fetch attempt 1 at 10:34:23 PM
+57 info attempt registry request try #1 at 10:34:23 PM
+58 http fetch GET http://registry.npmjs.org/passport/-/passport-0.3.2.tgz
+59 http fetch 200 http://registry.npmjs.org/passport/-/passport-0.3.2.tgz
+60 silly fetchAndShaCheck shasum 9dd009f915e8fe095b0124a01b8f82da07510102
+61 verbose addTmpTarball /tmp/npm-7197-27fad743/registry.npmjs.org/passport/-/passport-0.3.2.tgz not in flight; adding
+62 verbose addTmpTarball already have metadata; skipping unpack for passport@0.3.2
+63 silly cache afterAdd passport@0.3.2
+64 verbose afterAdd /home/seed/.npm/passport/0.3.2/package/package.json not in flight; writing
+65 verbose afterAdd /home/seed/.npm/passport/0.3.2/package/package.json written
+66 silly fetchNamedPackageData passport-strategy
+67 silly mapToRegistry name passport-strategy
+68 silly mapToRegistry using default registry
+69 silly mapToRegistry registry http://registry.npmjs.org/
+70 silly mapToRegistry uri http://registry.npmjs.org/passport-strategy
+71 silly fetchNamedPackageData pause
+72 silly mapToRegistry name pause
+73 silly mapToRegistry using default registry
+74 silly mapToRegistry registry http://registry.npmjs.org/
+75 silly mapToRegistry uri http://registry.npmjs.org/pause
+76 verbose request uri http://registry.npmjs.org/passport-strategy
+77 verbose request no auth needed
+78 info attempt registry request try #1 at 10:34:23 PM
+79 http request GET http://registry.npmjs.org/passport-strategy
+80 verbose request uri http://registry.npmjs.org/pause
+81 verbose request no auth needed
+82 info attempt registry request try #1 at 10:34:23 PM
+83 http request GET http://registry.npmjs.org/pause
+84 http 200 http://registry.npmjs.org/pause
+85 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+85 verbose headers   etag: '"SD31V4MU41UCZX0BCY4IRLTO"',
+85 verbose headers   'content-type': 'application/json',
+85 verbose headers   'cache-control': 'max-age=60',
+85 verbose headers   'content-length': '4298',
+85 verbose headers   'accept-ranges': 'bytes',
+85 verbose headers   date: 'Sat, 28 Nov 2015 06:34:18 GMT',
+85 verbose headers   via: '1.1 varnish',
+85 verbose headers   age: '2',
+85 verbose headers   connection: 'keep-alive',
+85 verbose headers   'x-served-by': 'cache-sjc3133-SJC',
+85 verbose headers   'x-cache': 'HIT',
+85 verbose headers   'x-cache-hits': '1',
+85 verbose headers   'x-timer': 'S1448692458.805407,VS0,VE0',
+85 verbose headers   vary: 'Accept' }
+86 silly get cb [ 200,
+86 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+86 silly get     etag: '"SD31V4MU41UCZX0BCY4IRLTO"',
+86 silly get     'content-type': 'application/json',
+86 silly get     'cache-control': 'max-age=60',
+86 silly get     'content-length': '4298',
+86 silly get     'accept-ranges': 'bytes',
+86 silly get     date: 'Sat, 28 Nov 2015 06:34:18 GMT',
+86 silly get     via: '1.1 varnish',
+86 silly get     age: '2',
+86 silly get     connection: 'keep-alive',
+86 silly get     'x-served-by': 'cache-sjc3133-SJC',
+86 silly get     'x-cache': 'HIT',
+86 silly get     'x-cache-hits': '1',
+86 silly get     'x-timer': 'S1448692458.805407,VS0,VE0',
+86 silly get     vary: 'Accept' } ]
+87 verbose get saving pause to /home/seed/.npm/registry.npmjs.org/pause/.cache.json
+88 silly resolveWithNewModule pause@0.0.1 checking installable status
+89 silly cache add args [ 'pause@0.0.1', null ]
+90 verbose cache add spec pause@0.0.1
+91 silly cache add parsed spec Result {
+91 silly cache add   raw: 'pause@0.0.1',
+91 silly cache add   scope: null,
+91 silly cache add   name: 'pause',
+91 silly cache add   rawSpec: '0.0.1',
+91 silly cache add   spec: '0.0.1',
+91 silly cache add   type: 'version' }
+92 silly addNamed pause@0.0.1
+93 verbose addNamed "0.0.1" is a plain semver version for pause
+94 silly mapToRegistry name pause
+95 silly mapToRegistry using default registry
+96 silly mapToRegistry registry http://registry.npmjs.org/
+97 silly mapToRegistry uri http://registry.npmjs.org/pause
+98 verbose addNameVersion registry:http://registry.npmjs.org/pause not in flight; fetching
+99 http 200 http://registry.npmjs.org/passport-strategy
+100 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+100 verbose headers   etag: '"CUC5B53DTH7Q3IFJAK7U55MMR"',
+100 verbose headers   'content-type': 'application/json',
+100 verbose headers   'cache-control': 'max-age=60',
+100 verbose headers   'content-length': '5281',
+100 verbose headers   'accept-ranges': 'bytes',
+100 verbose headers   date: 'Sat, 28 Nov 2015 06:34:18 GMT',
+100 verbose headers   via: '1.1 varnish',
+100 verbose headers   age: '0',
+100 verbose headers   connection: 'keep-alive',
+100 verbose headers   'x-served-by': 'cache-sjc3131-SJC',
+100 verbose headers   'x-cache': 'HIT',
+100 verbose headers   'x-cache-hits': '1',
+100 verbose headers   'x-timer': 'S1448692458.735409,VS0,VE83',
+100 verbose headers   vary: 'Accept' }
+101 silly get cb [ 200,
+101 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+101 silly get     etag: '"CUC5B53DTH7Q3IFJAK7U55MMR"',
+101 silly get     'content-type': 'application/json',
+101 silly get     'cache-control': 'max-age=60',
+101 silly get     'content-length': '5281',
+101 silly get     'accept-ranges': 'bytes',
+101 silly get     date: 'Sat, 28 Nov 2015 06:34:18 GMT',
+101 silly get     via: '1.1 varnish',
+101 silly get     age: '0',
+101 silly get     connection: 'keep-alive',
+101 silly get     'x-served-by': 'cache-sjc3131-SJC',
+101 silly get     'x-cache': 'HIT',
+101 silly get     'x-cache-hits': '1',
+101 silly get     'x-timer': 'S1448692458.735409,VS0,VE83',
+101 silly get     vary: 'Accept' } ]
+102 verbose get saving passport-strategy to /home/seed/.npm/registry.npmjs.org/passport-strategy/.cache.json
+103 verbose get http://registry.npmjs.org/pause not expired, no request
+104 silly mapToRegistry name pause
+105 silly mapToRegistry using default registry
+106 silly mapToRegistry registry http://registry.npmjs.org/
+107 silly mapToRegistry uri http://registry.npmjs.org/pause
+108 verbose addRemoteTarball http://registry.npmjs.org/pause/-/pause-0.0.1.tgz not in flight; adding
+109 verbose addRemoteTarball [ 'http://registry.npmjs.org/pause/-/pause-0.0.1.tgz',
+109 verbose addRemoteTarball   '1d408b3fdb76923b9543d96fb4c9dfd535d9cb5d' ]
+110 info retry fetch attempt 1 at 10:34:24 PM
+111 info attempt registry request try #1 at 10:34:24 PM
+112 http fetch GET http://registry.npmjs.org/pause/-/pause-0.0.1.tgz
+113 silly resolveWithNewModule passport-strategy@1.0.0 checking installable status
+114 silly cache add args [ 'passport-strategy@1.x.x', null ]
+115 verbose cache add spec passport-strategy@1.x.x
+116 silly cache add parsed spec Result {
+116 silly cache add   raw: 'passport-strategy@1.x.x',
+116 silly cache add   scope: null,
+116 silly cache add   name: 'passport-strategy',
+116 silly cache add   rawSpec: '1.x.x',
+116 silly cache add   spec: '>=1.0.0 <2.0.0',
+116 silly cache add   type: 'range' }
+117 silly addNamed passport-strategy@>=1.0.0 <2.0.0
+118 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for passport-strategy
+119 silly addNameRange { name: 'passport-strategy',
+119 silly addNameRange   range: '>=1.0.0 <2.0.0',
+119 silly addNameRange   hasData: false }
+120 silly mapToRegistry name passport-strategy
+121 silly mapToRegistry using default registry
+122 silly mapToRegistry registry http://registry.npmjs.org/
+123 silly mapToRegistry uri http://registry.npmjs.org/passport-strategy
+124 verbose addNameRange registry:http://registry.npmjs.org/passport-strategy not in flight; fetching
+125 verbose get http://registry.npmjs.org/passport-strategy not expired, no request
+126 silly addNameRange number 2 { name: 'passport-strategy',
+126 silly addNameRange   range: '>=1.0.0 <2.0.0',
+126 silly addNameRange   hasData: true }
+127 silly addNameRange versions [ 'passport-strategy', [ '1.0.0' ] ]
+128 silly addNamed passport-strategy@1.0.0
+129 verbose addNamed "1.0.0" is a plain semver version for passport-strategy
+130 silly mapToRegistry name passport-strategy
+131 silly mapToRegistry using default registry
+132 silly mapToRegistry registry http://registry.npmjs.org/
+133 silly mapToRegistry uri http://registry.npmjs.org/passport-strategy
+134 verbose addRemoteTarball http://registry.npmjs.org/passport-strategy/-/passport-strategy-1.0.0.tgz not in flight; adding
+135 verbose addRemoteTarball [ 'http://registry.npmjs.org/passport-strategy/-/passport-strategy-1.0.0.tgz',
+135 verbose addRemoteTarball   'b5539aa8fc225a3d1ad179476ddf236b440f52e4' ]
+136 info retry fetch attempt 1 at 10:34:24 PM
+137 info attempt registry request try #1 at 10:34:24 PM
+138 http fetch GET http://registry.npmjs.org/passport-strategy/-/passport-strategy-1.0.0.tgz
+139 http fetch 200 http://registry.npmjs.org/pause/-/pause-0.0.1.tgz
+140 http fetch 200 http://registry.npmjs.org/passport-strategy/-/passport-strategy-1.0.0.tgz
+141 silly fetchAndShaCheck shasum b5539aa8fc225a3d1ad179476ddf236b440f52e4
+142 verbose addTmpTarball /tmp/npm-7197-27fad743/registry.npmjs.org/passport-strategy/-/passport-strategy-1.0.0.tgz not in flight; adding
+143 verbose addTmpTarball already have metadata; skipping unpack for passport-strategy@1.0.0
+144 silly cache afterAdd passport-strategy@1.0.0
+145 verbose afterAdd /home/seed/.npm/passport-strategy/1.0.0/package/package.json not in flight; writing
+146 verbose afterAdd /home/seed/.npm/passport-strategy/1.0.0/package/package.json written
+147 silly fetchAndShaCheck shasum 1d408b3fdb76923b9543d96fb4c9dfd535d9cb5d
+148 verbose addTmpTarball /tmp/npm-7197-27fad743/registry.npmjs.org/pause/-/pause-0.0.1.tgz not in flight; adding
+149 verbose addTmpTarball already have metadata; skipping unpack for pause@0.0.1
+150 silly cache afterAdd pause@0.0.1
+151 verbose afterAdd /home/seed/.npm/pause/0.0.1/package/package.json not in flight; writing
+152 verbose afterAdd /home/seed/.npm/pause/0.0.1/package/package.json written
+153 silly fetchNamedPackageData fsevents
+154 silly mapToRegistry name fsevents
+155 silly mapToRegistry using default registry
+156 silly mapToRegistry registry http://registry.npmjs.org/
+157 silly mapToRegistry uri http://registry.npmjs.org/fsevents
+158 verbose request uri http://registry.npmjs.org/fsevents
+159 verbose request no auth needed
+160 info attempt registry request try #1 at 10:34:24 PM
+161 verbose etag "4F9X7UJ00LLYKKNJG6RHV1DOR"
+162 http request GET http://registry.npmjs.org/fsevents
+163 http 304 http://registry.npmjs.org/fsevents
+164 verbose headers { date: 'Sat, 28 Nov 2015 06:34:19 GMT',
+164 verbose headers   via: '1.1 varnish',
+164 verbose headers   'cache-control': 'max-age=60',
+164 verbose headers   etag: '"4F9X7UJ00LLYKKNJG6RHV1DOR"',
+164 verbose headers   age: '52',
+164 verbose headers   connection: 'keep-alive',
+164 verbose headers   'x-served-by': 'cache-sjc3131-SJC',
+164 verbose headers   'x-cache': 'HIT',
+164 verbose headers   'x-cache-hits': '3',
+164 verbose headers   'x-timer': 'S1448692459.163590,VS0,VE0',
+164 verbose headers   vary: 'Accept' }
+165 silly get cb [ 304,
+165 silly get   { date: 'Sat, 28 Nov 2015 06:34:19 GMT',
+165 silly get     via: '1.1 varnish',
+165 silly get     'cache-control': 'max-age=60',
+165 silly get     etag: '"4F9X7UJ00LLYKKNJG6RHV1DOR"',
+165 silly get     age: '52',
+165 silly get     connection: 'keep-alive',
+165 silly get     'x-served-by': 'cache-sjc3131-SJC',
+165 silly get     'x-cache': 'HIT',
+165 silly get     'x-cache-hits': '3',
+165 silly get     'x-timer': 'S1448692459.163590,VS0,VE0',
+165 silly get     vary: 'Accept' } ]
+166 verbose etag http://registry.npmjs.org/fsevents from cache
+167 verbose get saving fsevents to /home/seed/.npm/registry.npmjs.org/fsevents/.cache.json
+168 silly resolveWithNewModule fsevents@1.0.5 checking installable status
+169 warn install Couldn't install optional dependency: Unsupported
+170 verbose install Error: Unsupported
+170 verbose install     at checkPlatform (/usr/local/lib/node_modules/npm/node_modules/npm-install-checks/index.js:46:14)
+170 verbose install     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+170 verbose install     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+170 verbose install     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:18:7
+170 verbose install     at checkEngine (/usr/local/lib/node_modules/npm/node_modules/npm-install-checks/index.js:25:10)
+170 verbose install     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+170 verbose install     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+170 verbose install     at chain (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+170 verbose install     at module.exports.isInstallable (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:26:3)
+170 verbose install     at resolveWithNewModule (/usr/local/lib/node_modules/npm/lib/install/deps.js:408:12)
+171 silly loadAllDepsIntoIdealTree Finishing
+172 silly idealTree:prePrune starter-node-angular@
+172 silly idealTree:prePrune ├── abbrev@1.0.7
+172 silly idealTree:prePrune ├── accepts@1.0.7
+172 silly idealTree:prePrune ├── after@0.8.1
+172 silly idealTree:prePrune ├── amdefine@1.0.0
+172 silly idealTree:prePrune ├── ansi-green@0.1.1
+172 silly idealTree:prePrune ├── ansi-wrap@0.1.0
+172 silly idealTree:prePrune ├── anymatch@1.3.0
+172 silly idealTree:prePrune ├── argparse@1.0.3
+172 silly idealTree:prePrune ├── arr-diff@1.1.0
+172 silly idealTree:prePrune ├── arr-flatten@1.0.1
+172 silly idealTree:prePrune ├── array-slice@0.2.3
+172 silly idealTree:prePrune ├── array-unique@0.2.1
+172 silly idealTree:prePrune ├── arraybuffer.slice@0.0.6
+172 silly idealTree:prePrune ├── arrify@1.0.0
+172 silly idealTree:prePrune ├── asn1.js@2.2.1
+172 silly idealTree:prePrune ├── async-each@0.1.6
+172 silly idealTree:prePrune ├── async@0.2.10
+172 silly idealTree:prePrune ├── backo2@1.0.2
+172 silly idealTree:prePrune ├── balanced-match@0.2.1
+172 silly idealTree:prePrune ├── base64-arraybuffer@0.1.2
+172 silly idealTree:prePrune ├── base64-url@1.2.1
+172 silly idealTree:prePrune ├── base64id@0.1.0
+172 silly idealTree:prePrune ├─┬ base64url@1.0.5
+172 silly idealTree:prePrune │ ├── get-stdin@4.0.1
+172 silly idealTree:prePrune │ ├── indent-string@1.2.2
+172 silly idealTree:prePrune │ ├── meow@2.0.0
+172 silly idealTree:prePrune │ ├── minimist@1.2.0
+172 silly idealTree:prePrune │ ├── object-assign@1.0.0
+172 silly idealTree:prePrune │ └── repeating@1.1.3
+172 silly idealTree:prePrune ├── basic-auth@1.0.3
+172 silly idealTree:prePrune ├── batch@0.5.3
+172 silly idealTree:prePrune ├── benchmark@1.0.0
+172 silly idealTree:prePrune ├── better-assert@1.0.2
+172 silly idealTree:prePrune ├── binary-extensions@1.3.1
+172 silly idealTree:prePrune ├── bindings@1.2.1
+172 silly idealTree:prePrune ├── blob@0.0.4
+172 silly idealTree:prePrune ├── bluebird@2.9.26
+172 silly idealTree:prePrune ├── bn.js@2.2.0
+172 silly idealTree:prePrune ├── body-parser@1.4.3
+172 silly idealTree:prePrune ├── brace-expansion@1.1.1
+172 silly idealTree:prePrune ├── braces@1.8.2
+172 silly idealTree:prePrune ├── bson@0.2.22
+172 silly idealTree:prePrune ├── buffer-crc32@0.2.3
+172 silly idealTree:prePrune ├── buffer-equal-constant-time@1.0.1
+172 silly idealTree:prePrune ├─┬ bufferutil@1.2.1
+172 silly idealTree:prePrune │ └── nan@2.1.0
+172 silly idealTree:prePrune ├── builtin-modules@1.1.0
+172 silly idealTree:prePrune ├── bytes@1.0.0
+172 silly idealTree:prePrune ├── callsite@1.0.0
+172 silly idealTree:prePrune ├── camelcase-keys@1.0.0
+172 silly idealTree:prePrune ├── camelcase@1.2.1
+172 silly idealTree:prePrune ├── chokidar@1.2.0
+172 silly idealTree:prePrune ├── colors@1.1.2
+172 silly idealTree:prePrune ├── component-bind@1.0.0
+172 silly idealTree:prePrune ├── component-emitter@1.1.2
+172 silly idealTree:prePrune ├── component-inherit@0.0.3
+172 silly idealTree:prePrune ├── concat-map@0.0.1
+172 silly idealTree:prePrune ├─┬ concat-stream@1.4.10
+172 silly idealTree:prePrune │ └── readable-stream@1.1.13
+172 silly idealTree:prePrune ├─┬ connect@3.4.0
+172 silly idealTree:prePrune │ ├── debug@2.2.0
+172 silly idealTree:prePrune │ ├── escape-html@1.0.2
+172 silly idealTree:prePrune │ ├── finalhandler@0.4.0
+172 silly idealTree:prePrune │ ├── ms@0.7.1
+172 silly idealTree:prePrune │ └── parseurl@1.3.0
+172 silly idealTree:prePrune ├── content-type@1.0.1
+172 silly idealTree:prePrune ├─┬ cookie-parser@1.4.0
+172 silly idealTree:prePrune │ ├── cookie-signature@1.0.6
+172 silly idealTree:prePrune │ └── cookie@0.2.2
+172 silly idealTree:prePrune ├── cookie-signature@1.0.4
+172 silly idealTree:prePrune ├── cookie@0.1.2
+172 silly idealTree:prePrune ├── core-js@1.2.6
+172 silly idealTree:prePrune ├── core-util-is@1.0.1
+172 silly idealTree:prePrune ├── crc@3.3.0
+172 silly idealTree:prePrune ├── custom-event@1.0.0
+172 silly idealTree:prePrune ├── dateformat@1.0.11
+172 silly idealTree:prePrune ├── debug@1.0.2
+172 silly idealTree:prePrune ├── decamelize@1.1.1
+172 silly idealTree:prePrune ├── deep-is@0.1.3
+172 silly idealTree:prePrune ├── depd@0.3.0
+172 silly idealTree:prePrune ├── di@0.0.1
+172 silly idealTree:prePrune ├── dom-serialize@2.2.1
+172 silly idealTree:prePrune ├── ecdsa-sig-formatter@1.0.2
+172 silly idealTree:prePrune ├── ee-first@1.0.3
+172 silly idealTree:prePrune ├─┬ engine.io-client@1.5.4
+172 silly idealTree:prePrune │ ├── debug@1.0.4
+172 silly idealTree:prePrune │ └── parseuri@0.0.4
+172 silly idealTree:prePrune ├── engine.io-parser@1.2.2
+172 silly idealTree:prePrune ├─┬ engine.io@1.5.4
+172 silly idealTree:prePrune │ └── debug@1.0.3
+172 silly idealTree:prePrune ├── ent@2.2.0
+172 silly idealTree:prePrune ├── error-ex@1.3.0
+172 silly idealTree:prePrune ├── es6-promise@2.1.1
+172 silly idealTree:prePrune ├── escape-html@1.0.1
+172 silly idealTree:prePrune ├─┬ escodegen@1.7.0
+172 silly idealTree:prePrune │ ├── esprima@1.2.5
+172 silly idealTree:prePrune │ └── source-map@0.2.0
+172 silly idealTree:prePrune ├── esprima@2.5.0
+172 silly idealTree:prePrune ├── estraverse@1.9.3
+172 silly idealTree:prePrune ├── esutils@2.0.2
+172 silly idealTree:prePrune ├── eventemitter3@1.1.1
+172 silly idealTree:prePrune ├─┬ expand-braces@0.1.2
+172 silly idealTree:prePrune │ ├── braces@0.1.5
+172 silly idealTree:prePrune │ ├── expand-range@0.1.1
+172 silly idealTree:prePrune │ ├── is-number@0.1.1
+172 silly idealTree:prePrune │ └── repeat-string@0.2.2
+172 silly idealTree:prePrune ├── expand-brackets@0.1.4
+172 silly idealTree:prePrune ├── expand-range@1.8.1
+172 silly idealTree:prePrune ├─┬ express-session@1.12.1
+172 silly idealTree:prePrune │ ├── cookie-signature@1.0.6
+172 silly idealTree:prePrune │ ├── cookie@0.2.3
+172 silly idealTree:prePrune │ ├── debug@2.2.0
+172 silly idealTree:prePrune │ ├── depd@1.1.0
+172 silly idealTree:prePrune │ ├── ms@0.7.1
+172 silly idealTree:prePrune │ └── parseurl@1.3.0
+172 silly idealTree:prePrune ├─┬ express@4.5.1
+172 silly idealTree:prePrune │ ├── mime-types@1.0.2
+172 silly idealTree:prePrune │ └── type-is@1.3.2
+172 silly idealTree:prePrune ├── extend@3.0.0
+172 silly idealTree:prePrune ├── extglob@0.3.1
+172 silly idealTree:prePrune ├── fast-levenshtein@1.0.7
+172 silly idealTree:prePrune ├── filename-regex@2.0.0
+172 silly idealTree:prePrune ├─┬ fileset@0.2.1
+172 silly idealTree:prePrune │ └── minimatch@2.0.10
+172 silly idealTree:prePrune ├── fill-range@2.2.2
+172 silly idealTree:prePrune ├── finalhandler@0.0.2
+172 silly idealTree:prePrune ├── find-up@1.1.0
+172 silly idealTree:prePrune ├── finished@1.2.2
+172 silly idealTree:prePrune ├── for-in@0.1.4
+172 silly idealTree:prePrune ├── for-own@0.1.3
+172 silly idealTree:prePrune ├── fresh@0.2.2
+172 silly idealTree:prePrune ├── get-stdin@5.0.1
+172 silly idealTree:prePrune ├── glob-base@0.3.0
+172 silly idealTree:prePrune ├── glob-parent@2.0.0
+172 silly idealTree:prePrune ├── glob@5.0.15
+172 silly idealTree:prePrune ├── global@2.0.1
+172 silly idealTree:prePrune ├── graceful-fs@4.1.2
+172 silly idealTree:prePrune ├─┬ handlebars@4.0.4
+172 silly idealTree:prePrune │ ├── async@1.5.0
+172 silly idealTree:prePrune │ └── source-map@0.4.4
+172 silly idealTree:prePrune ├── has-binary-data@0.1.3
+172 silly idealTree:prePrune ├── has-binary@0.1.6
+172 silly idealTree:prePrune ├── has-cors@1.0.3
+172 silly idealTree:prePrune ├── has-flag@1.0.0
+172 silly idealTree:prePrune ├── hooks@0.2.1
+172 silly idealTree:prePrune ├── hosted-git-info@2.1.4
+172 silly idealTree:prePrune ├── http-errors@1.3.1
+172 silly idealTree:prePrune ├── http-proxy@1.12.0
+172 silly idealTree:prePrune ├── iconv-lite@0.4.3
+172 silly idealTree:prePrune ├── indent-string@2.1.0
+172 silly idealTree:prePrune ├── indexof@0.0.1
+172 silly idealTree:prePrune ├── inflight@1.0.4
+172 silly idealTree:prePrune ├── inherits@2.0.1
+172 silly idealTree:prePrune ├── ipaddr.js@0.1.2
+172 silly idealTree:prePrune ├── is-absolute@0.1.7
+172 silly idealTree:prePrune ├── is-arrayish@0.2.1
+172 silly idealTree:prePrune ├── is-binary-path@1.0.1
+172 silly idealTree:prePrune ├── is-buffer@1.1.0
+172 silly idealTree:prePrune ├── is-builtin-module@1.0.0
+172 silly idealTree:prePrune ├── is-dotfile@1.0.2
+172 silly idealTree:prePrune ├── is-equal-shallow@0.1.3
+172 silly idealTree:prePrune ├── is-extendable@0.1.1
+172 silly idealTree:prePrune ├── is-extglob@1.0.0
+172 silly idealTree:prePrune ├── is-finite@1.0.1
+172 silly idealTree:prePrune ├── is-glob@2.0.1
+172 silly idealTree:prePrune ├── is-number@1.1.2
+172 silly idealTree:prePrune ├── is-primitive@2.0.0
+172 silly idealTree:prePrune ├── is-relative@0.1.3
+172 silly idealTree:prePrune ├── is-utf8@0.2.0
+172 silly idealTree:prePrune ├── isarray@0.0.1
+172 silly idealTree:prePrune ├── isobject@1.0.2
+172 silly idealTree:prePrune ├─┬ istanbul@0.4.0
+172 silly idealTree:prePrune │ ├── async@1.5.0
+172 silly idealTree:prePrune │ └── wordwrap@1.0.0
+172 silly idealTree:prePrune ├── jasmine-core@2.3.4
+172 silly idealTree:prePrune ├─┬ js-yaml@3.4.3
+172 silly idealTree:prePrune │ └── esprima@2.7.0
+172 silly idealTree:prePrune ├── json3@3.2.6
+172 silly idealTree:prePrune ├─┬ jsonwebtoken@5.4.1
+172 silly idealTree:prePrune │ └── ms@0.7.1
+172 silly idealTree:prePrune ├─┬ jwa@1.1.1
+172 silly idealTree:prePrune │ └── base64url@0.0.6
+172 silly idealTree:prePrune ├── jws@3.1.0
+172 silly idealTree:prePrune ├── karma-coverage@0.5.3
+172 silly idealTree:prePrune ├── karma-jasmine@0.3.6
+172 silly idealTree:prePrune ├─┬ karma@0.13.15
+172 silly idealTree:prePrune │ ├── bluebird@2.10.2
+172 silly idealTree:prePrune │ ├── body-parser@1.14.1
+172 silly idealTree:prePrune │ ├── bytes@2.1.0
+172 silly idealTree:prePrune │ ├── debug@2.2.0
+172 silly idealTree:prePrune │ ├── depd@1.1.0
+172 silly idealTree:prePrune │ ├── iconv-lite@0.4.12
+172 silly idealTree:prePrune │ ├── media-typer@0.3.0
+172 silly idealTree:prePrune │ ├── mime-types@2.1.7
+172 silly idealTree:prePrune │ ├── mime@1.3.4
+172 silly idealTree:prePrune │ ├── ms@0.7.1
+172 silly idealTree:prePrune │ ├── qs@5.1.0
+172 silly idealTree:prePrune │ ├── raw-body@2.1.4
+172 silly idealTree:prePrune │ └── type-is@1.6.9
+172 silly idealTree:prePrune ├── kerberos@0.0.11
+172 silly idealTree:prePrune ├── kind-of@2.0.1
+172 silly idealTree:prePrune ├── lazy-cache@0.2.4
+172 silly idealTree:prePrune ├── levn@0.2.5
+172 silly idealTree:prePrune ├── load-json-file@1.1.0
+172 silly idealTree:prePrune ├── lodash._baseflatten@3.1.4
+172 silly idealTree:prePrune ├── lodash._isiterateecall@3.0.9
+172 silly idealTree:prePrune ├── lodash.flatten@3.0.2
+172 silly idealTree:prePrune ├── lodash.isarguments@3.0.4
+172 silly idealTree:prePrune ├── lodash.isarray@3.0.4
+172 silly idealTree:prePrune ├── lodash@3.10.1
+172 silly idealTree:prePrune ├─┬ log4js@0.6.27
+172 silly idealTree:prePrune │ └── readable-stream@1.0.33
+172 silly idealTree:prePrune ├── loud-rejection@1.2.0
+172 silly idealTree:prePrune ├── lru-cache@2.2.4
+172 silly idealTree:prePrune ├── map-obj@1.0.1
+172 silly idealTree:prePrune ├── media-typer@0.2.0
+172 silly idealTree:prePrune ├─┬ meow@3.5.0
+172 silly idealTree:prePrune │ └── minimist@1.2.0
+172 silly idealTree:prePrune ├── merge-descriptors@0.0.2
+172 silly idealTree:prePrune ├── method-override@2.0.2
+172 silly idealTree:prePrune ├── methods@1.0.1
+172 silly idealTree:prePrune ├── micromatch@2.3.2
+172 silly idealTree:prePrune ├── mime-db@1.19.0
+172 silly idealTree:prePrune ├── mime-types@1.0.0
+172 silly idealTree:prePrune ├── mime@1.2.11
+172 silly idealTree:prePrune ├── minimalistic-assert@1.0.0
+172 silly idealTree:prePrune ├── minimatch@3.0.0
+172 silly idealTree:prePrune ├── minimist@0.0.10
+172 silly idealTree:prePrune ├─┬ mkdirp@0.5.1
+172 silly idealTree:prePrune │ └── minimist@0.0.8
+172 silly idealTree:prePrune ├─┬ mongodb-core@1.2.24
+172 silly idealTree:prePrune │ └── bson@0.4.19
+172 silly idealTree:prePrune ├─┬ mongodb@2.0.49
+172 silly idealTree:prePrune │ └── readable-stream@1.0.31
+172 silly idealTree:prePrune ├─┬ mongoose@3.8.37
+172 silly idealTree:prePrune │ ├── mongodb@1.4.38
+172 silly idealTree:prePrune │ └── ms@0.1.0
+172 silly idealTree:prePrune ├─┬ morgan@1.6.1
+172 silly idealTree:prePrune │ ├── debug@2.2.0
+172 silly idealTree:prePrune │ ├── depd@1.0.1
+172 silly idealTree:prePrune │ └── ms@0.7.1
+172 silly idealTree:prePrune ├── mpath@0.1.1
+172 silly idealTree:prePrune ├── mpromise@0.4.3
+172 silly idealTree:prePrune ├─┬ mquery@1.6.1
+172 silly idealTree:prePrune │ ├── debug@2.2.0
+172 silly idealTree:prePrune │ └── ms@0.7.1
+172 silly idealTree:prePrune ├── ms@0.6.2
+172 silly idealTree:prePrune ├── muri@1.1.0
+172 silly idealTree:prePrune ├── nan@1.8.4
+172 silly idealTree:prePrune ├── negotiator@0.4.7
+172 silly idealTree:prePrune ├── nopt@3.0.6
+172 silly idealTree:prePrune ├── normalize-package-data@2.3.5
+172 silly idealTree:prePrune ├── normalize-path@2.0.0
+172 silly idealTree:prePrune ├── number-is-nan@1.0.0
+172 silly idealTree:prePrune ├── object-assign@4.0.1
+172 silly idealTree:prePrune ├── object-component@0.0.3
+172 silly idealTree:prePrune ├── object-keys@1.0.1
+172 silly idealTree:prePrune ├── object.omit@2.0.0
+172 silly idealTree:prePrune ├─┬ on-finished@2.3.0
+172 silly idealTree:prePrune │ └── ee-first@1.1.1
+172 silly idealTree:prePrune ├── on-headers@1.0.1
+172 silly idealTree:prePrune ├── once@1.3.2
+172 silly idealTree:prePrune ├── optimist@0.6.1
+172 silly idealTree:prePrune ├── optionator@0.5.0
+172 silly idealTree:prePrune ├── options@0.0.6
+172 silly idealTree:prePrune ├── parse-glob@3.0.4
+172 silly idealTree:prePrune ├── parse-json@2.2.0
+172 silly idealTree:prePrune ├── parsejson@0.0.1
+172 silly idealTree:prePrune ├── parseqs@0.0.2
+172 silly idealTree:prePrune ├── parseuri@0.0.2
+172 silly idealTree:prePrune ├── parseurl@1.0.1
+172 silly idealTree:prePrune ├── passport-strategy@1.0.0
+172 silly idealTree:prePrune ├── passport@0.3.2
+172 silly idealTree:prePrune ├── path-exists@2.1.0
+172 silly idealTree:prePrune ├── path-is-absolute@1.0.0
+172 silly idealTree:prePrune ├── path-to-regexp@0.1.2
+172 silly idealTree:prePrune ├── path-type@1.1.0
+172 silly idealTree:prePrune ├── pause@0.0.1
+172 silly idealTree:prePrune ├── pify@2.3.0
+172 silly idealTree:prePrune ├── pinkie-promise@2.0.0
+172 silly idealTree:prePrune ├── pinkie@2.0.0
+172 silly idealTree:prePrune ├── prelude-ls@1.1.2
+172 silly idealTree:prePrune ├── preserve@0.2.0
+172 silly idealTree:prePrune ├── process-nextick-args@1.0.3
+172 silly idealTree:prePrune ├── proxy-addr@1.0.1
+172 silly idealTree:prePrune ├── qs@0.6.6
+172 silly idealTree:prePrune ├─┬ randomatic@1.1.3
+172 silly idealTree:prePrune │ └─┬ is-number@2.0.2
+172 silly idealTree:prePrune │   └── kind-of@1.1.0
+172 silly idealTree:prePrune ├── range-parser@1.0.0
+172 silly idealTree:prePrune ├── raw-body@1.2.2
+172 silly idealTree:prePrune ├── read-pkg-up@1.0.1
+172 silly idealTree:prePrune ├── read-pkg@1.1.0
+172 silly idealTree:prePrune ├── readable-stream@2.0.4
+172 silly idealTree:prePrune ├─┬ readdirp@2.0.0
+172 silly idealTree:prePrune │ └── minimatch@2.0.10
+172 silly idealTree:prePrune ├── redent@1.0.0
+172 silly idealTree:prePrune ├── regex-cache@0.4.2
+172 silly idealTree:prePrune ├── regexp-clone@0.0.1
+172 silly idealTree:prePrune ├── repeat-element@1.1.2
+172 silly idealTree:prePrune ├── repeat-string@1.5.2
+172 silly idealTree:prePrune ├── repeating@2.0.0
+172 silly idealTree:prePrune ├── requires-port@0.0.1
+172 silly idealTree:prePrune ├── resolve@1.1.6
+172 silly idealTree:prePrune ├── rimraf@2.4.3
+172 silly idealTree:prePrune ├── semver@4.3.6
+172 silly idealTree:prePrune ├── send@0.5.0
+172 silly idealTree:prePrune ├─┬ serve-static@1.3.2
+172 silly idealTree:prePrune │ ├── debug@1.0.3
+172 silly idealTree:prePrune │ ├── parseurl@1.1.3
+172 silly idealTree:prePrune │ └── send@0.6.0
+172 silly idealTree:prePrune ├── signal-exit@2.1.2
+172 silly idealTree:prePrune ├── sliced@0.0.5
+172 silly idealTree:prePrune ├─┬ socket.io-adapter@0.3.1
+172 silly idealTree:prePrune │ └─┬ socket.io-parser@2.2.2
+172 silly idealTree:prePrune │   └── debug@0.7.4
+172 silly idealTree:prePrune ├─┬ socket.io-client@1.3.7
+172 silly idealTree:prePrune │ └── debug@0.7.4
+172 silly idealTree:prePrune ├─┬ socket.io-parser@2.2.4
+172 silly idealTree:prePrune │ └── debug@0.7.4
+172 silly idealTree:prePrune ├─┬ socket.io@1.3.7
+172 silly idealTree:prePrune │ └── debug@2.1.0
+172 silly idealTree:prePrune ├── source-map@0.5.3
+172 silly idealTree:prePrune ├── spdx-correct@1.0.2
+172 silly idealTree:prePrune ├── spdx-exceptions@1.0.4
+172 silly idealTree:prePrune ├── spdx-expression-parse@1.0.1
+172 silly idealTree:prePrune ├── spdx-license-ids@1.1.0
+172 silly idealTree:prePrune ├── sprintf-js@1.0.3
+172 silly idealTree:prePrune ├── statuses@1.2.1
+172 silly idealTree:prePrune ├── string_decoder@0.10.31
+172 silly idealTree:prePrune ├── strip-bom@2.0.0
+172 silly idealTree:prePrune ├─┬ strip-indent@1.0.1
+172 silly idealTree:prePrune │ └── get-stdin@4.0.1
+172 silly idealTree:prePrune ├── success-symbol@0.1.0
+172 silly idealTree:prePrune ├── supports-color@3.1.2
+172 silly idealTree:prePrune ├── to-array@0.1.3
+172 silly idealTree:prePrune ├── trim-newlines@1.0.0
+172 silly idealTree:prePrune ├── type-check@0.3.1
+172 silly idealTree:prePrune ├── type-is@1.3.1
+172 silly idealTree:prePrune ├── typedarray@0.0.6
+172 silly idealTree:prePrune ├─┬ uglify-js@2.4.24
+172 silly idealTree:prePrune │ └── source-map@0.1.34
+172 silly idealTree:prePrune ├── uglify-to-browserify@1.0.2
+172 silly idealTree:prePrune ├── uid-safe@2.0.0
+172 silly idealTree:prePrune ├── ultron@1.0.2
+172 silly idealTree:prePrune ├── underscore@1.8.2
+172 silly idealTree:prePrune ├── unpipe@1.0.0
+172 silly idealTree:prePrune ├── useragent@2.1.7
+172 silly idealTree:prePrune ├─┬ utf-8-validate@1.2.1
+172 silly idealTree:prePrune │ └── nan@2.1.0
+172 silly idealTree:prePrune ├── utf8@2.1.0
+172 silly idealTree:prePrune ├── util-deprecate@1.0.2
+172 silly idealTree:prePrune ├── utils-merge@1.0.0
+172 silly idealTree:prePrune ├── validate-npm-package-license@3.0.1
+172 silly idealTree:prePrune ├── vary@0.1.0
+172 silly idealTree:prePrune ├── void-elements@2.0.1
+172 silly idealTree:prePrune ├── which@1.2.0
+172 silly idealTree:prePrune ├── window-size@0.1.0
+172 silly idealTree:prePrune ├── wordwrap@0.0.3
+172 silly idealTree:prePrune ├── wrappy@1.0.1
+172 silly idealTree:prePrune ├── ws@0.8.0
+172 silly idealTree:prePrune ├── xmlhttprequest@1.5.0
+172 silly idealTree:prePrune └─┬ yargs@3.5.4
+172 silly idealTree:prePrune   └── wordwrap@0.0.2
+173 silly loadIdealTree Finishing
+174 silly currentTree starter-node-angular@
+174 silly currentTree ├── abbrev@1.0.7
+174 silly currentTree ├── accepts@1.0.7
+174 silly currentTree ├── after@0.8.1
+174 silly currentTree ├── amdefine@1.0.0
+174 silly currentTree ├── ansi-green@0.1.1
+174 silly currentTree ├── ansi-wrap@0.1.0
+174 silly currentTree ├── anymatch@1.3.0
+174 silly currentTree ├── argparse@1.0.3
+174 silly currentTree ├── arr-diff@1.1.0
+174 silly currentTree ├── arr-flatten@1.0.1
+174 silly currentTree ├── array-slice@0.2.3
+174 silly currentTree ├── array-unique@0.2.1
+174 silly currentTree ├── arraybuffer.slice@0.0.6
+174 silly currentTree ├── arrify@1.0.0
+174 silly currentTree ├── asn1.js@2.2.1
+174 silly currentTree ├── async-each@0.1.6
+174 silly currentTree ├── async@0.2.10
+174 silly currentTree ├── backo2@1.0.2
+174 silly currentTree ├── balanced-match@0.2.1
+174 silly currentTree ├── base64-arraybuffer@0.1.2
+174 silly currentTree ├── base64-url@1.2.1
+174 silly currentTree ├── base64id@0.1.0
+174 silly currentTree ├─┬ base64url@1.0.5
+174 silly currentTree │ ├── get-stdin@4.0.1
+174 silly currentTree │ ├── indent-string@1.2.2
+174 silly currentTree │ ├── meow@2.0.0
+174 silly currentTree │ ├── minimist@1.2.0
+174 silly currentTree │ ├── object-assign@1.0.0
+174 silly currentTree │ └── repeating@1.1.3
+174 silly currentTree ├── basic-auth@1.0.3
+174 silly currentTree ├── batch@0.5.3
+174 silly currentTree ├── benchmark@1.0.0
+174 silly currentTree ├── better-assert@1.0.2
+174 silly currentTree ├── binary-extensions@1.3.1
+174 silly currentTree ├── bindings@1.2.1
+174 silly currentTree ├── blob@0.0.4
+174 silly currentTree ├── bluebird@2.9.26
+174 silly currentTree ├── bn.js@2.2.0
+174 silly currentTree ├── body-parser@1.4.3
+174 silly currentTree ├── brace-expansion@1.1.1
+174 silly currentTree ├── braces@1.8.2
+174 silly currentTree ├── bson@0.2.22
+174 silly currentTree ├── buffer-crc32@0.2.3
+174 silly currentTree ├── buffer-equal-constant-time@1.0.1
+174 silly currentTree ├─┬ bufferutil@1.2.1
+174 silly currentTree │ └── nan@2.1.0
+174 silly currentTree ├── builtin-modules@1.1.0
+174 silly currentTree ├── bytes@1.0.0
+174 silly currentTree ├── callsite@1.0.0
+174 silly currentTree ├── camelcase-keys@1.0.0
+174 silly currentTree ├── camelcase@1.2.1
+174 silly currentTree ├── chokidar@1.2.0
+174 silly currentTree ├── colors@1.1.2
+174 silly currentTree ├── component-bind@1.0.0
+174 silly currentTree ├── component-emitter@1.1.2
+174 silly currentTree ├── component-inherit@0.0.3
+174 silly currentTree ├── concat-map@0.0.1
+174 silly currentTree ├─┬ concat-stream@1.4.10
+174 silly currentTree │ └── readable-stream@1.1.13
+174 silly currentTree ├─┬ connect@3.4.0
+174 silly currentTree │ ├── debug@2.2.0
+174 silly currentTree │ ├── escape-html@1.0.2
+174 silly currentTree │ ├── finalhandler@0.4.0
+174 silly currentTree │ ├── ms@0.7.1
+174 silly currentTree │ └── parseurl@1.3.0
+174 silly currentTree ├── content-type@1.0.1
+174 silly currentTree ├─┬ cookie-parser@1.4.0
+174 silly currentTree │ ├── cookie-signature@1.0.6
+174 silly currentTree │ └── cookie@0.2.2
+174 silly currentTree ├── cookie-signature@1.0.4
+174 silly currentTree ├── cookie@0.1.2
+174 silly currentTree ├── core-js@1.2.6
+174 silly currentTree ├── core-util-is@1.0.1
+174 silly currentTree ├── crc@3.3.0
+174 silly currentTree ├── custom-event@1.0.0
+174 silly currentTree ├── dateformat@1.0.11
+174 silly currentTree ├── debug@1.0.2
+174 silly currentTree ├── decamelize@1.1.1
+174 silly currentTree ├── deep-is@0.1.3
+174 silly currentTree ├── depd@0.3.0
+174 silly currentTree ├── di@0.0.1
+174 silly currentTree ├── dom-serialize@2.2.1
+174 silly currentTree ├── ecdsa-sig-formatter@1.0.2
+174 silly currentTree ├── ee-first@1.0.3
+174 silly currentTree ├─┬ engine.io-client@1.5.4
+174 silly currentTree │ ├── debug@1.0.4
+174 silly currentTree │ └── parseuri@0.0.4
+174 silly currentTree ├── engine.io-parser@1.2.2
+174 silly currentTree ├─┬ engine.io@1.5.4
+174 silly currentTree │ └── debug@1.0.3
+174 silly currentTree ├── ent@2.2.0
+174 silly currentTree ├── error-ex@1.3.0
+174 silly currentTree ├── es6-promise@2.1.1
+174 silly currentTree ├── escape-html@1.0.1
+174 silly currentTree ├─┬ escodegen@1.7.0
+174 silly currentTree │ ├── esprima@1.2.5
+174 silly currentTree │ └── source-map@0.2.0
+174 silly currentTree ├── esprima@2.5.0
+174 silly currentTree ├── estraverse@1.9.3
+174 silly currentTree ├── esutils@2.0.2
+174 silly currentTree ├── eventemitter3@1.1.1
+174 silly currentTree ├─┬ expand-braces@0.1.2
+174 silly currentTree │ ├── braces@0.1.5
+174 silly currentTree │ ├── expand-range@0.1.1
+174 silly currentTree │ ├── is-number@0.1.1
+174 silly currentTree │ └── repeat-string@0.2.2
+174 silly currentTree ├── expand-brackets@0.1.4
+174 silly currentTree ├── expand-range@1.8.1
+174 silly currentTree ├─┬ express-session@1.12.1
+174 silly currentTree │ ├── cookie-signature@1.0.6
+174 silly currentTree │ ├── cookie@0.2.3
+174 silly currentTree │ ├── debug@2.2.0
+174 silly currentTree │ ├── depd@1.1.0
+174 silly currentTree │ ├── ms@0.7.1
+174 silly currentTree │ └── parseurl@1.3.0
+174 silly currentTree ├─┬ express@4.5.1
+174 silly currentTree │ ├── mime-types@1.0.2
+174 silly currentTree │ └── type-is@1.3.2
+174 silly currentTree ├── extend@3.0.0
+174 silly currentTree ├── extglob@0.3.1
+174 silly currentTree ├── fast-levenshtein@1.0.7
+174 silly currentTree ├── filename-regex@2.0.0
+174 silly currentTree ├─┬ fileset@0.2.1
+174 silly currentTree │ └── minimatch@2.0.10
+174 silly currentTree ├── fill-range@2.2.2
+174 silly currentTree ├── finalhandler@0.0.2
+174 silly currentTree ├── find-up@1.1.0
+174 silly currentTree ├── finished@1.2.2
+174 silly currentTree ├── for-in@0.1.4
+174 silly currentTree ├── for-own@0.1.3
+174 silly currentTree ├── fresh@0.2.2
+174 silly currentTree ├── get-stdin@5.0.1
+174 silly currentTree ├── glob-base@0.3.0
+174 silly currentTree ├── glob-parent@2.0.0
+174 silly currentTree ├── glob@5.0.15
+174 silly currentTree ├── global@2.0.1
+174 silly currentTree ├── graceful-fs@4.1.2
+174 silly currentTree ├─┬ handlebars@4.0.4
+174 silly currentTree │ ├── async@1.5.0
+174 silly currentTree │ └── source-map@0.4.4
+174 silly currentTree ├── has-binary-data@0.1.3
+174 silly currentTree ├── has-binary@0.1.6
+174 silly currentTree ├── has-cors@1.0.3
+174 silly currentTree ├── has-flag@1.0.0
+174 silly currentTree ├── hooks@0.2.1
+174 silly currentTree ├── hosted-git-info@2.1.4
+174 silly currentTree ├── http-errors@1.3.1
+174 silly currentTree ├── http-proxy@1.12.0
+174 silly currentTree ├── iconv-lite@0.4.3
+174 silly currentTree ├── indent-string@2.1.0
+174 silly currentTree ├── indexof@0.0.1
+174 silly currentTree ├── inflight@1.0.4
+174 silly currentTree ├── inherits@2.0.1
+174 silly currentTree ├── ipaddr.js@0.1.2
+174 silly currentTree ├── is-absolute@0.1.7
+174 silly currentTree ├── is-arrayish@0.2.1
+174 silly currentTree ├── is-binary-path@1.0.1
+174 silly currentTree ├── is-buffer@1.1.0
+174 silly currentTree ├── is-builtin-module@1.0.0
+174 silly currentTree ├── is-dotfile@1.0.2
+174 silly currentTree ├── is-equal-shallow@0.1.3
+174 silly currentTree ├── is-extendable@0.1.1
+174 silly currentTree ├── is-extglob@1.0.0
+174 silly currentTree ├── is-finite@1.0.1
+174 silly currentTree ├── is-glob@2.0.1
+174 silly currentTree ├── is-number@1.1.2
+174 silly currentTree ├── is-primitive@2.0.0
+174 silly currentTree ├── is-relative@0.1.3
+174 silly currentTree ├── is-utf8@0.2.0
+174 silly currentTree ├── isarray@0.0.1
+174 silly currentTree ├── isobject@1.0.2
+174 silly currentTree ├─┬ istanbul@0.4.0
+174 silly currentTree │ ├── async@1.5.0
+174 silly currentTree │ └── wordwrap@1.0.0
+174 silly currentTree ├── jasmine-core@2.3.4
+174 silly currentTree ├─┬ js-yaml@3.4.3
+174 silly currentTree │ └── esprima@2.7.0
+174 silly currentTree ├── json3@3.2.6
+174 silly currentTree ├─┬ jsonwebtoken@5.4.1
+174 silly currentTree │ └── ms@0.7.1
+174 silly currentTree ├─┬ jwa@1.1.1
+174 silly currentTree │ └── base64url@0.0.6
+174 silly currentTree ├── jws@3.1.0
+174 silly currentTree ├── karma-coverage@0.5.3
+174 silly currentTree ├── karma-jasmine@0.3.6
+174 silly currentTree ├─┬ karma@0.13.15
+174 silly currentTree │ ├── bluebird@2.10.2
+174 silly currentTree │ ├── body-parser@1.14.1
+174 silly currentTree │ ├── bytes@2.1.0
+174 silly currentTree │ ├── debug@2.2.0
+174 silly currentTree │ ├── depd@1.1.0
+174 silly currentTree │ ├── iconv-lite@0.4.12
+174 silly currentTree │ ├── media-typer@0.3.0
+174 silly currentTree │ ├── mime-types@2.1.7
+174 silly currentTree │ ├── mime@1.3.4
+174 silly currentTree │ ├── ms@0.7.1
+174 silly currentTree │ ├── qs@5.1.0
+174 silly currentTree │ ├── raw-body@2.1.4
+174 silly currentTree │ └── type-is@1.6.9
+174 silly currentTree ├── kerberos@0.0.11
+174 silly currentTree ├── kind-of@2.0.1
+174 silly currentTree ├── lazy-cache@0.2.4
+174 silly currentTree ├── levn@0.2.5
+174 silly currentTree ├── load-json-file@1.1.0
+174 silly currentTree ├── lodash._baseflatten@3.1.4
+174 silly currentTree ├── lodash._isiterateecall@3.0.9
+174 silly currentTree ├── lodash.flatten@3.0.2
+174 silly currentTree ├── lodash.isarguments@3.0.4
+174 silly currentTree ├── lodash.isarray@3.0.4
+174 silly currentTree ├── lodash@3.10.1
+174 silly currentTree ├─┬ log4js@0.6.27
+174 silly currentTree │ └── readable-stream@1.0.33
+174 silly currentTree ├── loud-rejection@1.2.0
+174 silly currentTree ├── lru-cache@2.2.4
+174 silly currentTree ├── map-obj@1.0.1
+174 silly currentTree ├── media-typer@0.2.0
+174 silly currentTree ├─┬ meow@3.5.0
+174 silly currentTree │ └── minimist@1.2.0
+174 silly currentTree ├── merge-descriptors@0.0.2
+174 silly currentTree ├── method-override@2.0.2
+174 silly currentTree ├── methods@1.0.1
+174 silly currentTree ├── micromatch@2.3.2
+174 silly currentTree ├── mime-db@1.19.0
+174 silly currentTree ├── mime-types@1.0.0
+174 silly currentTree ├── mime@1.2.11
+174 silly currentTree ├── minimalistic-assert@1.0.0
+174 silly currentTree ├── minimatch@3.0.0
+174 silly currentTree ├── minimist@0.0.10
+174 silly currentTree ├─┬ mkdirp@0.5.1
+174 silly currentTree │ └── minimist@0.0.8
+174 silly currentTree ├─┬ mongodb-core@1.2.24
+174 silly currentTree │ └── bson@0.4.19
+174 silly currentTree ├─┬ mongodb@2.0.49
+174 silly currentTree │ └── readable-stream@1.0.31
+174 silly currentTree ├─┬ mongoose@3.8.37
+174 silly currentTree │ ├── mongodb@1.4.38
+174 silly currentTree │ └── ms@0.1.0
+174 silly currentTree ├─┬ morgan@1.6.1
+174 silly currentTree │ ├── debug@2.2.0
+174 silly currentTree │ ├── depd@1.0.1
+174 silly currentTree │ └── ms@0.7.1
+174 silly currentTree ├── mpath@0.1.1
+174 silly currentTree ├── mpromise@0.4.3
+174 silly currentTree ├─┬ mquery@1.6.1
+174 silly currentTree │ ├── debug@2.2.0
+174 silly currentTree │ └── ms@0.7.1
+174 silly currentTree ├── ms@0.6.2
+174 silly currentTree ├── muri@1.1.0
+174 silly currentTree ├── nan@1.8.4
+174 silly currentTree ├── negotiator@0.4.7
+174 silly currentTree ├── nopt@3.0.6
+174 silly currentTree ├── normalize-package-data@2.3.5
+174 silly currentTree ├── normalize-path@2.0.0
+174 silly currentTree ├── number-is-nan@1.0.0
+174 silly currentTree ├── object-assign@4.0.1
+174 silly currentTree ├── object-component@0.0.3
+174 silly currentTree ├── object-keys@1.0.1
+174 silly currentTree ├── object.omit@2.0.0
+174 silly currentTree ├─┬ on-finished@2.3.0
+174 silly currentTree │ └── ee-first@1.1.1
+174 silly currentTree ├── on-headers@1.0.1
+174 silly currentTree ├── once@1.3.2
+174 silly currentTree ├── optimist@0.6.1
+174 silly currentTree ├── optionator@0.5.0
+174 silly currentTree ├── options@0.0.6
+174 silly currentTree ├── parse-glob@3.0.4
+174 silly currentTree ├── parse-json@2.2.0
+174 silly currentTree ├── parsejson@0.0.1
+174 silly currentTree ├── parseqs@0.0.2
+174 silly currentTree ├── parseuri@0.0.2
+174 silly currentTree ├── parseurl@1.0.1
+174 silly currentTree ├── path-exists@2.1.0
+174 silly currentTree ├── path-is-absolute@1.0.0
+174 silly currentTree ├── path-to-regexp@0.1.2
+174 silly currentTree ├── path-type@1.1.0
+174 silly currentTree ├── pify@2.3.0
+174 silly currentTree ├── pinkie-promise@2.0.0
+174 silly currentTree ├── pinkie@2.0.0
+174 silly currentTree ├── prelude-ls@1.1.2
+174 silly currentTree ├── preserve@0.2.0
+174 silly currentTree ├── process-nextick-args@1.0.3
+174 silly currentTree ├── proxy-addr@1.0.1
+174 silly currentTree ├── qs@0.6.6
+174 silly currentTree ├─┬ randomatic@1.1.3
+174 silly currentTree │ └─┬ is-number@2.0.2
+174 silly currentTree │   └── kind-of@1.1.0
+174 silly currentTree ├── range-parser@1.0.0
+174 silly currentTree ├── raw-body@1.2.2
+174 silly currentTree ├── read-pkg-up@1.0.1
+174 silly currentTree ├── read-pkg@1.1.0
+174 silly currentTree ├── readable-stream@2.0.4
+174 silly currentTree ├─┬ readdirp@2.0.0
+174 silly currentTree │ └── minimatch@2.0.10
+174 silly currentTree ├── redent@1.0.0
+174 silly currentTree ├── regex-cache@0.4.2
+174 silly currentTree ├── regexp-clone@0.0.1
+174 silly currentTree ├── repeat-element@1.1.2
+174 silly currentTree ├── repeat-string@1.5.2
+174 silly currentTree ├── repeating@2.0.0
+174 silly currentTree ├── requires-port@0.0.1
+174 silly currentTree ├── resolve@1.1.6
+174 silly currentTree ├── rimraf@2.4.3
+174 silly currentTree ├── semver@4.3.6
+174 silly currentTree ├── send@0.5.0
+174 silly currentTree ├─┬ serve-static@1.3.2
+174 silly currentTree │ ├── debug@1.0.3
+174 silly currentTree │ ├── parseurl@1.1.3
+174 silly currentTree │ └── send@0.6.0
+174 silly currentTree ├── signal-exit@2.1.2
+174 silly currentTree ├── sliced@0.0.5
+174 silly currentTree ├─┬ socket.io-adapter@0.3.1
+174 silly currentTree │ └─┬ socket.io-parser@2.2.2
+174 silly currentTree │   └── debug@0.7.4
+174 silly currentTree ├─┬ socket.io-client@1.3.7
+174 silly currentTree │ └── debug@0.7.4
+174 silly currentTree ├─┬ socket.io-parser@2.2.4
+174 silly currentTree │ └── debug@0.7.4
+174 silly currentTree ├─┬ socket.io@1.3.7
+174 silly currentTree │ └── debug@2.1.0
+174 silly currentTree ├── source-map@0.5.3
+174 silly currentTree ├── spdx-correct@1.0.2
+174 silly currentTree ├── spdx-exceptions@1.0.4
+174 silly currentTree ├── spdx-expression-parse@1.0.1
+174 silly currentTree ├── spdx-license-ids@1.1.0
+174 silly currentTree ├── sprintf-js@1.0.3
+174 silly currentTree ├── statuses@1.2.1
+174 silly currentTree ├── string_decoder@0.10.31
+174 silly currentTree ├── strip-bom@2.0.0
+174 silly currentTree ├─┬ strip-indent@1.0.1
+174 silly currentTree │ └── get-stdin@4.0.1
+174 silly currentTree ├── success-symbol@0.1.0
+174 silly currentTree ├── supports-color@3.1.2
+174 silly currentTree ├── to-array@0.1.3
+174 silly currentTree ├── trim-newlines@1.0.0
+174 silly currentTree ├── type-check@0.3.1
+174 silly currentTree ├── type-is@1.3.1
+174 silly currentTree ├── typedarray@0.0.6
+174 silly currentTree ├─┬ uglify-js@2.4.24
+174 silly currentTree │ └── source-map@0.1.34
+174 silly currentTree ├── uglify-to-browserify@1.0.2
+174 silly currentTree ├── uid-safe@2.0.0
+174 silly currentTree ├── ultron@1.0.2
+174 silly currentTree ├── underscore@1.8.2
+174 silly currentTree ├── unpipe@1.0.0
+174 silly currentTree ├── useragent@2.1.7
+174 silly currentTree ├─┬ utf-8-validate@1.2.1
+174 silly currentTree │ └── nan@2.1.0
+174 silly currentTree ├── utf8@2.1.0
+174 silly currentTree ├── util-deprecate@1.0.2
+174 silly currentTree ├── utils-merge@1.0.0
+174 silly currentTree ├── validate-npm-package-license@3.0.1
+174 silly currentTree ├── vary@0.1.0
+174 silly currentTree ├── void-elements@2.0.1
+174 silly currentTree ├── which@1.2.0
+174 silly currentTree ├── window-size@0.1.0
+174 silly currentTree ├── wordwrap@0.0.3
+174 silly currentTree ├── wrappy@1.0.1
+174 silly currentTree ├── ws@0.8.0
+174 silly currentTree ├── xmlhttprequest@1.5.0
+174 silly currentTree └─┬ yargs@3.5.4
+174 silly currentTree   └── wordwrap@0.0.2
+175 silly idealTree starter-node-angular@
+175 silly idealTree ├── abbrev@1.0.7
+175 silly idealTree ├── accepts@1.0.7
+175 silly idealTree ├── after@0.8.1
+175 silly idealTree ├── amdefine@1.0.0
+175 silly idealTree ├── ansi-green@0.1.1
+175 silly idealTree ├── ansi-wrap@0.1.0
+175 silly idealTree ├── anymatch@1.3.0
+175 silly idealTree ├── argparse@1.0.3
+175 silly idealTree ├── arr-diff@1.1.0
+175 silly idealTree ├── arr-flatten@1.0.1
+175 silly idealTree ├── array-slice@0.2.3
+175 silly idealTree ├── array-unique@0.2.1
+175 silly idealTree ├── arraybuffer.slice@0.0.6
+175 silly idealTree ├── arrify@1.0.0
+175 silly idealTree ├── asn1.js@2.2.1
+175 silly idealTree ├── async-each@0.1.6
+175 silly idealTree ├── async@0.2.10
+175 silly idealTree ├── backo2@1.0.2
+175 silly idealTree ├── balanced-match@0.2.1
+175 silly idealTree ├── base64-arraybuffer@0.1.2
+175 silly idealTree ├── base64-url@1.2.1
+175 silly idealTree ├── base64id@0.1.0
+175 silly idealTree ├─┬ base64url@1.0.5
+175 silly idealTree │ ├── get-stdin@4.0.1
+175 silly idealTree │ ├── indent-string@1.2.2
+175 silly idealTree │ ├── meow@2.0.0
+175 silly idealTree │ ├── minimist@1.2.0
+175 silly idealTree │ ├── object-assign@1.0.0
+175 silly idealTree │ └── repeating@1.1.3
+175 silly idealTree ├── basic-auth@1.0.3
+175 silly idealTree ├── batch@0.5.3
+175 silly idealTree ├── benchmark@1.0.0
+175 silly idealTree ├── better-assert@1.0.2
+175 silly idealTree ├── binary-extensions@1.3.1
+175 silly idealTree ├── bindings@1.2.1
+175 silly idealTree ├── blob@0.0.4
+175 silly idealTree ├── bluebird@2.9.26
+175 silly idealTree ├── bn.js@2.2.0
+175 silly idealTree ├── body-parser@1.4.3
+175 silly idealTree ├── brace-expansion@1.1.1
+175 silly idealTree ├── braces@1.8.2
+175 silly idealTree ├── bson@0.2.22
+175 silly idealTree ├── buffer-crc32@0.2.3
+175 silly idealTree ├── buffer-equal-constant-time@1.0.1
+175 silly idealTree ├─┬ bufferutil@1.2.1
+175 silly idealTree │ └── nan@2.1.0
+175 silly idealTree ├── builtin-modules@1.1.0
+175 silly idealTree ├── bytes@1.0.0
+175 silly idealTree ├── callsite@1.0.0
+175 silly idealTree ├── camelcase-keys@1.0.0
+175 silly idealTree ├── camelcase@1.2.1
+175 silly idealTree ├── chokidar@1.2.0
+175 silly idealTree ├── colors@1.1.2
+175 silly idealTree ├── component-bind@1.0.0
+175 silly idealTree ├── component-emitter@1.1.2
+175 silly idealTree ├── component-inherit@0.0.3
+175 silly idealTree ├── concat-map@0.0.1
+175 silly idealTree ├─┬ concat-stream@1.4.10
+175 silly idealTree │ └── readable-stream@1.1.13
+175 silly idealTree ├─┬ connect@3.4.0
+175 silly idealTree │ ├── debug@2.2.0
+175 silly idealTree │ ├── escape-html@1.0.2
+175 silly idealTree │ ├── finalhandler@0.4.0
+175 silly idealTree │ ├── ms@0.7.1
+175 silly idealTree │ └── parseurl@1.3.0
+175 silly idealTree ├── content-type@1.0.1
+175 silly idealTree ├─┬ cookie-parser@1.4.0
+175 silly idealTree │ ├── cookie-signature@1.0.6
+175 silly idealTree │ └── cookie@0.2.2
+175 silly idealTree ├── cookie-signature@1.0.4
+175 silly idealTree ├── cookie@0.1.2
+175 silly idealTree ├── core-js@1.2.6
+175 silly idealTree ├── core-util-is@1.0.1
+175 silly idealTree ├── crc@3.3.0
+175 silly idealTree ├── custom-event@1.0.0
+175 silly idealTree ├── dateformat@1.0.11
+175 silly idealTree ├── debug@1.0.2
+175 silly idealTree ├── decamelize@1.1.1
+175 silly idealTree ├── deep-is@0.1.3
+175 silly idealTree ├── depd@0.3.0
+175 silly idealTree ├── di@0.0.1
+175 silly idealTree ├── dom-serialize@2.2.1
+175 silly idealTree ├── ecdsa-sig-formatter@1.0.2
+175 silly idealTree ├── ee-first@1.0.3
+175 silly idealTree ├─┬ engine.io-client@1.5.4
+175 silly idealTree │ ├── debug@1.0.4
+175 silly idealTree │ └── parseuri@0.0.4
+175 silly idealTree ├── engine.io-parser@1.2.2
+175 silly idealTree ├─┬ engine.io@1.5.4
+175 silly idealTree │ └── debug@1.0.3
+175 silly idealTree ├── ent@2.2.0
+175 silly idealTree ├── error-ex@1.3.0
+175 silly idealTree ├── es6-promise@2.1.1
+175 silly idealTree ├── escape-html@1.0.1
+175 silly idealTree ├─┬ escodegen@1.7.0
+175 silly idealTree │ ├── esprima@1.2.5
+175 silly idealTree │ └── source-map@0.2.0
+175 silly idealTree ├── esprima@2.5.0
+175 silly idealTree ├── estraverse@1.9.3
+175 silly idealTree ├── esutils@2.0.2
+175 silly idealTree ├── eventemitter3@1.1.1
+175 silly idealTree ├─┬ expand-braces@0.1.2
+175 silly idealTree │ ├── braces@0.1.5
+175 silly idealTree │ ├── expand-range@0.1.1
+175 silly idealTree │ ├── is-number@0.1.1
+175 silly idealTree │ └── repeat-string@0.2.2
+175 silly idealTree ├── expand-brackets@0.1.4
+175 silly idealTree ├── expand-range@1.8.1
+175 silly idealTree ├─┬ express-session@1.12.1
+175 silly idealTree │ ├── cookie-signature@1.0.6
+175 silly idealTree │ ├── cookie@0.2.3
+175 silly idealTree │ ├── debug@2.2.0
+175 silly idealTree │ ├── depd@1.1.0
+175 silly idealTree │ ├── ms@0.7.1
+175 silly idealTree │ └── parseurl@1.3.0
+175 silly idealTree ├─┬ express@4.5.1
+175 silly idealTree │ ├── mime-types@1.0.2
+175 silly idealTree │ └── type-is@1.3.2
+175 silly idealTree ├── extend@3.0.0
+175 silly idealTree ├── extglob@0.3.1
+175 silly idealTree ├── fast-levenshtein@1.0.7
+175 silly idealTree ├── filename-regex@2.0.0
+175 silly idealTree ├─┬ fileset@0.2.1
+175 silly idealTree │ └── minimatch@2.0.10
+175 silly idealTree ├── fill-range@2.2.2
+175 silly idealTree ├── finalhandler@0.0.2
+175 silly idealTree ├── find-up@1.1.0
+175 silly idealTree ├── finished@1.2.2
+175 silly idealTree ├── for-in@0.1.4
+175 silly idealTree ├── for-own@0.1.3
+175 silly idealTree ├── fresh@0.2.2
+175 silly idealTree ├── get-stdin@5.0.1
+175 silly idealTree ├── glob-base@0.3.0
+175 silly idealTree ├── glob-parent@2.0.0
+175 silly idealTree ├── glob@5.0.15
+175 silly idealTree ├── global@2.0.1
+175 silly idealTree ├── graceful-fs@4.1.2
+175 silly idealTree ├─┬ handlebars@4.0.4
+175 silly idealTree │ ├── async@1.5.0
+175 silly idealTree │ └── source-map@0.4.4
+175 silly idealTree ├── has-binary-data@0.1.3
+175 silly idealTree ├── has-binary@0.1.6
+175 silly idealTree ├── has-cors@1.0.3
+175 silly idealTree ├── has-flag@1.0.0
+175 silly idealTree ├── hooks@0.2.1
+175 silly idealTree ├── hosted-git-info@2.1.4
+175 silly idealTree ├── http-errors@1.3.1
+175 silly idealTree ├── http-proxy@1.12.0
+175 silly idealTree ├── iconv-lite@0.4.3
+175 silly idealTree ├── indent-string@2.1.0
+175 silly idealTree ├── indexof@0.0.1
+175 silly idealTree ├── inflight@1.0.4
+175 silly idealTree ├── inherits@2.0.1
+175 silly idealTree ├── ipaddr.js@0.1.2
+175 silly idealTree ├── is-absolute@0.1.7
+175 silly idealTree ├── is-arrayish@0.2.1
+175 silly idealTree ├── is-binary-path@1.0.1
+175 silly idealTree ├── is-buffer@1.1.0
+175 silly idealTree ├── is-builtin-module@1.0.0
+175 silly idealTree ├── is-dotfile@1.0.2
+175 silly idealTree ├── is-equal-shallow@0.1.3
+175 silly idealTree ├── is-extendable@0.1.1
+175 silly idealTree ├── is-extglob@1.0.0
+175 silly idealTree ├── is-finite@1.0.1
+175 silly idealTree ├── is-glob@2.0.1
+175 silly idealTree ├── is-number@1.1.2
+175 silly idealTree ├── is-primitive@2.0.0
+175 silly idealTree ├── is-relative@0.1.3
+175 silly idealTree ├── is-utf8@0.2.0
+175 silly idealTree ├── isarray@0.0.1
+175 silly idealTree ├── isobject@1.0.2
+175 silly idealTree ├─┬ istanbul@0.4.0
+175 silly idealTree │ ├── async@1.5.0
+175 silly idealTree │ └── wordwrap@1.0.0
+175 silly idealTree ├── jasmine-core@2.3.4
+175 silly idealTree ├─┬ js-yaml@3.4.3
+175 silly idealTree │ └── esprima@2.7.0
+175 silly idealTree ├── json3@3.2.6
+175 silly idealTree ├─┬ jsonwebtoken@5.4.1
+175 silly idealTree │ └── ms@0.7.1
+175 silly idealTree ├─┬ jwa@1.1.1
+175 silly idealTree │ └── base64url@0.0.6
+175 silly idealTree ├── jws@3.1.0
+175 silly idealTree ├── karma-coverage@0.5.3
+175 silly idealTree ├── karma-jasmine@0.3.6
+175 silly idealTree ├─┬ karma@0.13.15
+175 silly idealTree │ ├── bluebird@2.10.2
+175 silly idealTree │ ├── body-parser@1.14.1
+175 silly idealTree │ ├── bytes@2.1.0
+175 silly idealTree │ ├── debug@2.2.0
+175 silly idealTree │ ├── depd@1.1.0
+175 silly idealTree │ ├── iconv-lite@0.4.12
+175 silly idealTree │ ├── media-typer@0.3.0
+175 silly idealTree │ ├── mime-types@2.1.7
+175 silly idealTree │ ├── mime@1.3.4
+175 silly idealTree │ ├── ms@0.7.1
+175 silly idealTree │ ├── qs@5.1.0
+175 silly idealTree │ ├── raw-body@2.1.4
+175 silly idealTree │ └── type-is@1.6.9
+175 silly idealTree ├── kerberos@0.0.11
+175 silly idealTree ├── kind-of@2.0.1
+175 silly idealTree ├── lazy-cache@0.2.4
+175 silly idealTree ├── levn@0.2.5
+175 silly idealTree ├── load-json-file@1.1.0
+175 silly idealTree ├── lodash._baseflatten@3.1.4
+175 silly idealTree ├── lodash._isiterateecall@3.0.9
+175 silly idealTree ├── lodash.flatten@3.0.2
+175 silly idealTree ├── lodash.isarguments@3.0.4
+175 silly idealTree ├── lodash.isarray@3.0.4
+175 silly idealTree ├── lodash@3.10.1
+175 silly idealTree ├─┬ log4js@0.6.27
+175 silly idealTree │ └── readable-stream@1.0.33
+175 silly idealTree ├── loud-rejection@1.2.0
+175 silly idealTree ├── lru-cache@2.2.4
+175 silly idealTree ├── map-obj@1.0.1
+175 silly idealTree ├── media-typer@0.2.0
+175 silly idealTree ├─┬ meow@3.5.0
+175 silly idealTree │ └── minimist@1.2.0
+175 silly idealTree ├── merge-descriptors@0.0.2
+175 silly idealTree ├── method-override@2.0.2
+175 silly idealTree ├── methods@1.0.1
+175 silly idealTree ├── micromatch@2.3.2
+175 silly idealTree ├── mime-db@1.19.0
+175 silly idealTree ├── mime-types@1.0.0
+175 silly idealTree ├── mime@1.2.11
+175 silly idealTree ├── minimalistic-assert@1.0.0
+175 silly idealTree ├── minimatch@3.0.0
+175 silly idealTree ├── minimist@0.0.10
+175 silly idealTree ├─┬ mkdirp@0.5.1
+175 silly idealTree │ └── minimist@0.0.8
+175 silly idealTree ├─┬ mongodb-core@1.2.24
+175 silly idealTree │ └── bson@0.4.19
+175 silly idealTree ├─┬ mongodb@2.0.49
+175 silly idealTree │ └── readable-stream@1.0.31
+175 silly idealTree ├─┬ mongoose@3.8.37
+175 silly idealTree │ ├── mongodb@1.4.38
+175 silly idealTree │ └── ms@0.1.0
+175 silly idealTree ├─┬ morgan@1.6.1
+175 silly idealTree │ ├── debug@2.2.0
+175 silly idealTree │ ├── depd@1.0.1
+175 silly idealTree │ └── ms@0.7.1
+175 silly idealTree ├── mpath@0.1.1
+175 silly idealTree ├── mpromise@0.4.3
+175 silly idealTree ├─┬ mquery@1.6.1
+175 silly idealTree │ ├── debug@2.2.0
+175 silly idealTree │ └── ms@0.7.1
+175 silly idealTree ├── ms@0.6.2
+175 silly idealTree ├── muri@1.1.0
+175 silly idealTree ├── nan@1.8.4
+175 silly idealTree ├── negotiator@0.4.7
+175 silly idealTree ├── nopt@3.0.6
+175 silly idealTree ├── normalize-package-data@2.3.5
+175 silly idealTree ├── normalize-path@2.0.0
+175 silly idealTree ├── number-is-nan@1.0.0
+175 silly idealTree ├── object-assign@4.0.1
+175 silly idealTree ├── object-component@0.0.3
+175 silly idealTree ├── object-keys@1.0.1
+175 silly idealTree ├── object.omit@2.0.0
+175 silly idealTree ├─┬ on-finished@2.3.0
+175 silly idealTree │ └── ee-first@1.1.1
+175 silly idealTree ├── on-headers@1.0.1
+175 silly idealTree ├── once@1.3.2
+175 silly idealTree ├── optimist@0.6.1
+175 silly idealTree ├── optionator@0.5.0
+175 silly idealTree ├── options@0.0.6
+175 silly idealTree ├── parse-glob@3.0.4
+175 silly idealTree ├── parse-json@2.2.0
+175 silly idealTree ├── parsejson@0.0.1
+175 silly idealTree ├── parseqs@0.0.2
+175 silly idealTree ├── parseuri@0.0.2
+175 silly idealTree ├── parseurl@1.0.1
+175 silly idealTree ├── passport-strategy@1.0.0
+175 silly idealTree ├── passport@0.3.2
+175 silly idealTree ├── path-exists@2.1.0
+175 silly idealTree ├── path-is-absolute@1.0.0
+175 silly idealTree ├── path-to-regexp@0.1.2
+175 silly idealTree ├── path-type@1.1.0
+175 silly idealTree ├── pause@0.0.1
+175 silly idealTree ├── pify@2.3.0
+175 silly idealTree ├── pinkie-promise@2.0.0
+175 silly idealTree ├── pinkie@2.0.0
+175 silly idealTree ├── prelude-ls@1.1.2
+175 silly idealTree ├── preserve@0.2.0
+175 silly idealTree ├── process-nextick-args@1.0.3
+175 silly idealTree ├── proxy-addr@1.0.1
+175 silly idealTree ├── qs@0.6.6
+175 silly idealTree ├─┬ randomatic@1.1.3
+175 silly idealTree │ └─┬ is-number@2.0.2
+175 silly idealTree │   └── kind-of@1.1.0
+175 silly idealTree ├── range-parser@1.0.0
+175 silly idealTree ├── raw-body@1.2.2
+175 silly idealTree ├── read-pkg-up@1.0.1
+175 silly idealTree ├── read-pkg@1.1.0
+175 silly idealTree ├── readable-stream@2.0.4
+175 silly idealTree ├─┬ readdirp@2.0.0
+175 silly idealTree │ └── minimatch@2.0.10
+175 silly idealTree ├── redent@1.0.0
+175 silly idealTree ├── regex-cache@0.4.2
+175 silly idealTree ├── regexp-clone@0.0.1
+175 silly idealTree ├── repeat-element@1.1.2
+175 silly idealTree ├── repeat-string@1.5.2
+175 silly idealTree ├── repeating@2.0.0
+175 silly idealTree ├── requires-port@0.0.1
+175 silly idealTree ├── resolve@1.1.6
+175 silly idealTree ├── rimraf@2.4.3
+175 silly idealTree ├── semver@4.3.6
+175 silly idealTree ├── send@0.5.0
+175 silly idealTree ├─┬ serve-static@1.3.2
+175 silly idealTree │ ├── debug@1.0.3
+175 silly idealTree │ ├── parseurl@1.1.3
+175 silly idealTree │ └── send@0.6.0
+175 silly idealTree ├── signal-exit@2.1.2
+175 silly idealTree ├── sliced@0.0.5
+175 silly idealTree ├─┬ socket.io-adapter@0.3.1
+175 silly idealTree │ └─┬ socket.io-parser@2.2.2
+175 silly idealTree │   └── debug@0.7.4
+175 silly idealTree ├─┬ socket.io-client@1.3.7
+175 silly idealTree │ └── debug@0.7.4
+175 silly idealTree ├─┬ socket.io-parser@2.2.4
+175 silly idealTree │ └── debug@0.7.4
+175 silly idealTree ├─┬ socket.io@1.3.7
+175 silly idealTree │ └── debug@2.1.0
+175 silly idealTree ├── source-map@0.5.3
+175 silly idealTree ├── spdx-correct@1.0.2
+175 silly idealTree ├── spdx-exceptions@1.0.4
+175 silly idealTree ├── spdx-expression-parse@1.0.1
+175 silly idealTree ├── spdx-license-ids@1.1.0
+175 silly idealTree ├── sprintf-js@1.0.3
+175 silly idealTree ├── statuses@1.2.1
+175 silly idealTree ├── string_decoder@0.10.31
+175 silly idealTree ├── strip-bom@2.0.0
+175 silly idealTree ├─┬ strip-indent@1.0.1
+175 silly idealTree │ └── get-stdin@4.0.1
+175 silly idealTree ├── success-symbol@0.1.0
+175 silly idealTree ├── supports-color@3.1.2
+175 silly idealTree ├── to-array@0.1.3
+175 silly idealTree ├── trim-newlines@1.0.0
+175 silly idealTree ├── type-check@0.3.1
+175 silly idealTree ├── type-is@1.3.1
+175 silly idealTree ├── typedarray@0.0.6
+175 silly idealTree ├─┬ uglify-js@2.4.24
+175 silly idealTree │ └── source-map@0.1.34
+175 silly idealTree ├── uglify-to-browserify@1.0.2
+175 silly idealTree ├── uid-safe@2.0.0
+175 silly idealTree ├── ultron@1.0.2
+175 silly idealTree ├── underscore@1.8.2
+175 silly idealTree ├── unpipe@1.0.0
+175 silly idealTree ├── useragent@2.1.7
+175 silly idealTree ├─┬ utf-8-validate@1.2.1
+175 silly idealTree │ └── nan@2.1.0
+175 silly idealTree ├── utf8@2.1.0
+175 silly idealTree ├── util-deprecate@1.0.2
+175 silly idealTree ├── utils-merge@1.0.0
+175 silly idealTree ├── validate-npm-package-license@3.0.1
+175 silly idealTree ├── vary@0.1.0
+175 silly idealTree ├── void-elements@2.0.1
+175 silly idealTree ├── which@1.2.0
+175 silly idealTree ├── window-size@0.1.0
+175 silly idealTree ├── wordwrap@0.0.3
+175 silly idealTree ├── wrappy@1.0.1
+175 silly idealTree ├── ws@0.8.0
+175 silly idealTree ├── xmlhttprequest@1.5.0
+175 silly idealTree └─┬ yargs@3.5.4
+175 silly idealTree   └── wordwrap@0.0.2
+176 silly generateActionsToTake Starting
+177 silly install generateActionsToTake
+178 silly generateActionsToTake Finishing
+179 silly diffTrees action count 3
+180 silly diffTrees add passport-strategy@1.0.0
+181 silly diffTrees add pause@0.0.1
+182 silly diffTrees add passport@0.3.2
+183 silly decomposeActions action count 24
+184 silly decomposeActions fetch passport-strategy@1.0.0
+185 silly decomposeActions extract passport-strategy@1.0.0
+186 silly decomposeActions preinstall passport-strategy@1.0.0
+187 silly decomposeActions build passport-strategy@1.0.0
+188 silly decomposeActions install passport-strategy@1.0.0
+189 silly decomposeActions postinstall passport-strategy@1.0.0
+190 silly decomposeActions test passport-strategy@1.0.0
+191 silly decomposeActions finalize passport-strategy@1.0.0
+192 silly decomposeActions fetch pause@0.0.1
+193 silly decomposeActions extract pause@0.0.1
+194 silly decomposeActions preinstall pause@0.0.1
+195 silly decomposeActions build pause@0.0.1
+196 silly decomposeActions install pause@0.0.1
+197 silly decomposeActions postinstall pause@0.0.1
+198 silly decomposeActions test pause@0.0.1
+199 silly decomposeActions finalize pause@0.0.1
+200 silly decomposeActions fetch passport@0.3.2
+201 silly decomposeActions extract passport@0.3.2
+202 silly decomposeActions preinstall passport@0.3.2
+203 silly decomposeActions build passport@0.3.2
+204 silly decomposeActions install passport@0.3.2
+205 silly decomposeActions postinstall passport@0.3.2
+206 silly decomposeActions test passport@0.3.2
+207 silly decomposeActions finalize passport@0.3.2
+208 silly executeActions Starting
+209 silly install executeActions
+210 silly doSerial global-install 0
+211 silly doParallel fetch 3
+212 verbose lock using /home/seed/.npm/_locks/staging-d6faa95f0f429d3b.lock for /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging
+213 silly doParallel extract 3
+214 silly extract passport-strategy
+215 silly extract pause
+216 silly extract passport
+217 verbose unbuild node_modules/.staging/passport-strategy-095eeee11b9522aacf1dfe91a7298d1a
+218 verbose unbuild node_modules/.staging/pause-344c301ee19775e2075ba7bdf10a902e
+219 verbose unbuild node_modules/.staging/passport-ae88d87649d94025e2c5998221897503
+220 silly gentlyRm /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-strategy-095eeee11b9522aacf1dfe91a7298d1a is being purged from base /home/seed/HackSC/CS480VictoryLap/collabin
+221 silly gentlyRm /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/pause-344c301ee19775e2075ba7bdf10a902e is being purged from base /home/seed/HackSC/CS480VictoryLap/collabin
+222 silly gentlyRm /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-ae88d87649d94025e2c5998221897503 is being purged from base /home/seed/HackSC/CS480VictoryLap/collabin
+223 verbose gentlyRm don't care about contents; nuking /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-strategy-095eeee11b9522aacf1dfe91a7298d1a
+224 verbose gentlyRm don't care about contents; nuking /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/pause-344c301ee19775e2075ba7bdf10a902e
+225 verbose gentlyRm don't care about contents; nuking /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-ae88d87649d94025e2c5998221897503
+226 verbose tar unpack /home/seed/.npm/passport-strategy/1.0.0/package.tgz
+227 verbose tar unpacking to /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-strategy-095eeee11b9522aacf1dfe91a7298d1a
+228 silly gentlyRm /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-strategy-095eeee11b9522aacf1dfe91a7298d1a is being purged
+229 verbose tar unpack /home/seed/.npm/pause/0.0.1/package.tgz
+230 verbose tar unpacking to /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/pause-344c301ee19775e2075ba7bdf10a902e
+231 silly gentlyRm /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/pause-344c301ee19775e2075ba7bdf10a902e is being purged
+232 verbose tar unpack /home/seed/.npm/passport/0.3.2/package.tgz
+233 verbose tar unpacking to /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-ae88d87649d94025e2c5998221897503
+234 silly gentlyRm /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-ae88d87649d94025e2c5998221897503 is being purged
+235 verbose gentlyRm don't care about contents; nuking /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-strategy-095eeee11b9522aacf1dfe91a7298d1a
+236 verbose gentlyRm don't care about contents; nuking /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/pause-344c301ee19775e2075ba7bdf10a902e
+237 verbose gentlyRm don't care about contents; nuking /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-ae88d87649d94025e2c5998221897503
+238 silly gunzTarPerm modes [ '775', '664' ]
+239 silly gunzTarPerm modes [ '775', '664' ]
+240 silly gunzTarPerm modes [ '775', '664' ]
+241 silly gunzTarPerm extractEntry package.json
+242 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+243 silly gunzTarPerm extractEntry package.json
+244 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+245 silly gunzTarPerm extractEntry package.json
+246 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+247 silly gunzTarPerm extractEntry README.md
+248 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+249 silly gunzTarPerm extractEntry LICENSE
+250 silly gunzTarPerm modified mode [ 'LICENSE', 420, 436 ]
+251 silly gunzTarPerm extractEntry .npmignore
+252 silly gunzTarPerm modified mode [ '.npmignore', 420, 436 ]
+253 silly gunzTarPerm extractEntry index.js
+254 silly gunzTarPerm modified mode [ 'index.js', 420, 436 ]
+255 silly gunzTarPerm extractEntry LICENSE
+256 silly gunzTarPerm modified mode [ 'LICENSE', 420, 436 ]
+257 silly gunzTarPerm extractEntry lib/authenticator.js
+258 silly gunzTarPerm modified mode [ 'lib/authenticator.js', 420, 436 ]
+259 silly gunzTarPerm extractEntry History.md
+260 silly gunzTarPerm modified mode [ 'History.md', 420, 436 ]
+261 silly gunzTarPerm extractEntry Makefile
+262 silly gunzTarPerm modified mode [ 'Makefile', 420, 436 ]
+263 silly gunzTarPerm extractEntry .jshintrc
+264 silly gunzTarPerm modified mode [ '.jshintrc', 420, 436 ]
+265 silly gunzTarPerm extractEntry .travis.yml
+266 silly gunzTarPerm modified mode [ '.travis.yml', 420, 436 ]
+267 silly gunzTarPerm extractEntry lib/index.js
+268 silly gunzTarPerm modified mode [ 'lib/index.js', 420, 436 ]
+269 silly gunzTarPerm extractEntry Readme.md
+270 silly gunzTarPerm modified mode [ 'Readme.md', 420, 436 ]
+271 silly gunzTarPerm extractEntry lib/errors/authenticationerror.js
+272 silly gunzTarPerm modified mode [ 'lib/errors/authenticationerror.js', 420, 436 ]
+273 silly gunzTarPerm extractEntry lib/framework/connect.js
+274 silly gunzTarPerm modified mode [ 'lib/framework/connect.js', 420, 436 ]
+275 silly gunzTarPerm extractEntry lib/index.js
+276 silly gunzTarPerm modified mode [ 'lib/index.js', 420, 436 ]
+277 silly gunzTarPerm extractEntry lib/strategy.js
+278 silly gunzTarPerm modified mode [ 'lib/strategy.js', 420, 436 ]
+279 silly gunzTarPerm extractEntry lib/http/request.js
+280 silly gunzTarPerm modified mode [ 'lib/http/request.js', 420, 436 ]
+281 silly gunzTarPerm extractEntry lib/middleware/authenticate.js
+282 silly gunzTarPerm modified mode [ 'lib/middleware/authenticate.js', 420, 436 ]
+283 silly gunzTarPerm extractEntry lib/middleware/initialize.js
+284 silly gunzTarPerm modified mode [ 'lib/middleware/initialize.js', 420, 436 ]
+285 silly gunzTarPerm extractEntry lib/strategies/session.js
+286 silly gunzTarPerm modified mode [ 'lib/strategies/session.js', 420, 436 ]
+287 silly doParallel preinstall 3
+288 silly preinstall passport-strategy /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-strategy-095eeee11b9522aacf1dfe91a7298d1a
+289 info lifecycle passport-strategy@1.0.0~preinstall: passport-strategy@1.0.0
+290 silly preinstall pause /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/pause-344c301ee19775e2075ba7bdf10a902e
+291 info lifecycle pause@0.0.1~preinstall: pause@0.0.1
+292 silly preinstall passport /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-ae88d87649d94025e2c5998221897503
+293 info lifecycle passport@0.3.2~preinstall: passport@0.3.2
+294 silly lifecycle passport-strategy@1.0.0~preinstall: no script for preinstall, continuing
+295 silly lifecycle pause@0.0.1~preinstall: no script for preinstall, continuing
+296 silly lifecycle passport@0.3.2~preinstall: no script for preinstall, continuing
+297 silly doReverseSerial remove 0
+298 silly doSerial move 0
+299 silly doSerial finalize 3
+300 silly finalize /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/passport-strategy
+301 silly finalize /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/pause
+302 silly finalize /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/passport
+303 silly doSerial build 3
+304 silly build passport-strategy
+305 info linkStuff passport-strategy@1.0.0
+306 silly linkStuff passport-strategy@1.0.0 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+307 verbose linkBins passport-strategy@1.0.0
+308 verbose linkMans passport-strategy@1.0.0
+309 verbose rebuildBundles passport-strategy@1.0.0
+310 silly build pause
+311 info linkStuff pause@0.0.1
+312 silly linkStuff pause@0.0.1 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+313 verbose linkBins pause@0.0.1
+314 verbose linkMans pause@0.0.1
+315 verbose rebuildBundles pause@0.0.1
+316 silly build passport
+317 info linkStuff passport@0.3.2
+318 silly linkStuff passport@0.3.2 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+319 verbose linkBins passport@0.3.2
+320 verbose linkMans passport@0.3.2
+321 verbose rebuildBundles passport@0.3.2
+322 silly doSerial global-link 0
+323 silly doParallel update-linked 0
+324 silly doSerial install 3
+325 silly install passport-strategy /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-strategy-095eeee11b9522aacf1dfe91a7298d1a
+326 info lifecycle passport-strategy@1.0.0~install: passport-strategy@1.0.0
+327 silly lifecycle passport-strategy@1.0.0~install: no script for install, continuing
+328 silly install pause /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/pause-344c301ee19775e2075ba7bdf10a902e
+329 info lifecycle pause@0.0.1~install: pause@0.0.1
+330 silly lifecycle pause@0.0.1~install: no script for install, continuing
+331 silly install passport /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-ae88d87649d94025e2c5998221897503
+332 info lifecycle passport@0.3.2~install: passport@0.3.2
+333 silly lifecycle passport@0.3.2~install: no script for install, continuing
+334 silly doSerial postinstall 3
+335 silly postinstall passport-strategy /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-strategy-095eeee11b9522aacf1dfe91a7298d1a
+336 info lifecycle passport-strategy@1.0.0~postinstall: passport-strategy@1.0.0
+337 silly lifecycle passport-strategy@1.0.0~postinstall: no script for postinstall, continuing
+338 silly postinstall pause /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/pause-344c301ee19775e2075ba7bdf10a902e
+339 info lifecycle pause@0.0.1~postinstall: pause@0.0.1
+340 silly lifecycle pause@0.0.1~postinstall: no script for postinstall, continuing
+341 silly postinstall passport /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging/passport-ae88d87649d94025e2c5998221897503
+342 info lifecycle passport@0.3.2~postinstall: passport@0.3.2
+343 silly lifecycle passport@0.3.2~postinstall: no script for postinstall, continuing
+344 verbose unlock done using /home/seed/.npm/_locks/staging-d6faa95f0f429d3b.lock for /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.staging
+345 silly executeActions Finishing
+346 silly rollbackFailedOptional Starting
+347 silly rollbackFailedOptional Finishing
+348 silly runTopLevelLifecycles Starting
+349 silly install runTopLevelLifecycles
+350 silly preinstall starter-node-angular /home/seed/HackSC/CS480VictoryLap/collabin/starter-node-angular-e07de50041c98a153ca101511c72d37e
+351 info lifecycle starter-node-angular@~preinstall: starter-node-angular@
+352 silly lifecycle starter-node-angular@~preinstall: no script for preinstall, continuing
+353 silly build starter-node-angular
+354 info linkStuff starter-node-angular@
+355 silly linkStuff starter-node-angular@ has /home/seed/HackSC/CS480VictoryLap as its parent node_modules
+356 verbose linkBins starter-node-angular@
+357 verbose linkMans starter-node-angular@
+358 verbose rebuildBundles starter-node-angular@
+359 verbose rebuildBundles [ '.bin',
+359 verbose rebuildBundles   'abbrev',
+359 verbose rebuildBundles   'accepts',
+359 verbose rebuildBundles   'after',
+359 verbose rebuildBundles   'amdefine',
+359 verbose rebuildBundles   'ansi-green',
+359 verbose rebuildBundles   'ansi-wrap',
+359 verbose rebuildBundles   'anymatch',
+359 verbose rebuildBundles   'argparse',
+359 verbose rebuildBundles   'arr-diff',
+359 verbose rebuildBundles   'arr-flatten',
+359 verbose rebuildBundles   'array-slice',
+359 verbose rebuildBundles   'array-unique',
+359 verbose rebuildBundles   'arraybuffer.slice',
+359 verbose rebuildBundles   'arrify',
+359 verbose rebuildBundles   'asn1.js',
+359 verbose rebuildBundles   'async',
+359 verbose rebuildBundles   'async-each',
+359 verbose rebuildBundles   'backo2',
+359 verbose rebuildBundles   'balanced-match',
+359 verbose rebuildBundles   'base64-arraybuffer',
+359 verbose rebuildBundles   'base64-url',
+359 verbose rebuildBundles   'base64id',
+359 verbose rebuildBundles   'base64url',
+359 verbose rebuildBundles   'basic-auth',
+359 verbose rebuildBundles   'batch',
+359 verbose rebuildBundles   'benchmark',
+359 verbose rebuildBundles   'better-assert',
+359 verbose rebuildBundles   'binary-extensions',
+359 verbose rebuildBundles   'bindings',
+359 verbose rebuildBundles   'blob',
+359 verbose rebuildBundles   'bluebird',
+359 verbose rebuildBundles   'bn.js',
+359 verbose rebuildBundles   'body-parser',
+359 verbose rebuildBundles   'brace-expansion',
+359 verbose rebuildBundles   'braces',
+359 verbose rebuildBundles   'bson',
+359 verbose rebuildBundles   'buffer-crc32',
+359 verbose rebuildBundles   'buffer-equal-constant-time',
+359 verbose rebuildBundles   'bufferutil',
+359 verbose rebuildBundles   'builtin-modules',
+359 verbose rebuildBundles   'bytes',
+359 verbose rebuildBundles   'callsite',
+359 verbose rebuildBundles   'camelcase',
+359 verbose rebuildBundles   'camelcase-keys',
+359 verbose rebuildBundles   'chokidar',
+359 verbose rebuildBundles   'colors',
+359 verbose rebuildBundles   'component-bind',
+359 verbose rebuildBundles   'component-emitter',
+359 verbose rebuildBundles   'component-inherit',
+359 verbose rebuildBundles   'concat-map',
+359 verbose rebuildBundles   'concat-stream',
+359 verbose rebuildBundles   'connect',
+359 verbose rebuildBundles   'content-type',
+359 verbose rebuildBundles   'cookie',
+359 verbose rebuildBundles   'cookie-parser',
+359 verbose rebuildBundles   'cookie-signature',
+359 verbose rebuildBundles   'core-js',
+359 verbose rebuildBundles   'core-util-is',
+359 verbose rebuildBundles   'crc',
+359 verbose rebuildBundles   'custom-event',
+359 verbose rebuildBundles   'dateformat',
+359 verbose rebuildBundles   'debug',
+359 verbose rebuildBundles   'decamelize',
+359 verbose rebuildBundles   'deep-is',
+359 verbose rebuildBundles   'depd',
+359 verbose rebuildBundles   'di',
+359 verbose rebuildBundles   'dom-serialize',
+359 verbose rebuildBundles   'ecdsa-sig-formatter',
+359 verbose rebuildBundles   'ee-first',
+359 verbose rebuildBundles   'engine.io',
+359 verbose rebuildBundles   'engine.io-client',
+359 verbose rebuildBundles   'engine.io-parser',
+359 verbose rebuildBundles   'ent',
+359 verbose rebuildBundles   'error-ex',
+359 verbose rebuildBundles   'es6-promise',
+359 verbose rebuildBundles   'escape-html',
+359 verbose rebuildBundles   'escodegen',
+359 verbose rebuildBundles   'esprima',
+359 verbose rebuildBundles   'estraverse',
+359 verbose rebuildBundles   'esutils',
+359 verbose rebuildBundles   'eventemitter3',
+359 verbose rebuildBundles   'expand-braces',
+359 verbose rebuildBundles   'expand-brackets',
+359 verbose rebuildBundles   'expand-range',
+359 verbose rebuildBundles   'express',
+359 verbose rebuildBundles   'express-session',
+359 verbose rebuildBundles   'extend',
+359 verbose rebuildBundles   'extglob',
+359 verbose rebuildBundles   'fast-levenshtein',
+359 verbose rebuildBundles   'filename-regex',
+359 verbose rebuildBundles   'fileset',
+359 verbose rebuildBundles   'fill-range',
+359 verbose rebuildBundles   'finalhandler',
+359 verbose rebuildBundles   'find-up',
+359 verbose rebuildBundles   'finished',
+359 verbose rebuildBundles   'for-in',
+359 verbose rebuildBundles   'for-own',
+359 verbose rebuildBundles   'fresh',
+359 verbose rebuildBundles   'get-stdin',
+359 verbose rebuildBundles   'glob',
+359 verbose rebuildBundles   'glob-base',
+359 verbose rebuildBundles   'glob-parent',
+359 verbose rebuildBundles   'global',
+359 verbose rebuildBundles   'graceful-fs',
+359 verbose rebuildBundles   'handlebars',
+359 verbose rebuildBundles   'has-binary',
+359 verbose rebuildBundles   'has-binary-data',
+359 verbose rebuildBundles   'has-cors',
+359 verbose rebuildBundles   'has-flag',
+359 verbose rebuildBundles   'hooks',
+359 verbose rebuildBundles   'hosted-git-info',
+359 verbose rebuildBundles   'http-errors',
+359 verbose rebuildBundles   'http-proxy',
+359 verbose rebuildBundles   'iconv-lite',
+359 verbose rebuildBundles   'indent-string',
+359 verbose rebuildBundles   'indexof',
+359 verbose rebuildBundles   'inflight',
+359 verbose rebuildBundles   'inherits',
+359 verbose rebuildBundles   'ipaddr.js',
+359 verbose rebuildBundles   'is-absolute',
+359 verbose rebuildBundles   'is-arrayish',
+359 verbose rebuildBundles   'is-binary-path',
+359 verbose rebuildBundles   'is-buffer',
+359 verbose rebuildBundles   'is-builtin-module',
+359 verbose rebuildBundles   'is-dotfile',
+359 verbose rebuildBundles   'is-equal-shallow',
+359 verbose rebuildBundles   'is-extendable',
+359 verbose rebuildBundles   'is-extglob',
+359 verbose rebuildBundles   'is-finite',
+359 verbose rebuildBundles   'is-glob',
+359 verbose rebuildBundles   'is-number',
+359 verbose rebuildBundles   'is-primitive',
+359 verbose rebuildBundles   'is-relative',
+359 verbose rebuildBundles   'is-utf8',
+359 verbose rebuildBundles   'isarray',
+359 verbose rebuildBundles   'isobject',
+359 verbose rebuildBundles   'istanbul',
+359 verbose rebuildBundles   'jasmine-core',
+359 verbose rebuildBundles   'js-yaml',
+359 verbose rebuildBundles   'json3',
+359 verbose rebuildBundles   'jsonwebtoken',
+359 verbose rebuildBundles   'jwa',
+359 verbose rebuildBundles   'jws',
+359 verbose rebuildBundles   'karma',
+359 verbose rebuildBundles   'karma-coverage',
+359 verbose rebuildBundles   'karma-jasmine',
+359 verbose rebuildBundles   'kerberos',
+359 verbose rebuildBundles   'kind-of',
+359 verbose rebuildBundles   'lazy-cache',
+359 verbose rebuildBundles   'levn',
+359 verbose rebuildBundles   'load-json-file',
+359 verbose rebuildBundles   'lodash',
+359 verbose rebuildBundles   'lodash._baseflatten',
+359 verbose rebuildBundles   'lodash._isiterateecall',
+359 verbose rebuildBundles   'lodash.flatten',
+359 verbose rebuildBundles   'lodash.isarguments',
+359 verbose rebuildBundles   'lodash.isarray',
+359 verbose rebuildBundles   'log4js',
+359 verbose rebuildBundles   'loud-rejection',
+359 verbose rebuildBundles   'lru-cache',
+359 verbose rebuildBundles   'map-obj',
+359 verbose rebuildBundles   'media-typer',
+359 verbose rebuildBundles   'meow',
+359 verbose rebuildBundles   'merge-descriptors',
+359 verbose rebuildBundles   'method-override',
+359 verbose rebuildBundles   'methods',
+359 verbose rebuildBundles   'micromatch',
+359 verbose rebuildBundles   'mime',
+359 verbose rebuildBundles   'mime-db',
+359 verbose rebuildBundles   'mime-types',
+359 verbose rebuildBundles   'minimalistic-assert',
+359 verbose rebuildBundles   'minimatch',
+359 verbose rebuildBundles   'minimist',
+359 verbose rebuildBundles   'mkdirp',
+359 verbose rebuildBundles   'mongodb',
+359 verbose rebuildBundles   'mongodb-core',
+359 verbose rebuildBundles   'mongoose',
+359 verbose rebuildBundles   'morgan',
+359 verbose rebuildBundles   'mpath',
+359 verbose rebuildBundles   'mpromise',
+359 verbose rebuildBundles   'mquery',
+359 verbose rebuildBundles   'ms',
+359 verbose rebuildBundles   'muri',
+359 verbose rebuildBundles   'nan',
+359 verbose rebuildBundles   'negotiator',
+359 verbose rebuildBundles   'nopt',
+359 verbose rebuildBundles   'normalize-package-data',
+359 verbose rebuildBundles   'normalize-path',
+359 verbose rebuildBundles   'number-is-nan',
+359 verbose rebuildBundles   'object-assign',
+359 verbose rebuildBundles   'object-component',
+359 verbose rebuildBundles   'object-keys',
+359 verbose rebuildBundles   'object.omit',
+359 verbose rebuildBundles   'on-finished',
+359 verbose rebuildBundles   'on-headers',
+359 verbose rebuildBundles   'once',
+359 verbose rebuildBundles   'optimist',
+359 verbose rebuildBundles   'optionator',
+359 verbose rebuildBundles   'options',
+359 verbose rebuildBundles   'parse-glob',
+359 verbose rebuildBundles   'parse-json',
+359 verbose rebuildBundles   'parsejson',
+359 verbose rebuildBundles   'parseqs',
+359 verbose rebuildBundles   'parseuri',
+359 verbose rebuildBundles   'parseurl',
+359 verbose rebuildBundles   'passport',
+359 verbose rebuildBundles   'passport-strategy',
+359 verbose rebuildBundles   'path-exists',
+359 verbose rebuildBundles   'path-is-absolute',
+359 verbose rebuildBundles   'path-to-regexp',
+359 verbose rebuildBundles   'path-type',
+359 verbose rebuildBundles   'pause',
+359 verbose rebuildBundles   'pify',
+359 verbose rebuildBundles   'pinkie',
+359 verbose rebuildBundles   'pinkie-promise',
+359 verbose rebuildBundles   'prelude-ls',
+359 verbose rebuildBundles   'preserve',
+359 verbose rebuildBundles   'process-nextick-args',
+359 verbose rebuildBundles   'proxy-addr',
+359 verbose rebuildBundles   'qs',
+359 verbose rebuildBundles   'randomatic',
+359 verbose rebuildBundles   'range-parser',
+359 verbose rebuildBundles   'raw-body',
+359 verbose rebuildBundles   'read-pkg',
+359 verbose rebuildBundles   'read-pkg-up',
+359 verbose rebuildBundles   'readable-stream',
+359 verbose rebuildBundles   'readdirp',
+359 verbose rebuildBundles   'redent',
+359 verbose rebuildBundles   'regex-cache',
+359 verbose rebuildBundles   'regexp-clone',
+359 verbose rebuildBundles   'repeat-element',
+359 verbose rebuildBundles   'repeat-string',
+359 verbose rebuildBundles   'repeating',
+359 verbose rebuildBundles   'requires-port',
+359 verbose rebuildBundles   'resolve',
+359 verbose rebuildBundles   'rimraf',
+359 verbose rebuildBundles   'semver',
+359 verbose rebuildBundles   'send',
+359 verbose rebuildBundles   'serve-static',
+359 verbose rebuildBundles   'signal-exit',
+359 verbose rebuildBundles   'sliced',
+359 verbose rebuildBundles   'socket.io',
+359 verbose rebuildBundles   'socket.io-adapter',
+359 verbose rebuildBundles   'socket.io-client',
+359 verbose rebuildBundles   'socket.io-parser',
+359 verbose rebuildBundles   'source-map',
+359 verbose rebuildBundles   'spdx-correct',
+359 verbose rebuildBundles   'spdx-exceptions',
+359 verbose rebuildBundles   'spdx-expression-parse',
+359 verbose rebuildBundles   'spdx-license-ids',
+359 verbose rebuildBundles   'sprintf-js',
+359 verbose rebuildBundles   'statuses',
+359 verbose rebuildBundles   'string_decoder',
+359 verbose rebuildBundles   'strip-bom',
+359 verbose rebuildBundles   'strip-indent',
+359 verbose rebuildBundles   'success-symbol',
+359 verbose rebuildBundles   'supports-color',
+359 verbose rebuildBundles   'to-array',
+359 verbose rebuildBundles   'trim-newlines',
+359 verbose rebuildBundles   'type-check',
+359 verbose rebuildBundles   'type-is',
+359 verbose rebuildBundles   'typedarray',
+359 verbose rebuildBundles   'uglify-js',
+359 verbose rebuildBundles   'uglify-to-browserify',
+359 verbose rebuildBundles   'uid-safe',
+359 verbose rebuildBundles   'ultron',
+359 verbose rebuildBundles   'underscore',
+359 verbose rebuildBundles   'unpipe',
+359 verbose rebuildBundles   'useragent',
+359 verbose rebuildBundles   'utf-8-validate',
+359 verbose rebuildBundles   'utf8',
+359 verbose rebuildBundles   'util-deprecate',
+359 verbose rebuildBundles   'utils-merge',
+359 verbose rebuildBundles   'validate-npm-package-license',
+359 verbose rebuildBundles   'vary',
+359 verbose rebuildBundles   'void-elements',
+359 verbose rebuildBundles   'which',
+359 verbose rebuildBundles   'window-size',
+359 verbose rebuildBundles   'wordwrap',
+359 verbose rebuildBundles   'wrappy',
+359 verbose rebuildBundles   'ws',
+359 verbose rebuildBundles   'xmlhttprequest',
+359 verbose rebuildBundles   'yargs' ]
+360 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/abbrev
+361 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/abbrev
+362 info lifecycle abbrev@1.0.7~preinstall: abbrev@1.0.7
+363 silly lifecycle abbrev@1.0.7~preinstall: no script for preinstall, continuing
+364 info linkStuff abbrev@1.0.7
+365 silly linkStuff abbrev@1.0.7 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+366 verbose linkBins abbrev@1.0.7
+367 verbose linkMans abbrev@1.0.7
+368 verbose rebuildBundles abbrev@1.0.7
+369 info lifecycle abbrev@1.0.7~install: abbrev@1.0.7
+370 silly lifecycle abbrev@1.0.7~install: no script for install, continuing
+371 info lifecycle abbrev@1.0.7~postinstall: abbrev@1.0.7
+372 silly lifecycle abbrev@1.0.7~postinstall: no script for postinstall, continuing
+373 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/accepts
+374 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/accepts
+375 info lifecycle accepts@1.0.7~preinstall: accepts@1.0.7
+376 silly lifecycle accepts@1.0.7~preinstall: no script for preinstall, continuing
+377 info linkStuff accepts@1.0.7
+378 silly linkStuff accepts@1.0.7 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+379 verbose linkBins accepts@1.0.7
+380 verbose linkMans accepts@1.0.7
+381 verbose rebuildBundles accepts@1.0.7
+382 info lifecycle accepts@1.0.7~install: accepts@1.0.7
+383 silly lifecycle accepts@1.0.7~install: no script for install, continuing
+384 info lifecycle accepts@1.0.7~postinstall: accepts@1.0.7
+385 silly lifecycle accepts@1.0.7~postinstall: no script for postinstall, continuing
+386 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/after
+387 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/after
+388 info lifecycle after@0.8.1~preinstall: after@0.8.1
+389 silly lifecycle after@0.8.1~preinstall: no script for preinstall, continuing
+390 info linkStuff after@0.8.1
+391 silly linkStuff after@0.8.1 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+392 verbose linkBins after@0.8.1
+393 verbose linkMans after@0.8.1
+394 verbose rebuildBundles after@0.8.1
+395 info lifecycle after@0.8.1~install: after@0.8.1
+396 silly lifecycle after@0.8.1~install: no script for install, continuing
+397 info lifecycle after@0.8.1~postinstall: after@0.8.1
+398 silly lifecycle after@0.8.1~postinstall: no script for postinstall, continuing
+399 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/amdefine
+400 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/amdefine
+401 info lifecycle amdefine@1.0.0~preinstall: amdefine@1.0.0
+402 silly lifecycle amdefine@1.0.0~preinstall: no script for preinstall, continuing
+403 info linkStuff amdefine@1.0.0
+404 silly linkStuff amdefine@1.0.0 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+405 verbose linkBins amdefine@1.0.0
+406 verbose linkMans amdefine@1.0.0
+407 verbose rebuildBundles amdefine@1.0.0
+408 info lifecycle amdefine@1.0.0~install: amdefine@1.0.0
+409 silly lifecycle amdefine@1.0.0~install: no script for install, continuing
+410 info lifecycle amdefine@1.0.0~postinstall: amdefine@1.0.0
+411 silly lifecycle amdefine@1.0.0~postinstall: no script for postinstall, continuing
+412 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/ansi-green
+413 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/ansi-green
+414 info lifecycle ansi-green@0.1.1~preinstall: ansi-green@0.1.1
+415 silly lifecycle ansi-green@0.1.1~preinstall: no script for preinstall, continuing
+416 info linkStuff ansi-green@0.1.1
+417 silly linkStuff ansi-green@0.1.1 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+418 verbose linkBins ansi-green@0.1.1
+419 verbose linkMans ansi-green@0.1.1
+420 verbose rebuildBundles ansi-green@0.1.1
+421 info lifecycle ansi-green@0.1.1~install: ansi-green@0.1.1
+422 silly lifecycle ansi-green@0.1.1~install: no script for install, continuing
+423 info lifecycle ansi-green@0.1.1~postinstall: ansi-green@0.1.1
+424 silly lifecycle ansi-green@0.1.1~postinstall: no script for postinstall, continuing
+425 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/ansi-wrap
+426 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/ansi-wrap
+427 info lifecycle ansi-wrap@0.1.0~preinstall: ansi-wrap@0.1.0
+428 silly lifecycle ansi-wrap@0.1.0~preinstall: no script for preinstall, continuing
+429 info linkStuff ansi-wrap@0.1.0
+430 silly linkStuff ansi-wrap@0.1.0 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+431 verbose linkBins ansi-wrap@0.1.0
+432 verbose linkMans ansi-wrap@0.1.0
+433 verbose rebuildBundles ansi-wrap@0.1.0
+434 info lifecycle ansi-wrap@0.1.0~install: ansi-wrap@0.1.0
+435 silly lifecycle ansi-wrap@0.1.0~install: no script for install, continuing
+436 info lifecycle ansi-wrap@0.1.0~postinstall: ansi-wrap@0.1.0
+437 silly lifecycle ansi-wrap@0.1.0~postinstall: no script for postinstall, continuing
+438 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/anymatch
+439 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/anymatch
+440 info lifecycle anymatch@1.3.0~preinstall: anymatch@1.3.0
+441 silly lifecycle anymatch@1.3.0~preinstall: no script for preinstall, continuing
+442 info linkStuff anymatch@1.3.0
+443 silly linkStuff anymatch@1.3.0 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+444 verbose linkBins anymatch@1.3.0
+445 verbose linkMans anymatch@1.3.0
+446 verbose rebuildBundles anymatch@1.3.0
+447 info lifecycle anymatch@1.3.0~install: anymatch@1.3.0
+448 silly lifecycle anymatch@1.3.0~install: no script for install, continuing
+449 info lifecycle anymatch@1.3.0~postinstall: anymatch@1.3.0
+450 silly lifecycle anymatch@1.3.0~postinstall: no script for postinstall, continuing
+451 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/argparse
+452 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/argparse
+453 info lifecycle argparse@1.0.3~preinstall: argparse@1.0.3
+454 silly lifecycle argparse@1.0.3~preinstall: no script for preinstall, continuing
+455 info linkStuff argparse@1.0.3
+456 silly linkStuff argparse@1.0.3 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+457 verbose linkBins argparse@1.0.3
+458 verbose linkMans argparse@1.0.3
+459 verbose rebuildBundles argparse@1.0.3
+460 info lifecycle argparse@1.0.3~install: argparse@1.0.3
+461 silly lifecycle argparse@1.0.3~install: no script for install, continuing
+462 info lifecycle argparse@1.0.3~postinstall: argparse@1.0.3
+463 silly lifecycle argparse@1.0.3~postinstall: no script for postinstall, continuing
+464 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/arr-diff
+465 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/arr-diff
+466 info lifecycle arr-diff@1.1.0~preinstall: arr-diff@1.1.0
+467 silly lifecycle arr-diff@1.1.0~preinstall: no script for preinstall, continuing
+468 info linkStuff arr-diff@1.1.0
+469 silly linkStuff arr-diff@1.1.0 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+470 verbose linkBins arr-diff@1.1.0
+471 verbose linkMans arr-diff@1.1.0
+472 verbose rebuildBundles arr-diff@1.1.0
+473 info lifecycle arr-diff@1.1.0~install: arr-diff@1.1.0
+474 silly lifecycle arr-diff@1.1.0~install: no script for install, continuing
+475 info lifecycle arr-diff@1.1.0~postinstall: arr-diff@1.1.0
+476 silly lifecycle arr-diff@1.1.0~postinstall: no script for postinstall, continuing
+477 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/arr-flatten
+478 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/arr-flatten
+479 info lifecycle arr-flatten@1.0.1~preinstall: arr-flatten@1.0.1
+480 silly lifecycle arr-flatten@1.0.1~preinstall: no script for preinstall, continuing
+481 info linkStuff arr-flatten@1.0.1
+482 silly linkStuff arr-flatten@1.0.1 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+483 verbose linkBins arr-flatten@1.0.1
+484 verbose linkMans arr-flatten@1.0.1
+485 verbose rebuildBundles arr-flatten@1.0.1
+486 info lifecycle arr-flatten@1.0.1~install: arr-flatten@1.0.1
+487 silly lifecycle arr-flatten@1.0.1~install: no script for install, continuing
+488 info lifecycle arr-flatten@1.0.1~postinstall: arr-flatten@1.0.1
+489 silly lifecycle arr-flatten@1.0.1~postinstall: no script for postinstall, continuing
+490 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/array-slice
+491 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/array-slice
+492 info lifecycle array-slice@0.2.3~preinstall: array-slice@0.2.3
+493 silly lifecycle array-slice@0.2.3~preinstall: no script for preinstall, continuing
+494 info linkStuff array-slice@0.2.3
+495 silly linkStuff array-slice@0.2.3 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+496 verbose linkBins array-slice@0.2.3
+497 verbose linkMans array-slice@0.2.3
+498 verbose rebuildBundles array-slice@0.2.3
+499 info lifecycle array-slice@0.2.3~install: array-slice@0.2.3
+500 silly lifecycle array-slice@0.2.3~install: no script for install, continuing
+501 info lifecycle array-slice@0.2.3~postinstall: array-slice@0.2.3
+502 silly lifecycle array-slice@0.2.3~postinstall: no script for postinstall, continuing
+503 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/array-unique
+504 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/array-unique
+505 info lifecycle array-unique@0.2.1~preinstall: array-unique@0.2.1
+506 silly lifecycle array-unique@0.2.1~preinstall: no script for preinstall, continuing
+507 info linkStuff array-unique@0.2.1
+508 silly linkStuff array-unique@0.2.1 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+509 verbose linkBins array-unique@0.2.1
+510 verbose linkMans array-unique@0.2.1
+511 verbose rebuildBundles array-unique@0.2.1
+512 info lifecycle array-unique@0.2.1~install: array-unique@0.2.1
+513 silly lifecycle array-unique@0.2.1~install: no script for install, continuing
+514 info lifecycle array-unique@0.2.1~postinstall: array-unique@0.2.1
+515 silly lifecycle array-unique@0.2.1~postinstall: no script for postinstall, continuing
+516 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/arraybuffer.slice
+517 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/arraybuffer.slice
+518 info lifecycle arraybuffer.slice@0.0.6~preinstall: arraybuffer.slice@0.0.6
+519 silly lifecycle arraybuffer.slice@0.0.6~preinstall: no script for preinstall, continuing
+520 info linkStuff arraybuffer.slice@0.0.6
+521 silly linkStuff arraybuffer.slice@0.0.6 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+522 verbose linkBins arraybuffer.slice@0.0.6
+523 verbose linkMans arraybuffer.slice@0.0.6
+524 verbose rebuildBundles arraybuffer.slice@0.0.6
+525 info lifecycle arraybuffer.slice@0.0.6~install: arraybuffer.slice@0.0.6
+526 silly lifecycle arraybuffer.slice@0.0.6~install: no script for install, continuing
+527 info lifecycle arraybuffer.slice@0.0.6~postinstall: arraybuffer.slice@0.0.6
+528 silly lifecycle arraybuffer.slice@0.0.6~postinstall: no script for postinstall, continuing
+529 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/arrify
+530 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/arrify
+531 info lifecycle arrify@1.0.0~preinstall: arrify@1.0.0
+532 silly lifecycle arrify@1.0.0~preinstall: no script for preinstall, continuing
+533 info linkStuff arrify@1.0.0
+534 silly linkStuff arrify@1.0.0 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+535 verbose linkBins arrify@1.0.0
+536 verbose linkMans arrify@1.0.0
+537 verbose rebuildBundles arrify@1.0.0
+538 info lifecycle arrify@1.0.0~install: arrify@1.0.0
+539 silly lifecycle arrify@1.0.0~install: no script for install, continuing
+540 info lifecycle arrify@1.0.0~postinstall: arrify@1.0.0
+541 silly lifecycle arrify@1.0.0~postinstall: no script for postinstall, continuing
+542 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/asn1.js
+543 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/asn1.js
+544 info lifecycle asn1.js@2.2.1~preinstall: asn1.js@2.2.1
+545 silly lifecycle asn1.js@2.2.1~preinstall: no script for preinstall, continuing
+546 info linkStuff asn1.js@2.2.1
+547 silly linkStuff asn1.js@2.2.1 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+548 verbose linkBins asn1.js@2.2.1
+549 verbose linkMans asn1.js@2.2.1
+550 verbose rebuildBundles asn1.js@2.2.1
+551 info lifecycle asn1.js@2.2.1~install: asn1.js@2.2.1
+552 silly lifecycle asn1.js@2.2.1~install: no script for install, continuing
+553 info lifecycle asn1.js@2.2.1~postinstall: asn1.js@2.2.1
+554 silly lifecycle asn1.js@2.2.1~postinstall: no script for postinstall, continuing
+555 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/async
+556 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/async
+557 info lifecycle async@0.2.10~preinstall: async@0.2.10
+558 silly lifecycle async@0.2.10~preinstall: no script for preinstall, continuing
+559 info linkStuff async@0.2.10
+560 silly linkStuff async@0.2.10 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+561 verbose linkBins async@0.2.10
+562 verbose linkMans async@0.2.10
+563 verbose rebuildBundles async@0.2.10
+564 info lifecycle async@0.2.10~install: async@0.2.10
+565 silly lifecycle async@0.2.10~install: no script for install, continuing
+566 info lifecycle async@0.2.10~postinstall: async@0.2.10
+567 silly lifecycle async@0.2.10~postinstall: no script for postinstall, continuing
+568 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/async-each
+569 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/async-each
+570 info lifecycle async-each@0.1.6~preinstall: async-each@0.1.6
+571 silly lifecycle async-each@0.1.6~preinstall: no script for preinstall, continuing
+572 info linkStuff async-each@0.1.6
+573 silly linkStuff async-each@0.1.6 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+574 verbose linkBins async-each@0.1.6
+575 verbose linkMans async-each@0.1.6
+576 verbose rebuildBundles async-each@0.1.6
+577 info lifecycle async-each@0.1.6~install: async-each@0.1.6
+578 silly lifecycle async-each@0.1.6~install: no script for install, continuing
+579 info lifecycle async-each@0.1.6~postinstall: async-each@0.1.6
+580 silly lifecycle async-each@0.1.6~postinstall: no script for postinstall, continuing
+581 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/backo2
+582 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/backo2
+583 info lifecycle backo2@1.0.2~preinstall: backo2@1.0.2
+584 silly lifecycle backo2@1.0.2~preinstall: no script for preinstall, continuing
+585 info linkStuff backo2@1.0.2
+586 silly linkStuff backo2@1.0.2 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+587 verbose linkBins backo2@1.0.2
+588 verbose linkMans backo2@1.0.2
+589 verbose rebuildBundles backo2@1.0.2
+590 info lifecycle backo2@1.0.2~install: backo2@1.0.2
+591 silly lifecycle backo2@1.0.2~install: no script for install, continuing
+592 info lifecycle backo2@1.0.2~postinstall: backo2@1.0.2
+593 silly lifecycle backo2@1.0.2~postinstall: no script for postinstall, continuing
+594 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/balanced-match
+595 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/balanced-match
+596 info lifecycle balanced-match@0.2.1~preinstall: balanced-match@0.2.1
+597 silly lifecycle balanced-match@0.2.1~preinstall: no script for preinstall, continuing
+598 info linkStuff balanced-match@0.2.1
+599 silly linkStuff balanced-match@0.2.1 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+600 verbose linkBins balanced-match@0.2.1
+601 verbose linkMans balanced-match@0.2.1
+602 verbose rebuildBundles balanced-match@0.2.1
+603 info lifecycle balanced-match@0.2.1~install: balanced-match@0.2.1
+604 silly lifecycle balanced-match@0.2.1~install: no script for install, continuing
+605 info lifecycle balanced-match@0.2.1~postinstall: balanced-match@0.2.1
+606 silly lifecycle balanced-match@0.2.1~postinstall: no script for postinstall, continuing
+607 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64-arraybuffer
+608 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64-arraybuffer
+609 info lifecycle base64-arraybuffer@0.1.2~preinstall: base64-arraybuffer@0.1.2
+610 silly lifecycle base64-arraybuffer@0.1.2~preinstall: no script for preinstall, continuing
+611 info linkStuff base64-arraybuffer@0.1.2
+612 silly linkStuff base64-arraybuffer@0.1.2 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+613 verbose linkBins base64-arraybuffer@0.1.2
+614 verbose linkMans base64-arraybuffer@0.1.2
+615 verbose rebuildBundles base64-arraybuffer@0.1.2
+616 info lifecycle base64-arraybuffer@0.1.2~install: base64-arraybuffer@0.1.2
+617 silly lifecycle base64-arraybuffer@0.1.2~install: no script for install, continuing
+618 info lifecycle base64-arraybuffer@0.1.2~postinstall: base64-arraybuffer@0.1.2
+619 silly lifecycle base64-arraybuffer@0.1.2~postinstall: no script for postinstall, continuing
+620 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64-url
+621 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64-url
+622 info lifecycle base64-url@1.2.1~preinstall: base64-url@1.2.1
+623 silly lifecycle base64-url@1.2.1~preinstall: no script for preinstall, continuing
+624 info linkStuff base64-url@1.2.1
+625 silly linkStuff base64-url@1.2.1 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+626 verbose linkBins base64-url@1.2.1
+627 verbose linkMans base64-url@1.2.1
+628 verbose rebuildBundles base64-url@1.2.1
+629 info lifecycle base64-url@1.2.1~install: base64-url@1.2.1
+630 silly lifecycle base64-url@1.2.1~install: no script for install, continuing
+631 info lifecycle base64-url@1.2.1~postinstall: base64-url@1.2.1
+632 silly lifecycle base64-url@1.2.1~postinstall: no script for postinstall, continuing
+633 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64id
+634 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64id
+635 info lifecycle base64id@0.1.0~preinstall: base64id@0.1.0
+636 silly lifecycle base64id@0.1.0~preinstall: no script for preinstall, continuing
+637 info linkStuff base64id@0.1.0
+638 silly linkStuff base64id@0.1.0 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+639 verbose linkBins base64id@0.1.0
+640 verbose linkMans base64id@0.1.0
+641 verbose rebuildBundles base64id@0.1.0
+642 info lifecycle base64id@0.1.0~install: base64id@0.1.0
+643 silly lifecycle base64id@0.1.0~install: no script for install, continuing
+644 info lifecycle base64id@0.1.0~postinstall: base64id@0.1.0
+645 silly lifecycle base64id@0.1.0~postinstall: no script for postinstall, continuing
+646 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url
+647 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url
+648 info lifecycle base64url@1.0.5~preinstall: base64url@1.0.5
+649 silly lifecycle base64url@1.0.5~preinstall: no script for preinstall, continuing
+650 info linkStuff base64url@1.0.5
+651 silly linkStuff base64url@1.0.5 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+652 verbose linkBins base64url@1.0.5
+653 verbose link bins [ { base64url: './bin/base64url' },
+653 verbose link bins   '/home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.bin',
+653 verbose link bins   false ]
+654 verbose linkMans base64url@1.0.5
+655 verbose rebuildBundles base64url@1.0.5
+656 verbose rebuildBundles [ '.bin',
+656 verbose rebuildBundles   'get-stdin',
+656 verbose rebuildBundles   'indent-string',
+656 verbose rebuildBundles   'meow',
+656 verbose rebuildBundles   'minimist',
+656 verbose rebuildBundles   'object-assign',
+656 verbose rebuildBundles   'repeating' ]
+657 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules/get-stdin
+658 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules/get-stdin
+659 info lifecycle get-stdin@4.0.1~preinstall: get-stdin@4.0.1
+660 silly lifecycle get-stdin@4.0.1~preinstall: no script for preinstall, continuing
+661 info linkStuff get-stdin@4.0.1
+662 silly linkStuff get-stdin@4.0.1 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules as its parent node_modules
+663 verbose linkBins get-stdin@4.0.1
+664 verbose linkMans get-stdin@4.0.1
+665 verbose rebuildBundles get-stdin@4.0.1
+666 info lifecycle get-stdin@4.0.1~install: get-stdin@4.0.1
+667 silly lifecycle get-stdin@4.0.1~install: no script for install, continuing
+668 info lifecycle get-stdin@4.0.1~postinstall: get-stdin@4.0.1
+669 silly lifecycle get-stdin@4.0.1~postinstall: no script for postinstall, continuing
+670 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules/indent-string
+671 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules/indent-string
+672 info lifecycle indent-string@1.2.2~preinstall: indent-string@1.2.2
+673 silly lifecycle indent-string@1.2.2~preinstall: no script for preinstall, continuing
+674 info linkStuff indent-string@1.2.2
+675 silly linkStuff indent-string@1.2.2 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules as its parent node_modules
+676 verbose linkBins indent-string@1.2.2
+677 verbose link bins [ { 'indent-string': 'cli.js' },
+677 verbose link bins   '/home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules/.bin',
+677 verbose link bins   false ]
+678 verbose linkMans indent-string@1.2.2
+679 verbose rebuildBundles indent-string@1.2.2
+680 info lifecycle indent-string@1.2.2~install: indent-string@1.2.2
+681 silly lifecycle indent-string@1.2.2~install: no script for install, continuing
+682 info lifecycle indent-string@1.2.2~postinstall: indent-string@1.2.2
+683 silly lifecycle indent-string@1.2.2~postinstall: no script for postinstall, continuing
+684 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules/minimist
+685 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules/minimist
+686 info lifecycle minimist@1.2.0~preinstall: minimist@1.2.0
+687 silly lifecycle minimist@1.2.0~preinstall: no script for preinstall, continuing
+688 info linkStuff minimist@1.2.0
+689 silly linkStuff minimist@1.2.0 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules as its parent node_modules
+690 verbose linkBins minimist@1.2.0
+691 verbose linkMans minimist@1.2.0
+692 verbose rebuildBundles minimist@1.2.0
+693 info lifecycle minimist@1.2.0~install: minimist@1.2.0
+694 silly lifecycle minimist@1.2.0~install: no script for install, continuing
+695 info lifecycle minimist@1.2.0~postinstall: minimist@1.2.0
+696 silly lifecycle minimist@1.2.0~postinstall: no script for postinstall, continuing
+697 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules/object-assign
+698 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules/object-assign
+699 info lifecycle object-assign@1.0.0~preinstall: object-assign@1.0.0
+700 silly lifecycle object-assign@1.0.0~preinstall: no script for preinstall, continuing
+701 info linkStuff object-assign@1.0.0
+702 silly linkStuff object-assign@1.0.0 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules as its parent node_modules
+703 verbose linkBins object-assign@1.0.0
+704 verbose linkMans object-assign@1.0.0
+705 verbose rebuildBundles object-assign@1.0.0
+706 info lifecycle object-assign@1.0.0~install: object-assign@1.0.0
+707 silly lifecycle object-assign@1.0.0~install: no script for install, continuing
+708 info lifecycle object-assign@1.0.0~postinstall: object-assign@1.0.0
+709 silly lifecycle object-assign@1.0.0~postinstall: no script for postinstall, continuing
+710 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules/repeating
+711 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules/repeating
+712 info lifecycle repeating@1.1.3~preinstall: repeating@1.1.3
+713 silly lifecycle repeating@1.1.3~preinstall: no script for preinstall, continuing
+714 info linkStuff repeating@1.1.3
+715 silly linkStuff repeating@1.1.3 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules as its parent node_modules
+716 verbose linkBins repeating@1.1.3
+717 verbose link bins [ { repeating: 'cli.js' },
+717 verbose link bins   '/home/seed/HackSC/CS480VictoryLap/collabin/node_modules/base64url/node_modules/.bin',
+717 verbose link bins   false ]
+718 verbose linkMans repeating@1.1.3
+719 verbose rebuildBundles repeating@1.1.3
+720 info lifecycle repeating@1.1.3~install: repeating@1.1.3
+721 silly lifecycle repeating@1.1.3~install: no script for install, continuing
+722 info lifecycle repeating@1.1.3~postinstall: repeating@1.1.3
+723 silly lifecycle repeating@1.1.3~postinstall: no script for postinstall, continuing
+724 info lifecycle base64url@1.0.5~install: base64url@1.0.5
+725 silly lifecycle base64url@1.0.5~install: no script for install, continuing
+726 info lifecycle base64url@1.0.5~postinstall: base64url@1.0.5
+727 silly lifecycle base64url@1.0.5~postinstall: no script for postinstall, continuing
+728 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/basic-auth
+729 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/basic-auth
+730 info lifecycle basic-auth@1.0.3~preinstall: basic-auth@1.0.3
+731 silly lifecycle basic-auth@1.0.3~preinstall: no script for preinstall, continuing
+732 info linkStuff basic-auth@1.0.3
+733 silly linkStuff basic-auth@1.0.3 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+734 verbose linkBins basic-auth@1.0.3
+735 verbose linkMans basic-auth@1.0.3
+736 verbose rebuildBundles basic-auth@1.0.3
+737 info lifecycle basic-auth@1.0.3~install: basic-auth@1.0.3
+738 silly lifecycle basic-auth@1.0.3~install: no script for install, continuing
+739 info lifecycle basic-auth@1.0.3~postinstall: basic-auth@1.0.3
+740 silly lifecycle basic-auth@1.0.3~postinstall: no script for postinstall, continuing
+741 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/batch
+742 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/batch
+743 info lifecycle batch@0.5.3~preinstall: batch@0.5.3
+744 silly lifecycle batch@0.5.3~preinstall: no script for preinstall, continuing
+745 info linkStuff batch@0.5.3
+746 silly linkStuff batch@0.5.3 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+747 verbose linkBins batch@0.5.3
+748 verbose linkMans batch@0.5.3
+749 verbose rebuildBundles batch@0.5.3
+750 info lifecycle batch@0.5.3~install: batch@0.5.3
+751 silly lifecycle batch@0.5.3~install: no script for install, continuing
+752 info lifecycle batch@0.5.3~postinstall: batch@0.5.3
+753 silly lifecycle batch@0.5.3~postinstall: no script for postinstall, continuing
+754 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/benchmark
+755 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/benchmark
+756 info lifecycle benchmark@1.0.0~preinstall: benchmark@1.0.0
+757 silly lifecycle benchmark@1.0.0~preinstall: no script for preinstall, continuing
+758 info linkStuff benchmark@1.0.0
+759 silly linkStuff benchmark@1.0.0 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+760 verbose linkBins benchmark@1.0.0
+761 verbose linkMans benchmark@1.0.0
+762 verbose rebuildBundles benchmark@1.0.0
+763 info lifecycle benchmark@1.0.0~install: benchmark@1.0.0
+764 silly lifecycle benchmark@1.0.0~install: no script for install, continuing
+765 info lifecycle benchmark@1.0.0~postinstall: benchmark@1.0.0
+766 silly lifecycle benchmark@1.0.0~postinstall: no script for postinstall, continuing
+767 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/better-assert
+768 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/better-assert
+769 info lifecycle better-assert@1.0.2~preinstall: better-assert@1.0.2
+770 silly lifecycle better-assert@1.0.2~preinstall: no script for preinstall, continuing
+771 info linkStuff better-assert@1.0.2
+772 silly linkStuff better-assert@1.0.2 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+773 verbose linkBins better-assert@1.0.2
+774 verbose linkMans better-assert@1.0.2
+775 verbose rebuildBundles better-assert@1.0.2
+776 info lifecycle better-assert@1.0.2~install: better-assert@1.0.2
+777 silly lifecycle better-assert@1.0.2~install: no script for install, continuing
+778 info lifecycle better-assert@1.0.2~postinstall: better-assert@1.0.2
+779 silly lifecycle better-assert@1.0.2~postinstall: no script for postinstall, continuing
+780 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/binary-extensions
+781 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/binary-extensions
+782 info lifecycle binary-extensions@1.3.1~preinstall: binary-extensions@1.3.1
+783 silly lifecycle binary-extensions@1.3.1~preinstall: no script for preinstall, continuing
+784 info linkStuff binary-extensions@1.3.1
+785 silly linkStuff binary-extensions@1.3.1 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+786 verbose linkBins binary-extensions@1.3.1
+787 verbose linkMans binary-extensions@1.3.1
+788 verbose rebuildBundles binary-extensions@1.3.1
+789 info lifecycle binary-extensions@1.3.1~install: binary-extensions@1.3.1
+790 silly lifecycle binary-extensions@1.3.1~install: no script for install, continuing
+791 info lifecycle binary-extensions@1.3.1~postinstall: binary-extensions@1.3.1
+792 silly lifecycle binary-extensions@1.3.1~postinstall: no script for postinstall, continuing
+793 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/bindings
+794 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/bindings
+795 info lifecycle bindings@1.2.1~preinstall: bindings@1.2.1
+796 silly lifecycle bindings@1.2.1~preinstall: no script for preinstall, continuing
+797 info linkStuff bindings@1.2.1
+798 silly linkStuff bindings@1.2.1 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+799 verbose linkBins bindings@1.2.1
+800 verbose linkMans bindings@1.2.1
+801 verbose rebuildBundles bindings@1.2.1
+802 info lifecycle bindings@1.2.1~install: bindings@1.2.1
+803 silly lifecycle bindings@1.2.1~install: no script for install, continuing
+804 info lifecycle bindings@1.2.1~postinstall: bindings@1.2.1
+805 silly lifecycle bindings@1.2.1~postinstall: no script for postinstall, continuing
+806 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/blob
+807 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/blob
+808 info lifecycle blob@0.0.4~preinstall: blob@0.0.4
+809 silly lifecycle blob@0.0.4~preinstall: no script for preinstall, continuing
+810 info linkStuff blob@0.0.4
+811 silly linkStuff blob@0.0.4 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+812 verbose linkBins blob@0.0.4
+813 verbose linkMans blob@0.0.4
+814 verbose rebuildBundles blob@0.0.4
+815 info lifecycle blob@0.0.4~install: blob@0.0.4
+816 silly lifecycle blob@0.0.4~install: no script for install, continuing
+817 info lifecycle blob@0.0.4~postinstall: blob@0.0.4
+818 silly lifecycle blob@0.0.4~postinstall: no script for postinstall, continuing
+819 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/bluebird
+820 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/bluebird
+821 info lifecycle bluebird@2.9.26~preinstall: bluebird@2.9.26
+822 silly lifecycle bluebird@2.9.26~preinstall: no script for preinstall, continuing
+823 info linkStuff bluebird@2.9.26
+824 silly linkStuff bluebird@2.9.26 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+825 verbose linkBins bluebird@2.9.26
+826 verbose linkMans bluebird@2.9.26
+827 verbose rebuildBundles bluebird@2.9.26
+828 info lifecycle bluebird@2.9.26~install: bluebird@2.9.26
+829 silly lifecycle bluebird@2.9.26~install: no script for install, continuing
+830 info lifecycle bluebird@2.9.26~postinstall: bluebird@2.9.26
+831 silly lifecycle bluebird@2.9.26~postinstall: no script for postinstall, continuing
+832 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/bn.js
+833 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/bn.js
+834 info lifecycle bn.js@2.2.0~preinstall: bn.js@2.2.0
+835 silly lifecycle bn.js@2.2.0~preinstall: no script for preinstall, continuing
+836 info linkStuff bn.js@2.2.0
+837 silly linkStuff bn.js@2.2.0 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+838 verbose linkBins bn.js@2.2.0
+839 verbose linkMans bn.js@2.2.0
+840 verbose rebuildBundles bn.js@2.2.0
+841 info lifecycle bn.js@2.2.0~install: bn.js@2.2.0
+842 silly lifecycle bn.js@2.2.0~install: no script for install, continuing
+843 info lifecycle bn.js@2.2.0~postinstall: bn.js@2.2.0
+844 silly lifecycle bn.js@2.2.0~postinstall: no script for postinstall, continuing
+845 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/brace-expansion
+846 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/brace-expansion
+847 info lifecycle brace-expansion@1.1.1~preinstall: brace-expansion@1.1.1
+848 silly lifecycle brace-expansion@1.1.1~preinstall: no script for preinstall, continuing
+849 info linkStuff brace-expansion@1.1.1
+850 silly linkStuff brace-expansion@1.1.1 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+851 verbose linkBins brace-expansion@1.1.1
+852 verbose linkMans brace-expansion@1.1.1
+853 verbose rebuildBundles brace-expansion@1.1.1
+854 info lifecycle brace-expansion@1.1.1~install: brace-expansion@1.1.1
+855 silly lifecycle brace-expansion@1.1.1~install: no script for install, continuing
+856 info lifecycle brace-expansion@1.1.1~postinstall: brace-expansion@1.1.1
+857 silly lifecycle brace-expansion@1.1.1~postinstall: no script for postinstall, continuing
+858 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/braces
+859 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/braces
+860 info lifecycle braces@1.8.2~preinstall: braces@1.8.2
+861 silly lifecycle braces@1.8.2~preinstall: no script for preinstall, continuing
+862 info linkStuff braces@1.8.2
+863 silly linkStuff braces@1.8.2 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+864 verbose linkBins braces@1.8.2
+865 verbose linkMans braces@1.8.2
+866 verbose rebuildBundles braces@1.8.2
+867 info lifecycle braces@1.8.2~install: braces@1.8.2
+868 silly lifecycle braces@1.8.2~install: no script for install, continuing
+869 info lifecycle braces@1.8.2~postinstall: braces@1.8.2
+870 silly lifecycle braces@1.8.2~postinstall: no script for postinstall, continuing
+871 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/bson
+872 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/bson
+873 info lifecycle bson@0.2.22~preinstall: bson@0.2.22
+874 silly lifecycle bson@0.2.22~preinstall: no script for preinstall, continuing
+875 info linkStuff bson@0.2.22
+876 silly linkStuff bson@0.2.22 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+877 verbose linkBins bson@0.2.22
+878 verbose linkMans bson@0.2.22
+879 verbose rebuildBundles bson@0.2.22
+880 info lifecycle bson@0.2.22~install: bson@0.2.22
+881 verbose lifecycle bson@0.2.22~install: unsafe-perm in lifecycle true
+882 verbose lifecycle bson@0.2.22~install: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/home/seed/HackSC/CS480VictoryLap/collabin/node_modules/bson/node_modules/.bin:/home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.bin:.:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+883 verbose lifecycle bson@0.2.22~install: CWD: /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/bson
+884 silly lifecycle bson@0.2.22~install: Args: [ '-c', '(node-gyp rebuild 2> builderror.log) || (exit 0)' ]
+885 silly lifecycle bson@0.2.22~install: Returned: code: 0  signal: null
+886 info lifecycle bson@0.2.22~postinstall: bson@0.2.22
+887 silly lifecycle bson@0.2.22~postinstall: no script for postinstall, continuing
+888 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/buffer-crc32
+889 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/buffer-crc32
+890 info lifecycle buffer-crc32@0.2.3~preinstall: buffer-crc32@0.2.3
+891 silly lifecycle buffer-crc32@0.2.3~preinstall: no script for preinstall, continuing
+892 info linkStuff buffer-crc32@0.2.3
+893 silly linkStuff buffer-crc32@0.2.3 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+894 verbose linkBins buffer-crc32@0.2.3
+895 verbose linkMans buffer-crc32@0.2.3
+896 verbose rebuildBundles buffer-crc32@0.2.3
+897 info lifecycle buffer-crc32@0.2.3~install: buffer-crc32@0.2.3
+898 silly lifecycle buffer-crc32@0.2.3~install: no script for install, continuing
+899 info lifecycle buffer-crc32@0.2.3~postinstall: buffer-crc32@0.2.3
+900 silly lifecycle buffer-crc32@0.2.3~postinstall: no script for postinstall, continuing
+901 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/buffer-equal-constant-time
+902 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/buffer-equal-constant-time
+903 info lifecycle buffer-equal-constant-time@1.0.1~preinstall: buffer-equal-constant-time@1.0.1
+904 silly lifecycle buffer-equal-constant-time@1.0.1~preinstall: no script for preinstall, continuing
+905 info linkStuff buffer-equal-constant-time@1.0.1
+906 silly linkStuff buffer-equal-constant-time@1.0.1 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+907 verbose linkBins buffer-equal-constant-time@1.0.1
+908 verbose linkMans buffer-equal-constant-time@1.0.1
+909 verbose rebuildBundles buffer-equal-constant-time@1.0.1
+910 info lifecycle buffer-equal-constant-time@1.0.1~install: buffer-equal-constant-time@1.0.1
+911 silly lifecycle buffer-equal-constant-time@1.0.1~install: no script for install, continuing
+912 info lifecycle buffer-equal-constant-time@1.0.1~postinstall: buffer-equal-constant-time@1.0.1
+913 silly lifecycle buffer-equal-constant-time@1.0.1~postinstall: no script for postinstall, continuing
+914 verbose rebuild bundle /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/bufferutil
+915 info build /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/bufferutil
+916 info lifecycle bufferutil@1.2.1~preinstall: bufferutil@1.2.1
+917 silly lifecycle bufferutil@1.2.1~preinstall: no script for preinstall, continuing
+918 info linkStuff bufferutil@1.2.1
+919 silly linkStuff bufferutil@1.2.1 has /home/seed/HackSC/CS480VictoryLap/collabin/node_modules as its parent node_modules
+920 verbose linkBins bufferutil@1.2.1
+921 verbose linkMans bufferutil@1.2.1
+922 verbose rebuildBundles bufferutil@1.2.1
+923 verbose rebuildBundles [ 'nan' ]
+924 info lifecycle bufferutil@1.2.1~install: bufferutil@1.2.1
+925 verbose lifecycle bufferutil@1.2.1~install: unsafe-perm in lifecycle true
+926 verbose lifecycle bufferutil@1.2.1~install: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/home/seed/HackSC/CS480VictoryLap/collabin/node_modules/bufferutil/node_modules/.bin:/home/seed/HackSC/CS480VictoryLap/collabin/node_modules/.bin:.:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+927 verbose lifecycle bufferutil@1.2.1~install: CWD: /home/seed/HackSC/CS480VictoryLap/collabin/node_modules/bufferutil
+928 silly lifecycle bufferutil@1.2.1~install: Args: [ '-c', 'node-gyp rebuild' ]
+929 silly lifecycle bufferutil@1.2.1~install: Returned: code: 1  signal: null
+930 info lifecycle bufferutil@1.2.1~install: Failed to exec install script
+931 warn EPACKAGEJSON starter-node-angular@ No description
+932 warn EPACKAGEJSON starter-node-angular@ No repository field.
+933 warn EPACKAGEJSON starter-node-angular@ No license field.
+934 verbose stack Error: bufferutil@1.2.1 install: `node-gyp rebuild`
+934 verbose stack Exit status 1
+934 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:233:16)
+934 verbose stack     at emitTwo (events.js:87:13)
+934 verbose stack     at EventEmitter.emit (events.js:172:7)
+934 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+934 verbose stack     at emitTwo (events.js:87:13)
+934 verbose stack     at ChildProcess.emit (events.js:172:7)
+934 verbose stack     at maybeClose (internal/child_process.js:818:16)
+934 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+935 verbose pkgid bufferutil@1.2.1
+936 verbose cwd /home/seed/HackSC/CS480VictoryLap/collabin
+937 error Linux 3.5.0-37-generic
+938 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+939 error node v5.0.0
+940 error npm  v3.3.6
+941 error code ELIFECYCLE
+942 error bufferutil@1.2.1 install: `node-gyp rebuild`
+942 error Exit status 1
+943 error Failed at the bufferutil@1.2.1 install script 'node-gyp rebuild'.
+943 error This is most likely a problem with the bufferutil package,
+943 error not with npm itself.
+943 error Tell the author that this fails on your system:
+943 error     node-gyp rebuild
+943 error You can get their info via:
+943 error     npm owner ls bufferutil
+943 error There is likely additional logging output above.
+944 verbose exit [ 1, true ]
