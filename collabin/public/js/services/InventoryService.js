@@ -2,22 +2,24 @@
 angular.module('InventoryService', []).factory('Inventory', ['$http', function($http) {
 
     return {
-        // ============= Change Later ==============
-        // call to get all nerds
-        get : function() {
-            return $http.get('/api/nerds');
+        // call to get an inventory
+        get : function(id) {
+            return $http.get('/api/inventories/' + id);
         },
 
-
-                // these will work when more API routes are defined on the Node side of things
-        // call to POST and create a new nerd
-        create : function(nerdData) {
-            return $http.post('/api/nerds', nerdData);
+        // call to create a new inventory
+        create : function(inventoryData) {
+            return $http.post('/api/inventories', inventoryData);
         },
 
-        // call to DELETE a nerd
+        // call to update an inventory
+        update : function(id, inventoryData) {
+            return $http.put('/api/inventories/' + id, inventoryData);
+        },
+
+        // call to delete an inventory
         delete : function(id) {
-            return $http.delete('/api/nerds/' + id);
+            return $http.delete('/api/inventories/' + id);
         }
     }       
 
