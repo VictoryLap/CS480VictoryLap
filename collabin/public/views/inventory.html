@@ -17,26 +17,8 @@
             <!--<li class="profile-image">-->
             <!--<img class="img-responsive" src="../images/emily1.png">-->
             <!--</li>-->
-            <li>
-                <a href="#">Inventory 1</a>
-            </li>
-            <li>
-                <a href="#">Inventory 2</a>
-            </li>
-            <li>
-                <a href="#">Inventory 3</a>
-            </li>
-            <li>
-                <a href="#">Inventory 4</a>
-            </li>
-            <li>
-                <a href="#">Inventory 5</a>
-            </li>
-            <li>
-                <a href="#">Inventory 6</a>
-            </li>
-            <li>
-                <a href="#">Inventory 7</a>
+            <li ng-repeat="inventory in inventories">
+                <a href="#">{{ inventory.name }}</a>
             </li>
         </ul>
     </div>
@@ -48,7 +30,7 @@
         <!-- Table header -->
         <div class="panel panel-default text-center">
             <div class="panel-heading">
-                <h2> Iventory Name</h2>
+                <h2>Iventory Name</h2>
 
                 <div class="btn-toolbar" style="display: inline-block">
                     <a href="#menu-toggle" class="btn btn-warning" id="menu-toggle"><span
@@ -73,23 +55,11 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td style="vertical-align: middle"> mathagoris</td>
-                    <td style="vertical-align: middle"> 70m Rope</td>
-                    <td style="vertical-align: middle"> 2</td>
-                    <td style="vertical-align: middle"><img class="img-responsive" src="../images/70mrope.jpeg"></td>
-                    <td style="vertical-align: middle">
-                        <div class="btn-group-vertical">
-                            <button class="btn-warning btn btn-xs center-block" type="submit" data-toggle="modal" data-target="#editItemModal""> Edit</button>
-                            <button class="btn-danger btn btn-xs center-block" type="submit"> Remove</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="vertical-align: middle"> crisrealTheSecurityGod</td>
-                    <td style="vertical-align: middle"> Nuts</td>
-                    <td style="vertical-align: middle"> 7</td>
-                    <td style="vertical-align: middle"><img class="img-responsive" src="../images/nuts.jpeg"></td>
+                <tr ng-repeat="item in items | orderBy:orderProp">
+                    <td style="vertical-align: middle">{{ item.owner }}</td>
+                    <td style="vertical-align: middle">{{ item.name }}</td>
+                    <td style="vertical-align: middle">{{ item.quantity }}</td>
+                    <td style="vertical-align: middle"><img class="img-responsive" src={{item.image}}></td>
                     <td style="vertical-align: middle">
                         <div class="btn-group-vertical">
                             <button class="btn-warning btn btn-xs center-block" type="submit" data-toggle="modal" data-target="#editItemModal"> Edit</button>

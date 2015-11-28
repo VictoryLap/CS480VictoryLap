@@ -9,16 +9,10 @@
             controller: 'MainController'
         })
 
-        // nerds page that will use the NerdController
-        .when('/nerds', {
-            templateUrl: 'views/nerd.html',
-            controller: 'NerdController'
-        })
-
-        // inventories page that will use the InventoriesController
+        // inventories page that will use the InventoryController
         .when('/inventories', {
-            templateUrl: 'views/inventories.html',
-            controller: 'InventoriesController'
+            templateUrl: 'views/inventory.html',
+            controller: 'InventoryController'
         })
 
         .when('/profile', {

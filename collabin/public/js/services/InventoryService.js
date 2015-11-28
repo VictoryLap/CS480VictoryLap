@@ -1,7 +1,8 @@
-// public/js/services/NerdService.js
-angular.module('NerdService', []).factory('Nerd', ['$http', function($http) {
+// public/js/services/InventoryService.js
+angular.module('InventoryService', []).factory('Inventory', ['$http', function($http) {
 
     return {
+        // ============= Change Later ==============
         // call to get all nerds
         get : function() {
             return $http.get('/api/nerds');
