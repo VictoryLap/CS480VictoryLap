@@ -28,7 +28,6 @@ var itemSchema = Schema({
 	description: String,
 	img: { data: Buffer, contentType: String },
 	quantity: Number,
-	//owner: Schema.Types.ObjectId
 	owner: Schema.Types.ObjectId
 });
 
