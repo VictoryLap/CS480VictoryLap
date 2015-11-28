@@ -5,51 +5,31 @@ var Schema = mongoose.Schema;
 
 // define our schema
 var inventorySchema = Schema({
-	//ID: Schema.Types.ObjectId,
-	ID: {
-		type: Schema.Types.ObjectId,
-		ref: 'inventory'
-	},
 	name: String,
 	dateCreated: Date,
 	dateLastAltered: Date,
-	admins: [{
-		type: Schema.Types.ObjectId,
-		ref: 'user'}],
-	users: [{
-		type: Schema.Types.ObjectId,
-		ref: 'user'}],
-	items: [{
-		type: Schema.Types.ObjectId,
-		ref: 'item'}]
+	admins: [Schema.Types.ObjectId],
+	users: [Schema.Types.ObjectId],
+	items: [Schema.Types.ObjectId]
 });
 
 var userSchema = Schema({
-	//ID: Schema.Types.ObjectId,
-	ID: {
-		type: Schema.Types.ObjectId,
-		ref: 'user'
-	},
 	userName: String,
+	firstName: String,
+	lastName: String,
+	email: String,
 	dateCreated: Date,
-	password: String
+	password: String,
+	img: { data: Buffer, contentType: String }
 });
 
 var itemSchema = Schema({
-	//ID: Schema.Types.ObjectId,
-	ID: {
-		type: Schema.Types.ObjectId,
-		ref: 'item'
-	},
 	name: String,
 	description: String,
 	img: { data: Buffer, contentType: String },
 	quantity: Number,
 	//owner: Schema.Types.ObjectId
-	owner: {
-		type: Schema.Types.ObjectId,
-		ref: 'user'
-	}
+	owner: Schema.Types.ObjectId
 });
 
 // create models from schema
