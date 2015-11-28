@@ -14,7 +14,7 @@ width: 100%; background-size: cover; height:100vh;">
 
                 <!-- Sign In Form-->
                 <form class="form-signin">
-                    <input id="email" type="text" class="form-control" placeholder="Username" required autofocus>
+                    <input id="email" type="text" class="form-control" placeholder="Email" required autofocus>
                     <input id="password" type="password" class="form-control" placeholder="Password" required>
                     <button class="btn btn-lg btn-warning btn-block" type="submit">
                         Sign in
@@ -45,31 +45,31 @@ width: 100%; background-size: cover; height:100vh;">
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">First name:</label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" value="" type="text" id="firstname_input">
+                                        <input class="form-control" value="" type="text" name="firstname_input">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Last name:</label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" value="" type="text" id="lastname_input">
+                                        <input class="form-control" value="" type="text" name="lastname_input">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Email:</label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" value="" type="text" id="email_input">
+                                        <input class="form-control" value="" type="text" name="email_input">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label">Username:</label>
                                     <div class="col-md-8">
-                                        <input class="form-control" value="" type="text" id="username_input">
+                                        <input class="form-control" value="" type="text" name="username_input">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label">Password:</label>
                                     <div class="col-md-8">
-                                        <input class="form-control" value="" type="password" id="password_input">
+                                        <input class="form-control" value="" type="password" name="password_input">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -81,14 +81,14 @@ width: 100%; background-size: cover; height:100vh;">
                                 <div class="form-group">
                                     <label class="col-md-3 control-label"></label>
                                     <div class="col-md-8">
-                                        <input class="btn btn-warning btn-lg btn-block" value="Done" type="button"  ng-click="newUser(firstname_input, lastname_input, username_input, email_input, password_input)">
+                                        <input class="btn btn-warning btn-lg btn-block" value="Done" type="button">
                                         <span></span>
                                     </div>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="">Close</button>
                         </div>
                     </div>
                 </div>

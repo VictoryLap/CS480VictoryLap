@@ -37,6 +37,7 @@ var Item = dbModels.item;
                     if (err)
                         res.send(err);
 
+<<<<<<< HEAD
                     res.json(inventories);
                 });
             })
@@ -44,6 +45,17 @@ var Item = dbModels.item;
             // add an inventory
             .post(function(req, res){
                 var inventory = new Inventory();
+=======
+//        app.get('/api/inventory/{inventoryID}', function(req, res) {
+	app.get('/api/inventory/{inventoryID}', function(req, res) {
+            // use mongoose to get all inventories in the database
+            dbModels.inventory.find(function(err, inventories) {
+
+                // if there is an error retrieving, send the error. 
+                // nothing after res.send(err) will execute
+                if (err)
+                    res.send(err);
+>>>>>>> DevCris
 
                 inventory.name = req.body.name;
                 inventory.dateCreated = Date.now();
