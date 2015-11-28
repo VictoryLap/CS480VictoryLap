@@ -4,11 +4,16 @@
 var express        = require('express');
 var app            = express();
 var bodyParser     = require('body-parser');
+var morgan	   = require('morgan');
 var mongoose 	   = require('mongoose');
 var methodOverride = require('method-override');
+var jwt		   = require('jsonwebtoken');
+var cookieParser   = require('cookie-parser');
+var passport	   = require('passport');
+var session	   = require('express-session');
 
 // configuration ===========================================
-    
+
 // config files
 var db = require('./config/db');
 
@@ -26,6 +31,8 @@ dbconn.once('open', function (callback) {
   // yay!
 });
 
+app.set('superSecret', db.secret); //secret variable
+
 // get all data/stuff of the body (POST) parameters
 // parse application/json 
 app.use(bodyParser.json()); 
@@ -36,11 +43,21 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true })); 
 
+//use morgan to log requests to console
+app.use(morgan('dev'));
+
 // override with the X-HTTP-Method-Override header in the request. simulate DELETE/PUT
 app.use(methodOverride('X-HTTP-Method-Override')); 
 
 // set the static files location /public/img will be /img for users
 app.use(express.static(__dirname + '/public')); 
+
+// Cookies n Sessions
+app.use(cookieParser());
+
+app.use(session({ secret: 'QWERTYUIOP' }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // routes ==================================================
 require('./app/routes')(app); // configure our routes

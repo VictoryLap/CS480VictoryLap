@@ -45,31 +45,31 @@ width: 100%; background-size: cover; height:100vh;">
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">First name:</label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" value="" type="text">
+                                        <input class="form-control" value="" type="text" id="firstname_input">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Last name:</label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" value="" type="text">
+                                        <input class="form-control" value="" type="text" id="lastname_input">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Email:</label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" value="" type="text">
+                                        <input class="form-control" value="" type="text" id="email_input">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label">Username:</label>
                                     <div class="col-md-8">
-                                        <input class="form-control" value="" type="text">
+                                        <input class="form-control" value="" type="text" id="username_input">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label">Password:</label>
                                     <div class="col-md-8">
-                                        <input class="form-control" value="" type="password">
+                                        <input class="form-control" value="" type="password" id="password_input">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -81,7 +81,7 @@ width: 100%; background-size: cover; height:100vh;">
                                 <div class="form-group">
                                     <label class="col-md-3 control-label"></label>
                                     <div class="col-md-8">
-                                        <input class="btn btn-warning btn-lg btn-block" value="Done" type="button">
+                                        <input class="btn btn-warning btn-lg btn-block" value="Done" type="button"  ng-click="newUser(firstname_input, lastname_input, username_input, email_input, password_input)">
                                         <span></span>
                                     </div>
                                 </div>

@@ -5,7 +5,12 @@
     "express": "~4.5.1",
     "mongoose": "~3.8.0",
     "body-parser": "~1.4.2",
-    "method-override": "~2.0.2"
+    "method-override": "~2.0.2",
+    "morgan": "~1.6.1",
+    "jsonwebtoken": "~5.4.1",
+    "cookie-parser": "~1.4.0",
+    "express-session": "~1.12.1",
+    "passport": "~0.3.2"
   },
   "devDependencies": {
     "jasmine-core": "~2.3.2",
