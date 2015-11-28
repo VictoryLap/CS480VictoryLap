@@ -20,7 +20,7 @@ var db = require('./config/db');
 // set our port
 
 //var ipaddr = process.env.OPENSHIFT_INTERNAL_IP;
-var port = process.env.PORT || 8081; 
+var port = process.env.PORT || 8080; 
 //var port = process.env.PORT || process.env.OPENSHIFT_INTERNAL_PORT || 8080; 
 
 // connect to our mongoDB database
