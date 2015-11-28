@@ -22,6 +22,12 @@ angular.module('InventoryCtrl', []).controller('InventoryController', function($
 
     ];
 
+    $scope.collaborators = [
+        {'name': 'mathagoris'},
+        {'name': 'crisraelTheSecurityGod'},
+        {'name': 'emilycup'}
+    ];
+
     $scope.orderProp = 'name';
     $scope.orderType = "Amount";
     $scope.sortOrder = function() {
