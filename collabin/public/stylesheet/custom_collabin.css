@@ -65,27 +65,6 @@ html, body {
 
 }
 
-/**************** JUMBOTRON ******************/
-/*.jumbotron h1{*/
-    /*color: #FC5C2C;*/
-    /*/!*margin-top: -20px;*!/*/
-/*}*/
-
-/*.jumbotron p{*/
-    /*color:  #EEAC12;*/
-/*}*/
-
-/*.jumbotron {*/
-    /*position: relative;*/
-    /*background: #000 url("../images/wynne_stuff.jpg") center center;*/
-    /*width: 100%;*/
-    /*background-size: cover;*/
-    /*height:100vh;*/
-/*}*/
-
-/*.special,.special .jumbotron {height:100%;}*/
-
-
 /**************** SIGN IN ********************/
 .form-signin {
     max-width: 330px;
@@ -155,7 +134,29 @@ html, body {
     margin-top: 10px;
 }
 
-/******************** TABLE ********************/
-/*.panel-default tr{*/
-    /*text-align: center;*/
-/*}*/
+/******************** Item Image Preview ********************/
+.container{
+    margin-top:20px;
+}
+.image-preview-input {
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.image-preview-input input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.image-preview-input-title {
+    margin-left:2px;
+}
