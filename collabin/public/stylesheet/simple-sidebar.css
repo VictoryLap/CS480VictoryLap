@@ -130,6 +130,11 @@
 
     /******** MY OWN ADDITIONS TO THIS CSS *********/
 
+    /************* borderless table *********/
+    .borderless th, .borderless td {
+        border-top: none !important;
+    }
+
     /*************** IMAGE ******************/
     #sidebar-wrapper img {
         padding-top: 10%;

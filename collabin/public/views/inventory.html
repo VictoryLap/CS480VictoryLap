@@ -16,11 +16,14 @@
             </div>
         </div>
         <ul class="sidebar-nav center-block">
-            <!--<li class="profile-image">-->
-            <!--<img class="img-responsive" src="../images/emily1.png">-->
-            <!--</li>-->
             <li ng-repeat="inventory in inventories">
-                <a href="#">{{ inventory.name }}</a>
+                <table class="table borderless">
+                    <li>
+                    <td><a href="#">{{ inventory.name }}</a></td>
+                    <td><button class="btn-danger btn btn-xs center-block" type="submit"><span
+                            class="glyphicon glyphicon-minus"></span></button></td>
+                    </li>
+                </table>
             </li>
         </ul>
     </div>
@@ -100,7 +103,9 @@
                 </div>
                 <div class="modal-footer">
                     <div class="btn-toolbar" style="display: inline-block">
-                        <button type="button" class="btn btn-warning" data-dismiss="modal">Add</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal" ng-click="createInventory()">
+                            Add
+                        </button>
                         <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
                     </div>
                 </div>

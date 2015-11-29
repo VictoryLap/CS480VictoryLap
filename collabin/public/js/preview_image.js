@@ -1,3 +1,4 @@
+// pop-up box  ============================================================
 $(document).on('click', '#close-preview', function () {
     $('.image-preview').popover('hide');
     // Hover befor close the preview
@@ -11,7 +12,15 @@ $(document).on('click', '#close-preview', function () {
     );
 });
 
+// main logic ===============================================================
+//
+//      * creates the close button
+//      * clears the image when 'clear button is pressed'
+//      * creates the preview image
+//
+// ==========================================================================
 $(function () {
+
     // Create the close button
     var closebtn = $('<button/>', {
         type: "button",
@@ -20,6 +29,7 @@ $(function () {
         style: 'font-size: initial;',
     });
     closebtn.attr("class", "close pull-right");
+
     // Set the popover default content
     $('.image-preview').popover({
         trigger: 'manual',
@@ -28,6 +38,7 @@ $(function () {
         content: "There's no image",
         placement: 'bottom'
     });
+
     // Clear event
     $('.image-preview-clear').click(function () {
         $('.image-preview').attr("data-content", "").popover('hide');
@@ -36,6 +47,7 @@ $(function () {
         $('.image-preview-input input:file').val("");
         $(".image-preview-input-title").text("Browse");
     });
+
     // Create the preview image
     $(".image-preview-input input:file").change(function () {
         var img = $('<img/>', {
