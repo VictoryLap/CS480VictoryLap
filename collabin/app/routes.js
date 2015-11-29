@@ -139,7 +139,7 @@ var Item = dbModels.item;
         router.route('/users/:userID')
             // get a user by userID
             .get(function(req, res) {
-                User.findById(req.params.userID, function(err, user) {
+                User.findOne({userName: req.params.userID}, function(err, user) {
                     if (err)
                         res.send(err);
                     res.json(user);
