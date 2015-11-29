@@ -5,28 +5,27 @@ angular.module('MainCtrl', []).controller('MainController', ['$scope', '$http', 
 
 	$scope.user = {};
 	$scope.tagline = 'An inventory for everyone';
-	//var dbModels = require('../../../app/models/dbModels');
-
 
     $scope.newUser = function() {
 
-        //var dbModels = require('../../../app/models/dbModels');
-		/*
-		var user = {
-			userName: username,
-			firstName: first,
-			lastName: last,
-			email: email,
-			password: password
-		}; */
+        /*
+        User.findOne({ //Find at least one user
+            userName: $scope.user.userName;
+        } function (err, user) {
+            if(!user) { //No users in collection
+                !!!User.create stuff goes here
+            }
+        };
 
-		//if(!$.isEmptyObject($scope.user)) {
+
+        */
+
+		//Should check if username exists
+		//if(User.get($scope.user.userName) == null)
 		User.create($scope.user)
-		//			.success(function() {
-		//				$scope.user = {};
-		//			});
-
-		//}
+				.success(function() {
+					$scope.user = {};
+				});
 	};
 		
 }]);

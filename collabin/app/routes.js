@@ -9,7 +9,7 @@ var Inventory = dbModels.inventory;
 var User = dbModels.user;
 var Item = dbModels.item;
 
-    module.exports = function(app) {
+    module.exports = function(app, passport) {
 
         // middleware to use for all requests
         router.use(function(req, res, next) {

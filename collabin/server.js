@@ -53,6 +53,8 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/public')); 
 
 // Cookies n Sessions
+require('./config/passport')(passport);
+
 app.use(cookieParser());
 
 app.use(session({ secret: 'QWERTYUIOP' }));
@@ -60,7 +62,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // routes ==================================================
-require('./app/routes')(app); // configure our routes
+require('./app/routes')(app, passport); // configure our routes
 
 // start app ===============================================
 // startup our app at http://localhost:8080
