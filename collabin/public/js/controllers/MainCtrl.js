@@ -1,31 +1,32 @@
 // public/js/controllers/MainCtrl.js
 
-angular.module('MainCtrl', []).controller('MainController', ['$scope', '$http', 'Users', function($scope, $http, Users) {
+angular.module('MainCtrl', []).controller('MainController', ['$scope', '$http', 'User', function($scope, $http, User) {
 
 
-	//$scope.formData = {};
+	$scope.user = {};
 	$scope.tagline = 'An inventory for everyone';
 	//var dbModels = require('../../../app/models/dbModels');
 
 
-    $scope.newUser = function(first, last, username, email, password) {
+    $scope.newUser = function() {
 
         //var dbModels = require('../../../app/models/dbModels');
+		/*
 		var user = {
 			userName: username,
 			firstName: first,
 			lastName: last,
 			email: email,
 			password: password
-		};
+		}; */
 
-		if(!$.isEmptyObject(user)) {
-			user.create(user)
-					.success(function() {
-						user = {};
-					});
+		//if(!$.isEmptyObject($scope.user)) {
+		User.create($scope.user)
+		//			.success(function() {
+		//				$scope.user = {};
+		//			});
 
-		}
+		//}
 	};
 		
 }]);
