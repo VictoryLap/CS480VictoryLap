@@ -2,9 +2,19 @@
 angular.module('UserService', []).factory('User', ['$http', function($http) {
 
     return {
-        // call to get a user
-        get : function(userName) {
-            return $http.get('/api/users/' + userName);
+        // get all users
+        get : function() {
+            return $http.get('/api/users');
+        },
+
+        // get user by id
+        getByID : function(id) {
+            return $http.get('/api/users/' + id);
+        },
+
+        // call to get a user by userName
+        getByUserName : function(userName) {
+            return $http.get('/api/users/userName/' + userName);
         },
 
         // call to create a new user

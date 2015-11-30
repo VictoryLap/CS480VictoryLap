@@ -2,8 +2,13 @@
 angular.module('ItemService', []).factory('Item', ['$http', function($http) {
 
     return {
-        // call to get an item
-        get : function(id) {
+        // call to get all items
+        get : function() {
+            return $http.get('/api/items');
+        },
+
+        // call to get an item by id
+        getByID : function(id) {
             return $http.get('/api/items/' + id);
         },
 

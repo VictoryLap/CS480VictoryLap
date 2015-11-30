@@ -2,8 +2,13 @@
 angular.module('InventoryService', []).factory('Inventory', ['$http', function($http) {
 
     return {
-        // call to get an inventory
-        get : function(id) {
+        // call to get all inventories
+        get : function() {
+            return $http.get('/api/inventories');
+        },
+
+        // call to get an inventory by id
+        getByID : function(id) {
             return $http.get('/api/inventories/' + id);
         },
 

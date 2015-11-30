@@ -103,6 +103,7 @@ var Item = dbModels.item;
                 });
             });
 
+
         // user api ================================================================
 
         router.route('/users')
@@ -141,7 +142,7 @@ var Item = dbModels.item;
         router.route('/users/:userID')
             // get a user by userID
             .get(function(req, res) {
-                User.findOne({userName: req.params.userID}, function(err, user) {
+                User.findById(req.params.userID, function(err, user) {
                     if (err)
                         res.send(err);
                     res.json(user);
@@ -178,6 +179,17 @@ var Item = dbModels.item;
                     if(err)
                         res.send(err);
                     res.json({ message: 'Successfully deleted' });
+                });
+            });
+
+        router.route('/users/userName/:userName')
+
+            // get user by userName
+            .get(function(req, res) {
+                User.findOne({userName: req.params.userName}, function(err, user) {
+                    if (err)
+                        res.send(err);
+                    res.json(user);
                 });
             });
 
