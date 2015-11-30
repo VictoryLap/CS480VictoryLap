@@ -52,9 +52,24 @@
 angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope', '$http', 'Inventory', 'Item', function ($scope, $http, Inventory, Item) {
 
     // declaring variables that will be used during api calls
-    $scope.inventory = {};
+    $scope.inventory = [];
+    //$scope.items = [];
 
-    $scope.inventories = Inventory.get();
+    Inventory.get()
+        .success(function (data) {
+            $scope.inventories = data;
+            $scope.inventory = $scope.inventories[0];
+            $scope.items = [];
+            $scope.inventory.items.forEach(function (element, index, array) {
+                console.log(element);
+                Item.getByID(element)
+                    .success(function (itemData) {
+                        $scope.items.push(itemData);
+                    });
+            });
+        });
+
+
     // CREATE INVENTORY =============================================
     // when submitting the add form, send the text to the node API
     $scope.createInventory = function () {
@@ -62,14 +77,47 @@ angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope',
         // validate the formData to make sure that something is there if form is empty, nothing will happen
         // people can't just hold enter to keep adding the same to-do anymore
         if (!$.isEmptyObject($scope.inventory)) {
+
             // call the create function from our service (returns a promise object)
             Inventory.create($scope.inventory)
 
                 // if successful creation, call our get function to get all the new todos
                 .success(function () {
-                    $scope.inventory.name = {}; // clear the form so our user is ready to enter another
 
+                    // clear the form so our user is ready to enter another
+                    $scope.inventory.name = null;
                 });
         }
     }
+
+    // CREATE ITEM =====================================================
+    $scope.createItem = function () {
+
+        // validate the formData to make sure that something is there if form is empty, nothing will happen
+        // people can't just hold enter to keep adding the same to-do anymore
+        if (!$.isEmptyObject($scope.item)) {
+
+            // call the create function from our service (returns a promise object)
+            Item.create($scope.item)
+
+                // if successful creation, call our get function to get all the new todos
+                .success(function (data) {
+                    Inventory.getByID("565be7c72a59ac09608d58e5")
+                        .success(function (inventoryData) {
+                            $scope.inventory = inventoryData;
+                            $scope.inventory.items.push(data);
+                            Inventory.update($scope.inventory._id, $scope.inventory)
+
+                                .success(function () {
+                                // it added yay!
+                            });
+                        });
+
+                    // clear the form so our user is ready to enter another
+                    $scope.item.name = null;
+                    $scope.item.quantity = null;
+                });
+        }
+    }
+
 }]);

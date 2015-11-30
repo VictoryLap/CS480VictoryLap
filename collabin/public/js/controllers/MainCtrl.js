@@ -21,7 +21,7 @@ angular.module('MainCtrl', []).controller('MainController', ['$scope', '$http', 
 		//if(User.get($scope.user.userName) == null)
 		User.create($scope.user)
 				.success(function() {
-					$scope.user = {};
+					$scope.user = null;
 				});
 	};
 		

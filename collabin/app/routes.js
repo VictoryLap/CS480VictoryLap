@@ -48,9 +48,9 @@ var Item = dbModels.item;
                 inventory.name = req.body.name;
                 inventory.dateCreated = Date.now();
                 inventory.dateLastAltered = Date.now();
-                //inventory.admins = req.body.admins;
-                inventory.users = null;
-                inventory.items = null;
+                inventory.admins = req.body.admins;
+                inventory.users = [];
+                inventory.items = [];
 
                 inventory.save(function(err){
                     if(err)
@@ -219,14 +219,14 @@ var Item = dbModels.item;
                 item.save(function(err){
                     if(err)
                         res.send(err);
-                    res.json({ message: 'Item created!' });
+                    res.json(item._id);
                 });
             });
 
         router.route('/items/:itemID')
             // get a item by itemID
             .get(function(req, res) {
-                User.findById(req.params.itemID, function(err, item) {
+                Item.findById(req.params.itemID, function(err, item) {
                     if (err)
                         res.send(err);
                     res.json(item);
@@ -235,7 +235,7 @@ var Item = dbModels.item;
 
             // update an item
             .put(function(req, res) {
-                User.findById(req.params.itemID, function(err, item) {
+                Item.findById(req.params.itemID, function(err, item) {
                     if (err)
                         res.send(err);
 

@@ -1,6 +1,6 @@
 <div id="wrapper">
 
-    <!-- Sidebar -->
+    <!-- Sidebar -------------------------------------------------------------------------------------->
     <div id="sidebar-wrapper">
         <div class="center-image">
             <img class="img-responsive img-rounded" src="../images/emily1.png">
@@ -19,8 +19,8 @@
             <li ng-repeat="inventory in inventories">
                 <table class="table borderless">
                     <li>
-                    <td><a href="#">{{ inventory.name }}</a></td>
-                    <td><button class="btn-danger btn btn-xs center-block" type="submit"><span
+                    <td style="text-align: left"><a href="#">{{ inventory.name }}</a></td>
+                    <td style="padding-right: 30px !important;"><button class="btn-danger btn btn-xs pull-right" type="submit"><span
                             class="glyphicon glyphicon-minus"></span></button></td>
                     </li>
                 </table>
@@ -29,10 +29,10 @@
     </div>
     <!-- #sidebar-wrapper -->
 
-    <!-- Page Content -->
+    <!-- Page Content -------------------------------------------------------------------------------------->
     <div id="page-content-wrapper">
 
-        <!-- Table header -->
+        <!-- Table header -------------------------------------------------------------------------------------->
         <div class="panel panel-default text-center">
             <div class="panel-heading">
                 <h2>Iventory Name</h2>
@@ -66,7 +66,7 @@
                     <td style="vertical-align: middle">{{ item.owner }}</td>
                     <td style="vertical-align: middle">{{ item.name }}</td>
                     <td style="vertical-align: middle">{{ item.quantity }}</td>
-                    <td style="vertical-align: middle"><img class="img-responsive" src={{item.image}}></td>
+                    <td style="vertical-align: middle"><img class="img-responsive" src={{item.img}}></td>
                     <td style="vertical-align: middle">
                         <div class="btn-group-vertical">
                             <button class="btn-warning btn btn-xs center-block" type="submit" data-toggle="modal"
@@ -82,7 +82,7 @@
     </div>
     <!-- #page-content-wrapper -->
 
-    <!-- Modal Add Inventory -->
+    <!-- Modal Add Inventory -------------------------------------------------------------------------------------->
     <div id="inventoryModal" class="modal fade" role="dialog" ng-controller="InventoryController">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -103,7 +103,7 @@
                 </div>
                 <div class="modal-footer">
                     <div class="btn-toolbar" style="display: inline-block">
-                        <button type="button" class="btn btn-warning" data-dismiss="modal" ng-click="createInventory()">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal" ng-click="createInventory()" id="refreshTable">
                             Add
                         </button>
                         <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
@@ -113,7 +113,7 @@
         </div>
     </div>
 
-    <!--Modal Add Item-->
+    <!--Modal Add Item -------------------------------------------------------------------------------------->
     <div id="itemModal" class="modal fade" role="dialog" ng-controller="InventoryController">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -127,14 +127,14 @@
                             <label class="col-lg-3 control-label">Name:</label>
 
                             <div class="col-lg-8">
-                                <input class="form-control" value="" type="text">
+                                <input class="form-control" value="" type="text" ng-model="item.name">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-3 control-label">Amount:</label>
+                            <label class="col-lg-3 control-label">Quantity:</label>
 
                             <div class="col-lg-8">
-                                <input class="form-control" value="" type="text">
+                                <input class="form-control" value="" type="text" ng-model="item.quantity">
                             </div>
                         </div>
                         <div class="form-group">
@@ -166,7 +166,7 @@
                 </div>
                 <div class="modal-footer">
                     <div class="btn-toolbar" style="display: inline-block">
-                        <button type="button" class="btn btn-warning" data-dismiss="modal">Add</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal" ng-click="createItem()">Add</button>
                         <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -174,7 +174,7 @@
         </div>
     </div>
 
-    <!--Add Collaborators Modal-->
+    <!--Add Collaborators Modal -------------------------------------------------------------------------------------->
     <div id="collaboratorsModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -215,7 +215,7 @@
         </div>
     </div>
 
-    <!--Modal Edit Item-->
+    <!-- Modal Edit Item -------------------------------------------------------------------------------------->
     <div id="editItemModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -277,15 +277,29 @@
     </div>
 
 </div>
-<!-- /#wrapper -->
 
-<!-- will toggle the responsive side menu -->
+<!-- scripts are here -------------------------------------------------------------------------------------->
 <script>
+    // refresh inventory modal ================================
+    // will refresh inventory table once the modal is closed
+    $('#inventoryModal').on('hidden.bs.modal', function () {
+        location.reload();
+    })
+
+    // refresh item modal =====================================
+    // will refresh item table once the modal is closed
+    $('#itemModal').on('hidden.bs.modal', function () {
+        location.reload();
+    })
+
+    // menu toggle ============================================
+    // will toggle the responsive side menu back and forth
     $("#menu-toggle").click(function (e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
+
 </script>
 
-<!--javascript for previewing image-->
+<!-- allows for image previews on item ------------------------------->
 <script src="../js/preview_image.js"></script>
