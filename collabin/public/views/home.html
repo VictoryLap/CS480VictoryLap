@@ -69,7 +69,7 @@ width: 100%; background-size: cover; height:100vh;">
                                 <div class="form-group">
                                     <label class="col-md-3 control-label">Password:</label>
                                     <div class="col-md-8">
-                                        <input class="form-control" value="" type="password" id="user.password">
+                                        <input class="form-control" value="" type="password" ng-model="user.password">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -81,7 +81,7 @@ width: 100%; background-size: cover; height:100vh;">
                                 <div class="form-group">
                                     <label class="col-md-3 control-label"></label>
                                     <div class="col-md-8">
-                                        <input class="btn btn-warning btn-lg btn-block" value="Done" type="button"  ng-click="newUser()">
+                                        <input class="btn btn-warning btn-lg btn-block" value="Done" type="button" data-dismiss="modal" ng-click="newUser()">
                                         <span></span>
                                     </div>
                                 </div>

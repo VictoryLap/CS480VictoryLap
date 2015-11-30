@@ -8,18 +8,15 @@ angular.module('MainCtrl', []).controller('MainController', ['$scope', '$http', 
 
     $scope.newUser = function() {
 
-        /*
-        User.findOne({ //Find at least one user
-            userName: $scope.user.userName;
-        } function (err, user) {
-            if(!user) { //No users in collection
-                !!!User.create stuff goes here
-            }
-        };
 
-
-        */
-
+        //User.findOne({ //Find at least one user
+        //    userName: $scope.user.userName;
+        //} function (err, user) {
+        //    if(!user) { //No users in collection
+        //        User.create //stuff goes here
+        //    }
+        //};
+        console.log('User Hey');
 		//Should check if username exists
 		//if(User.get($scope.user.userName) == null)
 		User.create($scope.user)

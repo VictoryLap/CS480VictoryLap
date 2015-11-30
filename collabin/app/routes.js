@@ -44,11 +44,11 @@ var Item = dbModels.item;
             // add an inventory
             .post(function(req, res){
                 var inventory = new Inventory();
-
+                console.log('Adding an Inventory');
                 inventory.name = req.body.name;
                 inventory.dateCreated = Date.now();
                 inventory.dateLastAltered = Date.now();
-                inventory.admins = req.body.admins;
+                //inventory.admins = req.body.admins;
                 inventory.users = null;
                 inventory.items = null;
 
@@ -120,6 +120,8 @@ var Item = dbModels.item;
             // add a user
             .post(function(req, res){
                 var user = new User();
+
+                console.log('Another User Hello');
 
                 user.userName = req.body.userName;
                 user.firstName = req.body.firstName;
