@@ -19,7 +19,7 @@
             <li ng-repeat="inventory in inventories">
                 <table class="table borderless">
                     <li>
-                        <td style="text-align: left"><a href="#">{{ inventory.name }}</a></td>
+                        <td style="text-align: left"><a href="#" ng-click="switchInventory(inventory._id)">{{ inventory.name }}</a></td>
                         <td style="padding-right: 30px !important;">
                             <button id="inventoryDeleteButton" class="btn-danger btn btn-xs pull-right" type="submit"
                                     ng-click="removeInventory(inventory._id)"><span
@@ -38,7 +38,7 @@
         <!-- Table header -------------------------------------------------------------------------------------->
         <div class="panel panel-default text-center">
             <div class="panel-heading">
-                <h2>Iventory Name</h2>
+                <h2>{{ inventoryName }}</h2>
 
                 <div class="btn-toolbar" style="display: inline-block">
                     <a href="#menu-toggle" class="btn btn-warning" id="menu-toggle"><span
@@ -65,7 +65,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="item in items | orderBy:orderProp">
+                <tr ng-repeat="item in items">
                     <td style="vertical-align: middle">{{ item.owner }}</td>
                     <td style="vertical-align: middle">{{ item.name }}</td>
                     <td style="vertical-align: middle">{{ item.quantity }}</td>
@@ -92,7 +92,7 @@
     <!-- #page-content-wrapper -->
 
     <!-- Modal Add Inventory -------------------------------------------------------------------------------------->
-    <div id="inventoryModal" class="modal fade" role="dialog" ng-controller="InventoryController">
+    <div id="inventoryModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -105,7 +105,7 @@
                             <label class="col-lg-3 control-label">Inventory name:</label>
 
                             <div class="col-lg-8">
-                                <input class="form-control" value="" type="text" ng-model="inventory.name">
+                                <input class="form-control" value="" type="text" ng-model="inv.name">
                             </div>
                         </div>
                     </form>
@@ -124,7 +124,7 @@
     </div>
 
     <!--Modal Add Item -------------------------------------------------------------------------------------->
-    <div id="itemModal" class="modal fade" role="dialog" ng-controller="InventoryController">
+    <div id="itemModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -186,7 +186,7 @@
     </div>
 
     <!--Add Collaborators Modal -------------------------------------------------------------------------------------->
-    <div id="collaboratorsModal" class="modal fade" role="dialog" ng-controller="InventoryController">
+    <div id="collaboratorsModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -227,7 +227,7 @@
     </div>
 
     <!-- Modal Edit Item -------------------------------------------------------------------------------------->
-    <div id="editItemModal" class="modal fade" role="dialog" ng-controller="InventoryController">
+    <div id="editItemModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">

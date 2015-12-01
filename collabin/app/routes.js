@@ -55,7 +55,7 @@ var Item = dbModels.item;
                 inventory.save(function(err){
                     if(err)
                         res.send(err);
-                    res.json({ message: 'Inventory created!' });
+                    res.json(inventory._id);
                 });
             });
 
@@ -73,7 +73,7 @@ var Item = dbModels.item;
 
             // update an inventory
             .put(function(req, res) {
-                dbModels.inventory.findById(req.params.inventoryID, function(err, inventory) {
+                Inventory.findById(req.params.inventoryID, function(err, inventory) {
                     if (err)
                         res.send(err);
 
@@ -87,7 +87,7 @@ var Item = dbModels.item;
                     inventory.save(function(err) {
                         if(err)
                             res.send(err);
-                        res.json({ message: 'Inventory updated!' });
+                        res.json(inventory);
                     });
                 });
             })
@@ -135,7 +135,7 @@ var Item = dbModels.item;
                 user.save(function(err){
                     if(err)
                         res.send(err);
-                    res.json({ message: 'User created!' });
+                    res.json(user._id);
                 });
             });
 
@@ -213,13 +213,13 @@ var Item = dbModels.item;
 
                 item.name = req.body.name;
                 item.quantity = req.body.quantity;
-                item.owner = req.body.owner;
-                item.img = req.body.img;
+                item.owner = null;
+                item.img = null;
 
                 item.save(function(err){
                     if(err)
                         res.send(err);
-                    res.json(item._id);
+                    res.json(item);
                 });
             });
 
