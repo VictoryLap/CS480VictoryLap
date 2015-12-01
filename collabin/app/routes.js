@@ -48,9 +48,9 @@ var currentUser; //This should not be the right implementation but it works so w
                 inventory.name = req.body.name;
                 inventory.dateCreated = Date.now();
                 inventory.dateLastAltered = Date.now();
-                inventory.admins = currentUser.userName;
-                inventory.users = null;
-                inventory.items = null;
+                inventory.admins = currentUser.username;
+                inventory.users = [];
+                inventory.items = [];
 
                 inventory.save(function(err){
                     if(err)
@@ -219,14 +219,14 @@ var currentUser; //This should not be the right implementation but it works so w
                 item.save(function(err){
                     if(err)
                         res.send(err);
-                    res.json({ message: 'Item created!' });
+                    res.json(item._id);
                 });
             });
 
         router.route('/items/:itemID')
             // get a item by itemID
             .get(function(req, res) {
-                User.findById(req.params._id, function(err, item) {
+                Item.findById(req.params.itemID, function(err, item) {
                     if (err)
                         res.send(err);
                     res.json(item);
@@ -235,7 +235,7 @@ var currentUser; //This should not be the right implementation but it works so w
 
             // update an item
             .put(function(req, res) {
-                User.findById(req.params._id, function(err, item) {
+                Item.findById(req.params.itemID, function(err, item) {
                     if (err)
                         res.send(err);
 

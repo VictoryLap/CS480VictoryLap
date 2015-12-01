@@ -32,7 +32,7 @@ angular.module('MainCtrl', []).controller('MainController', ['$scope', '$http', 
 		//if(User.get($scope.user.userName) == null)
 		User.create($scope.suser)
 				.success(function() {
-					$scope.suser = {};
+					$scope.user = null;
 				});
 	};
 		
