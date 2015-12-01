@@ -18,9 +18,6 @@ var currentUser; //This should not be the right implementation but it works so w
         router.use(function(req, res, next) {
             // do logging
             console.log('Something is happening.');
-            console.log(req.user);
-            console.log(currentUser);
-            console.log('IT DIDNT PRINT');
             next(); // make sure we go to the next routes and don't stop here
         });
 
@@ -45,13 +42,13 @@ var currentUser; //This should not be the right implementation but it works so w
             })
 
             // add an inventory
-            .post(function(req, res){
+            .post(function(req, res) {
                 var inventory = new Inventory();
                 console.log('Adding an Inventory');
                 inventory.name = req.body.name;
                 inventory.dateCreated = Date.now();
                 inventory.dateLastAltered = Date.now();
-                inventory.admins = req.user.username;
+                inventory.admins = currentUser.userName;
                 inventory.users = null;
                 inventory.items = null;
 
@@ -216,7 +213,7 @@ var currentUser; //This should not be the right implementation but it works so w
 
                 item.name = req.body.name;
                 item.quantity = req.body.quantity;
-                item.owner = req.body.owner;
+                item.owner = currentUser.userName;
                 item.img = req.body.img;
 
                 item.save(function(err){
@@ -298,7 +295,7 @@ var currentUser; //This should not be the right implementation but it works so w
 
                             //req.user = user;
                             //req.session.user = user;
-                            currentUser = user;
+                            currentUser = user; //Lol here we goooooooooo
                             console.log('User good yo');
                             return done(null, user);
                         });
@@ -312,69 +309,18 @@ var currentUser; //This should not be the right implementation but it works so w
 
         app.get('/loginFail', function(req, res, next) {
             res.send('Failure to Authenticate');
-            console.log(req.body.username);
             res.redirect('/');
         });
 
         app.get('/loginSucceed', function(req, res, next) {
             res.send('Authentication Success');
-            console.log(req.body);
-            //console.log(req.user.userName);
-            console.log('I love you Matt');
             //res.redirect('/api/inventories');
-            res.sendfile('./public/views/inventories.html');
+            res.redirect('./public/views/inventories.html');
         });
 
         app.post('/login',
             passport.authenticate('local', {
-                successRedirect: '/loginSucceed',
+                successRedirect: '/api/inventories',
                 failureRedirect: '/loginFail'
             }));
-
-        /*
-        app.use(function(req, res, next) {
-            if(req.session && req.session.user) { //Check for session cookies
-                User.findOne( {userName: req.session.user.userName}, function(err, user_) {
-                    if(user_) {
-                        req.user = user_;
-                        req.session.user = user_; //refresh session value
-                        res.locals.currentUser = user_;
-                    }
-                    //finish processing middleware and run route
-                    next();
-                });
-            } else {
-                next();
-            }
-        });
-
-        app.use(session({
-            cookieName: 'session',
-            secret: 'CrisraelIsCoolioYo',
-            duration: 30 * 60 * 1000,
-            activeDuration: 5 * 60 * 1000,
-            ephemeral: true
-        }));
-
-        app.post('/login', function(req, res) {
-            User.findOne( {userName: req.body.userName}, function(err, user_) {
-                if(!user_) {
-                    res.render('/', {error: 'Invalid Username'});
-                } else {
-                    if(req.body.password == user_.password) {
-                        // Sets a cookie with user info
-                        req.session.user = user_;
-                        res.redirect('/inventories');
-                    } else {
-                        res.render('/', {error: 'Invalid Password'});
-                    }
-                }
-            });
-        });
-
-        app.get('/logout', function(req, res) {
-            req.session.reset;
-            res.redirect('/');
-        });
-        */
     };
