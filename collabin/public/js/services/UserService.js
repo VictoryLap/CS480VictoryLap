@@ -30,6 +30,10 @@ angular.module('UserService', []).factory('User', ['$http', function($http) {
         // call to delete a user
         delete : function(id) {
             return $http.delete('/api/users/' + id);
+        },
+
+        login : function(userData) {
+            return $http.post('/login', userData);
         }
     }
 }]);

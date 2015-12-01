@@ -3,8 +3,19 @@
 angular.module('MainCtrl', []).controller('MainController', ['$scope', '$http', 'User', function($scope, $http, User) {
 
 
-	$scope.user = {};
+	$scope.suser = {};
 	$scope.tagline = 'An inventory for everyone';
+
+	$scope.loginUser = function () {
+		var loginUser = {
+			username: $scope.luser.userName,
+			password: $scope.luser.password
+		}
+		User.login(loginUser)
+				.success(function() {
+					$scope.luser = {};
+				});
+	}
 
     $scope.newUser = function() {
 
@@ -16,10 +27,10 @@ angular.module('MainCtrl', []).controller('MainController', ['$scope', '$http', 
         //        User.create //stuff goes here
         //    }
         //};
-        console.log('User Hey');
+
 		//Should check if username exists
 		//if(User.get($scope.user.userName) == null)
-		User.create($scope.user)
+		User.create($scope.suser)
 				.success(function() {
 					$scope.user = null;
 				});

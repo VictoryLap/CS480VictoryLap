@@ -9,7 +9,7 @@ var inventorySchema = Schema({
 	name: String,
 	dateCreated: Date,
 	dateLastAltered: Date,
-	admins: [Schema.Types.ObjectId],
+	admins: String, //previously admins: [Schema.Types.ObjectId],
 	users: [Schema.Types.ObjectId],
 	items: [Schema.Types.ObjectId]
 });
