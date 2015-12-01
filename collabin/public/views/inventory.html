@@ -19,9 +19,12 @@
             <li ng-repeat="inventory in inventories">
                 <table class="table borderless">
                     <li>
-                    <td style="text-align: left"><a href="#">{{ inventory.name }}</a></td>
-                    <td style="padding-right: 30px !important;"><button class="btn-danger btn btn-xs pull-right" type="submit"><span
-                            class="glyphicon glyphicon-minus"></span></button></td>
+                        <td style="text-align: left"><a href="#">{{ inventory.name }}</a></td>
+                        <td style="padding-right: 30px !important;">
+                            <button id="inventoryDeleteButton" class="btn-danger btn btn-xs pull-right" type="submit"
+                                    ng-click="removeInventory(inventory._id)"><span
+                                    class="glyphicon glyphicon-minus"></span></button>
+                        </td>
                     </li>
                 </table>
             </li>
@@ -69,10 +72,16 @@
                     <td style="vertical-align: middle"><img class="img-responsive" src={{item.img}}></td>
                     <td style="vertical-align: middle">
                         <div class="btn-group-vertical">
-                            <button class="btn-warning btn btn-xs center-block" type="submit" data-toggle="modal"
-                                    data-target="#editItemModal"> Edit
+                            <!--<button class="btn-warning btn btn-xs center-block" type="submit" data-toggle="modal"-->
+                                    <!--data-target="#editItemModal" data-id=item._id ng-click="openModal(item._id)"-->
+                                    <!--data-id="item._id"> Edit-->
+                            <!--</button>-->
+                            <button class="btn-warning btn btn-xs center-block" type="submit"
+                                    ng-click="openModal(item._id)" data-id="item._id"> Edit
                             </button>
-                            <button class="btn-danger btn btn-xs center-block" type="submit"> Remove</button>
+                            <button class="btn-danger btn btn-xs center-block" type="submit"
+                                    ng-click="removeItem(item._id)"> Remove
+                            </button>
                         </div>
                     </td>
                 </tr>
@@ -103,7 +112,8 @@
                 </div>
                 <div class="modal-footer">
                     <div class="btn-toolbar" style="display: inline-block">
-                        <button type="button" class="btn btn-warning" data-dismiss="modal" ng-click="createInventory()" id="refreshTable">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal" ng-click="createInventory()"
+                                id="refreshTable">
                             Add
                         </button>
                         <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
@@ -166,7 +176,8 @@
                 </div>
                 <div class="modal-footer">
                     <div class="btn-toolbar" style="display: inline-block">
-                        <button type="button" class="btn btn-warning" data-dismiss="modal" ng-click="createItem()">Add</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal" ng-click="createItem()">Add
+                        </button>
                         <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -175,7 +186,7 @@
     </div>
 
     <!--Add Collaborators Modal -------------------------------------------------------------------------------------->
-    <div id="collaboratorsModal" class="modal fade" role="dialog">
+    <div id="collaboratorsModal" class="modal fade" role="dialog" ng-controller="InventoryController">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -216,7 +227,7 @@
     </div>
 
     <!-- Modal Edit Item -------------------------------------------------------------------------------------->
-    <div id="editItemModal" class="modal fade" role="dialog">
+    <div id="editItemModal" class="modal fade" role="dialog" ng-controller="InventoryController">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -229,14 +240,14 @@
                             <label class="col-lg-3 control-label">Name:</label>
 
                             <div class="col-lg-8">
-                                <input class="form-control" value="" type="text">
+                                <input class="form-control" value="" type="text" ng-model="item.name">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-lg-3 control-label">Amount:</label>
 
                             <div class="col-lg-8">
-                                <input class="form-control" value="" type="text">
+                                <input class="form-control" value="" type="text" ng-model="item.quantity">
                             </div>
                         </div>
                         <div class="form-group">
@@ -268,32 +279,20 @@
                 </div>
                 <div class="modal-footer">
                     <div class="btn-toolbar" style="display: inline-block">
-                        <button type="button" class="btn btn-warning" data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal"
+                                ng-click="editItem(selectedId)">Save
+                        </button>
                         <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 
-<!-- scripts are here -------------------------------------------------------------------------------------->
+<!-- toggle menu------------------------------------------------------>
 <script>
-    // refresh inventory modal ================================
-    // will refresh inventory table once the modal is closed
-    $('#inventoryModal').on('hidden.bs.modal', function () {
-        location.reload();
-    })
-
-    // refresh item modal =====================================
-    // will refresh item table once the modal is closed
-    $('#itemModal').on('hidden.bs.modal', function () {
-        location.reload();
-    })
-
-    // menu toggle ============================================
-    // will toggle the responsive side menu back and forth
+    // allows button to toggle the responsive side menu back and forth
     $("#menu-toggle").click(function (e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");

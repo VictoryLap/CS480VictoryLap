@@ -47,21 +47,18 @@
 //
 //});
 
-// CRIS YOU CAN WORK OFF THIS ==========================================================================================
-
 angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope', '$http', 'Inventory', 'Item', function ($scope, $http, Inventory, Item) {
 
     // declaring variables that will be used during api calls
     $scope.inventory = [];
-    //$scope.items = [];
+    $scope.items = [];
+    $scope.selctedId = null;
 
     Inventory.get()
         .success(function (data) {
             $scope.inventories = data;
             $scope.inventory = $scope.inventories[0];
-            $scope.items = [];
-            $scope.inventory.items.forEach(function (element, index, array) {
-                console.log(element);
+            $scope.inventory.items.forEach(function (element) {
                 Item.getByID(element)
                     .success(function (itemData) {
                         $scope.items.push(itemData);
@@ -84,10 +81,28 @@ angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope',
                 // if successful creation, call our get function to get all the new todos
                 .success(function () {
 
+                    // refresh page
+                    location.reload();
+
                     // clear the form so our user is ready to enter another
                     $scope.inventory.name = null;
                 });
         }
+    }
+
+    // REMOVE INVENTORY ================================================
+    // this method will be called when the (-) is clicked
+    $scope.removeInventory = function (data) {
+
+        // delete data from database
+        Inventory.delete(data)
+            // if successful creation,
+            .success(function () {
+
+                // refresh page
+                location.reload();
+            });
+
     }
 
     // CREATE ITEM =====================================================
@@ -102,15 +117,18 @@ angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope',
 
                 // if successful creation, call our get function to get all the new todos
                 .success(function (data) {
-                    Inventory.getByID("565be7c72a59ac09608d58e5")
+                    Inventory.getByID("565cf813fa4b3b58671d39b4")
                         .success(function (inventoryData) {
+                            console.log(inventoryData)
                             $scope.inventory = inventoryData;
                             $scope.inventory.items.push(data);
                             Inventory.update($scope.inventory._id, $scope.inventory)
 
                                 .success(function () {
-                                // it added yay!
-                            });
+
+                                    // refresh page
+                                    location.reload();
+                                });
                         });
 
                     // clear the form so our user is ready to enter another
@@ -118,6 +136,54 @@ angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope',
                     $scope.item.quantity = null;
                 });
         }
+    }
+
+    // REMOVE ITEM =========================================================
+    // this method will be called when the 'Remove' button is clicked
+    $scope.removeItem = function (data) {
+
+        // delete item from database
+        Item.delete(data)
+            .success(function () {
+
+                // remove from the inventory
+                Inventory.getByID("565cf813fa4b3b58671d39b4")
+                    .success(function (inventoryData) {
+                        $scope.inventory = inventoryData;
+                        $scope.inventory.items.pop();
+                        Inventory.update($scope.inventory._id, $scope.inventory)
+                            .success(function () {
+
+                                // refresh page
+                                location.reload();
+                            });
+                    });
+            });
+    }
+
+    // EDIT ITEM ==============================================================
+    // this method will be called when the 'Edit' button is clicked
+
+    $scope.openModal = function(data) {
+        $scope.selectedId = data;
+        $('#editItemModal').modal('show');
+    }
+
+    $scope.editItem = function (data) {
+        console.log(data)
+        console.log($scope.item.name)
+        $scope.item.name = data.name;
+        $scope.item.quantity = data.name;
+
+        // update item in database
+        Item.update(data, $scope.item)
+            .success(function () {
+
+
+                // refresh page
+                location.reload();
+             });
+
     }
 
 }]);
