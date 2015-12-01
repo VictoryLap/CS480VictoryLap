@@ -18,6 +18,7 @@ var currentUser; //This should not be the right implementation but it works so w
         router.use(function(req, res, next) {
             // do logging
             console.log('Something is happening.');
+            //console.log(currentUser.userName);
             next(); // make sure we go to the next routes and don't stop here
         });
 
@@ -27,7 +28,7 @@ var currentUser; //This should not be the right implementation but it works so w
         });
 
         // server routes ===========================================================
-        // Went all the way to the bottom
+        // Started from the bottom now we here
         // inventory api ===========================================================
         router.route('/inventories')
 
@@ -48,7 +49,7 @@ var currentUser; //This should not be the right implementation but it works so w
                 inventory.name = req.body.name;
                 inventory.dateCreated = Date.now();
                 inventory.dateLastAltered = Date.now();
-                inventory.admins = currentUser.username;
+                inventory.admins = currentUser.userName;
                 inventory.users = [];
                 inventory.items = [];
 
