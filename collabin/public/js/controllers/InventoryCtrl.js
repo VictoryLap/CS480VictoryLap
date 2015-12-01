@@ -49,22 +49,32 @@
 
 angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope', '$http', 'Inventory', 'Item', function ($scope, $http, Inventory, Item) {
 
-    // declaring variables that will be used during api calls
-    $scope.inventory = [];
-    $scope.items = [];
-    $scope.selctedId = null;
 
-    Inventory.get()
-        .success(function (data) {
-            $scope.inventories = data;
-            $scope.inventory = $scope.inventories[0];
-            $scope.inventory.items.forEach(function (element) {
-                Item.getByID(element)
-                    .success(function (itemData) {
-                        $scope.items.push(itemData);
+    var init = function() {
+        // declaring variables that will be used during api calls
+        $scope.inventories = [];
+        $scope.inventoryName = "Inventory Name";
+        $scope.inventory = null;
+        $scope.items = [];
+        $scope.selctedId = null;
+
+        Inventory.get()
+            .success(function (inventoriesData) {
+                $scope.inventories = inventoriesData;
+                console.log($scope.inventories);
+                if($scope.inventories.length != 0) {
+                    $scope.inventory = $scope.inventories[0];
+                    $scope.inventoryName = $scope.inventory.name;
+                    $scope.inventory.items.forEach(function (element) {
+                        Item.getByID(element)
+                            .success(function (itemData) {
+                                $scope.items.push(itemData);
+                            });
                     });
+                }
             });
-        });
+    }
+    init();
 
 
     // CREATE INVENTORY =============================================
@@ -73,36 +83,85 @@ angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope',
 
         // validate the formData to make sure that something is there if form is empty, nothing will happen
         // people can't just hold enter to keep adding the same to-do anymore
-        if (!$.isEmptyObject($scope.inventory)) {
+        if (!$.isEmptyObject($scope.inv)) {
 
             // call the create function from our service (returns a promise object)
-            Inventory.create($scope.inventory)
+            Inventory.create($scope.inv)
 
                 // if successful creation, call our get function to get all the new todos
-                .success(function () {
-
-                    // refresh page
-                    location.reload();
+                .success(function (inventoryID) {
+                    Inventory.getByID(inventoryID)
+                        .success(function(inventoryData) {
+                            $scope.inventories.push(inventoryData);
+                            $scope.inventory = inventoryData;
+                            $scope.inventoryName = $scope.inventory.name;
+                            $scope.switchInventory($scope.inventory._id);
+                        });
 
                     // clear the form so our user is ready to enter another
-                    $scope.inventory.name = null;
+                    $scope.inv.name = null;
                 });
         }
     }
 
     // REMOVE INVENTORY ================================================
     // this method will be called when the (-) is clicked
-    $scope.removeInventory = function (data) {
+    $scope.removeInventory = function (inventoryID) {
 
+        Inventory.getByID(inventoryID)
+            .success(function (inv) {
+                inv.items.forEach(function (itemID) {
+                    console.log(itemID);
+                    Item.delete(itemID)
+                        .success(function() {
+
+                        });
+                });
+            });
+        $scope.items = [];
         // delete data from database
-        Inventory.delete(data)
+        Inventory.delete(inventoryID)
             // if successful creation,
             .success(function () {
 
-                // refresh page
-                location.reload();
             });
+        Inventory.get()
+            .success(function(inventories) {
+                $scope.inventories = inventories;
+                $scope.inventory = null;
+                $scope.inventoryName = 'Inventory Name';
+                if(inventories.length != 0){
+                    $scope.inventory = inventories[0];
+                    $scope.inventoryName = $scope.inventory.name;
+                    $scope.switchInventory($scope.inventory._id);
+                }
+            });
+    }
 
+    // SWITCH INVENTORIES ==============================================
+    // this method switches to an inventory when it is clicked on the
+    // sidebar
+    $scope.switchInventory = function (inventoryID) {
+        $scope.fillItemPage(inventoryID);
+    }
+
+    $scope.fillItemPage = function (inventoryID) {
+        Inventory.getByID(inventoryID)
+            .success(function (inv) {
+                $scope.items = [];
+                $scope.inventory = inv;
+                if($scope.inventory != null) {
+                    $scope.inventoryName = $scope.inventory.name;
+                    $scope.inventory.items.forEach(function (itemID) {
+                        Item.getByID(itemID)
+                            .success(function (itemData) {
+                                $scope.items.push(itemData);
+                            });
+                    });
+                } else {
+                    $scope.inventoryName = "Inventory Name";
+                }
+            });
     }
 
     // CREATE ITEM =====================================================
@@ -111,52 +170,38 @@ angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope',
         // validate the formData to make sure that something is there if form is empty, nothing will happen
         // people can't just hold enter to keep adding the same to-do anymore
         if (!$.isEmptyObject($scope.item)) {
-
             // call the create function from our service (returns a promise object)
             Item.create($scope.item)
-
                 // if successful creation, call our get function to get all the new todos
-                .success(function (data) {
-                    Inventory.getByID("565cf813fa4b3b58671d39b4")
-                        .success(function (inventoryData) {
-                            console.log(inventoryData)
-                            $scope.inventory = inventoryData;
-                            $scope.inventory.items.push(data);
-                            Inventory.update($scope.inventory._id, $scope.inventory)
-
-                                .success(function () {
-
-                                    // refresh page
-                                    location.reload();
-                                });
+                .success(function (itemData) {
+                    $scope.inventory.items.push(itemData._id);
+                    $scope.items.push(itemData);
+                    console.log($scope.inventory);
+                    Inventory.update($scope.inventory._id, $scope.inventory)
+                        .success(function () {
+                            // clear the form so our user is ready to enter another
+                            $scope.item.name = null;
+                            $scope.item.quantity = null;
                         });
-
-                    // clear the form so our user is ready to enter another
-                    $scope.item.name = null;
-                    $scope.item.quantity = null;
                 });
+
+
         }
     }
 
     // REMOVE ITEM =========================================================
     // this method will be called when the 'Remove' button is clicked
-    $scope.removeItem = function (data) {
+    $scope.removeItem = function (itemID) {
 
         // delete item from database
-        Item.delete(data)
+        Item.delete(itemID)
             .success(function () {
-
-                // remove from the inventory
-                Inventory.getByID("565cf813fa4b3b58671d39b4")
+                var index = $scope.inventory.items.indexOf(itemID);
+                $scope.inventory.items.splice(index, 1);
+                Inventory.update($scope.inventory._id, $scope.inventory)
                     .success(function (inventoryData) {
                         $scope.inventory = inventoryData;
-                        $scope.inventory.items.pop();
-                        Inventory.update($scope.inventory._id, $scope.inventory)
-                            .success(function () {
-
-                                // refresh page
-                                location.reload();
-                            });
+                        $scope.switchInventory($scope.inventory._id);
                     });
             });
     }
@@ -169,8 +214,8 @@ angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope',
         $('#editItemModal').modal('show');
     }
 
-    $scope.editItem = function (data) {
-        console.log(data)
+    $scope.editItem = function (itemID) {
+        console.log(itemID)
         console.log($scope.item.name)
         $scope.item.name = data.name;
         $scope.item.quantity = data.name;
@@ -179,9 +224,6 @@ angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope',
         Item.update(data, $scope.item)
             .success(function () {
 
-
-                // refresh page
-                location.reload();
              });
 
     }
