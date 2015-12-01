@@ -9,7 +9,7 @@ var inventorySchema = Schema({
 	name: String,
 	dateCreated: Date,
 	dateLastAltered: Date,
-	admins: String, //previously admins: [Schema.Types.ObjectId],
+	admins: [Schema.Types.ObjectId],
 	users: [Schema.Types.ObjectId],
 	items: [Schema.Types.ObjectId]
 });
@@ -28,7 +28,7 @@ var itemSchema = Schema({
 	name: String,
 	img: { data: Buffer, contentType: String },
 	quantity: Number,
-	owner: Schema.Types.ObjectId
+	owner: String
 });
 
 // create models from schema

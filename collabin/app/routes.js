@@ -49,8 +49,10 @@ var currentUser; //This should not be the right implementation but it works so w
                 inventory.name = req.body.name;
                 inventory.dateCreated = Date.now();
                 inventory.dateLastAltered = Date.now();
-                inventory.admins = currentUser.userName;
+                inventory.admins = [];
+                inventory.admins.push(currentUser._id);
                 inventory.users = [];
+                inventory.users.push(currentUser._id);
                 inventory.items = [];
 
                 inventory.save(function(err){
@@ -211,7 +213,6 @@ var currentUser; //This should not be the right implementation but it works so w
             // add an item
             .post(function(req, res){
                 var item = new Item();
-
                 item.name = req.body.name;
                 item.quantity = req.body.quantity;
                 item.owner = currentUser.userName;

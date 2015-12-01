@@ -62,7 +62,7 @@ angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope',
             .success(function (inventoriesData) {
                 $scope.inventories = inventoriesData;
                 console.log($scope.inventories);
-                if($scope.inventories.length != 0) {
+                if($scope.inventories.length !== 0) {
                     $scope.inventory = $scope.inventories[0];
                     $scope.inventoryName = $scope.inventory.name;
                     $scope.inventory.items.forEach(function (element) {
@@ -125,12 +125,13 @@ angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope',
             .success(function () {
 
             });
+
         Inventory.get()
             .success(function(inventories) {
                 $scope.inventories = inventories;
                 $scope.inventory = null;
                 $scope.inventoryName = 'Inventory Name';
-                if(inventories.length != 0){
+                if(inventories.length !== 0){
                     $scope.inventory = inventories[0];
                     $scope.inventoryName = $scope.inventory.name;
                     $scope.switchInventory($scope.inventory._id);
@@ -150,7 +151,7 @@ angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope',
             .success(function (inv) {
                 $scope.items = [];
                 $scope.inventory = inv;
-                if($scope.inventory != null) {
+                if($scope.inventory !== null) {
                     $scope.inventoryName = $scope.inventory.name;
                     $scope.inventory.items.forEach(function (itemID) {
                         Item.getByID(itemID)
@@ -170,19 +171,30 @@ angular.module('InventoryCtrl', []).controller('InventoryController', ['$scope',
         // validate the formData to make sure that something is there if form is empty, nothing will happen
         // people can't just hold enter to keep adding the same to-do anymore
         if (!$.isEmptyObject($scope.item)) {
+            console.log($scope.item);
             // call the create function from our service (returns a promise object)
             Item.create($scope.item)
                 // if successful creation, call our get function to get all the new todos
                 .success(function (itemData) {
-                    $scope.inventory.items.push(itemData._id);
-                    $scope.items.push(itemData);
-                    console.log($scope.inventory);
-                    Inventory.update($scope.inventory._id, $scope.inventory)
-                        .success(function () {
-                            // clear the form so our user is ready to enter another
-                            $scope.item.name = null;
-                            $scope.item.quantity = null;
+                    Inventory.getByID($scope.inventory._id)
+                        .success(function (inv) {
+                            inv.items.push(itemData._id);
+                            $scope.items.push(itemData);
+                            Inventory.update(inv._id, inv)
+                                .success(function () {
+                                    $scope.item.name = null;
+                                    $scope.item.quantity = null;
+                                });
                         });
+                    //$scope.inventory.items.push(itemData._id); //Fails here
+                    //$scope.items.push(itemData);
+                    //console.log($scope.inventory);
+                    //Inventory.update($scope.inventory._id, $scope.inventory)
+                    //    .success(function () {
+                    //        // clear the form so our user is ready to enter another
+                    //        $scope.item.name = null;
+                    //        $scope.item.quantity = null;
+                    //    });
                 });
 
 
